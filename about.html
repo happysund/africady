@@ -11,540 +11,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; color: #2c3e50; line-height: 1.7; background: #ffffff; overflow-x: hidden; }
 
-    body {
-      font-family: 'Poppins', Arial, Helvetica, sans-serif;
-      color: #2c3e50;
-      line-height: 1.7;
-      background: #ffffff;
-      overflow-x: hidden;
-    }
+    header { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; align-items: center; gap: 5px; }
+    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: 0.3s; }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; }
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    .page-hero { background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)), url("images/ado-team-hero.jpg") center/cover no-repeat; color: #fff; padding: 120px 30px; text-align: center; }
+    .page-hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; }
 
-    header img {
-      height: 65px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
+    section { max-width: 1200px; margin: auto; padding: 80px 40px; }
+    h2 { color: #0f5132; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; position: relative; display: inline-block; }
+    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    nav a {
-      color: #fff;
-      padding: 10px 18px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: rgba(255,255,255,0.15);
-      transform: translateY(-2px);
-    }
-
-    nav a.donate-btn {
-      background: #ffc107;
-      color: #000;
-      font-weight: 600;
-      margin-left: 10px;
-      box-shadow: 0 4px 12px rgba(255,193,7,0.3);
-    }
-
-    nav a.donate-btn:hover {
-      background: #ffb300;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255,193,7,0.4);
-    }
-
-    /* PAGE HERO */
-    .page-hero {
-      background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)),
-                  url("images/ado-team-hero.jpg") center/cover no-repeat;
-      color: #fff;
-      padding: 120px 30px;
-      text-align: center;
-      position: relative;
-    }
-
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
-    }
-
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .page-hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-      text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
-      letter-spacing: -0.5px;
-    }
-
-    .page-hero p {
-      font-size: 1.25rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
-      font-weight: 300;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 40px;
-    }
-
-    h2 {
-      color: #0f5132;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      font-weight: 700;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background: #ffc107;
-      border-radius: 2px;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.9;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    /* HIGHLIGHT BOX */
-    .highlight {
-      background: linear-gradient(135deg, #f1f7f4 0%, #e8f5e9 100%);
-      border-left: 6px solid #0f5132;
-      padding: 30px;
-      border-radius: 10px;
-      margin: 35px 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .highlight strong {
-      color: #0f5132;
-      font-size: 1.15rem;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    /* MISSION/VISION BOXES */
-    .mission-vision-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 35px;
-      margin-top: 40px;
-    }
-
-    .mission-box, .vision-box {
-      padding: 40px;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mission-box {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff;
-      box-shadow: 0 8px 25px rgba(15,81,50,0.3);
-    }
-
-    .vision-box {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000;
-      box-shadow: 0 8px 25px rgba(255,193,7,0.3);
-    }
-
-    .mission-box h2, .vision-box h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .mission-box h2 {
-      color: #fff;
-    }
-
-    .mission-box h2::after {
-      background: #ffc107;
-    }
-
-    .vision-box h2 {
-      color: #000;
-    }
-
-    .vision-box h2::after {
-      background: #0f5132;
-    }
-
-    .mission-box p, .vision-box p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-    }
-
-    .mission-box p {
-      color: #fff;
-    }
-
-    .vision-box p {
-      color: #000;
-    }
-
-    /* VALUES */
-    .values {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .value-card {
-      background: #fff;
-      border: none;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .value-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #0f5132, #ffc107);
-    }
-
-    .value-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    .value-card h3 {
-      color: #0f5132;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .value-card p {
-      color: #666;
-      font-size: 1rem;
-      margin: 0;
-    }
+    .highlight { background: #f1f7f4; border-left: 6px solid #0f5132; padding: 30px; border-radius: 10px; margin: 35px 0; }
+    .mission-vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+    .mission-box { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; padding: 40px; border-radius: 12px; }
+    .vision-box { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; padding: 40px; border-radius: 12px; }
 
     /* LEADERSHIP SECTION */
-    .leadership {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    }
+    .leadership { background: #f8f9fa; }
+    .founder-message { background: #f1f7f4; border-left: 6px solid #ffc107; padding: 40px; border-radius: 12px; margin: 50px 0; }
+    .founder-message h3 { color: #0f5132; margin-bottom: 20px; }
+    .founder-message p { font-style: italic; margin-bottom: 15px; color: #555; }
+    .signature { font-weight: 600; color: #0f5132; margin-top: 25px; font-style: normal; }
 
-    /* FOUNDER MESSAGE */
-    .founder-message {
-      background: linear-gradient(135deg, #f1f7f4 0%, #e8f5e9 100%);
-      border-left: 6px solid #ffc107;
-      padding: 40px;
-      border-radius: 12px;
-      margin: 50px 0;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    }
-
-    .founder-message h3 {
-      color: #0f5132;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .founder-message p {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      color: #555;
-      font-style: italic;
-      margin-bottom: 15px;
-    }
-
-    .founder-message .signature {
-      margin-top: 25px;
-      font-weight: 600;
-      color: #0f5132;
-      font-style: normal;
-      font-size: 1.1rem;
-    }
-
-    .leaders-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-      margin-top: 50px;
-    }
-
-    .leader-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 15px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-
-    .leader-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.18);
-    }
-
-    .leader-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border-bottom: 4px solid #ffc107;
-    }
-
-    .leader-card .content {
-      padding: 25px;
-    }
-
-    .leader-card h3 {
-      margin-bottom: 8px;
-      color: #0f5132;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .leader-card .role {
-      font-weight: 600;
-      color: #ffc107;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .leader-card p {
-      font-size: 0.95rem;
-      color: #666;
-      line-height: 1.7;
-      margin: 0;
-      text-align: left;
-    }
-
-    /* Founder & Co-founder special styling */
-    .leader-card.founder {
-      border: 3px solid #ffc107;
-    }
-
-    .leader-card.founder img {
-      border-bottom: 5px solid #0f5132;
-    }
-
-    /* CTA SECTION */
-    .cta {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff;
-      text-align: center;
-      padding: 90px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: pulse 15s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 0.3; }
-    }
-
-    .cta h2 {
-      color: #fff;
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta h2::after {
-      background: #ffc107;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .cta p {
-      color: #fff;
-      font-size: 1.2rem;
-      margin-bottom: 35px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 16px 40px;
-      background: #ffc107;
-      color: #000;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta a:hover {
-      background: #ffb300;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(255,193,7,0.4);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 40px 30px;
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      color: #ccc;
-      line-height: 1.8;
-    }
-
-    /* STICKY SUPPORT */
-    .sticky-support {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-      z-index: 9999;
-    }
-
-    .sticky-support button {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000;
-      border: none;
-      padding: 16px 26px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(255,193,7,0.4);
-      transition: all 0.3s ease;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .sticky-support button:hover {
-      background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(255,193,7,0.5);
-    }
- 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        padding: 15px 20px;
-      }
-
-      nav {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-      }
-
-      .page-hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .page-hero p {
-        font-size: 1.1rem;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .mission-vision-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .sticky-donate {
-        right: 15px;
-        bottom: 15px;
-      }
-
-      .sticky-donate button {
-        padding: 14px 22px;
-        font-size: 0.95rem;
-      }
-    }
+    .leaders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
+    .leader-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: 0.3s; display: flex; flex-direction: column; }
+    .leader-card img { width: 100%; height: 280px; object-fit: cover; border-bottom: 4px solid #ffc107; }
+    .leader-card .content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+    .leader-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 5px; }
+    .leader-card .role { color: #ffc107; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
+    
+    /* READ MORE STYLES */
+    .bio-text { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 10px; }
+    .more-text { display: none; }
+    .read-more-btn { background: none; border: none; color: #0f5132; font-weight: 700; cursor: pointer; padding: 0; font-size: 0.85rem; text-decoration: underline; margin-top: auto; text-align: left; }
+    
+    .cta { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; text-align: center; padding: 90px 40px; }
+    .cta a { display: inline-block; padding: 16px 40px; background: #ffc107; color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 25px; }
+    footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 40px; }
   </style>
 </head>
 
 <body>
 
 <header>
-   <div class="logo-wrapper">
-    <span class="logo-text">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+  <div class="logo-wrapper">
+    <span class="logo-text" style="font-weight:700;">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
   </div>
   <nav>
     <a href="index.html">Home</a>
@@ -558,216 +74,165 @@
 </header>
 
 <section class="page-hero">
-  <div class="page-hero-content">
-    <h1>About Africa Dynamite Organisation</h1>
-    <p>Building futures through education, collaboration, and community leadership.</p>
-  </div>
+  <h1>About Africa Dynamite Organisation</h1>
+  <p>Building futures through education, collaboration, and community leadership.</p>
 </section>
 
 <section>
   <h2>Who We Are</h2>
-  <p>
-    Africa Dynamite Organisation (ADO) is a community-driven non-profit initiative founded
-    in 2025 by a group of committed individuals working across Africa and the African diaspora.
-    We are united by a shared belief that education is the most powerful tool for transformation,
-    and that every child deserves the opportunity to learn, grow, and reach their full potential.
-  </p>
-
+  <p>Africa Dynamite Organisation (ADO) is a community-driven non-profit initiative founded in 2025. We are united by a shared belief that education is the most powerful tool for transformation.</p>
   <div class="highlight">
     <strong>Current Status</strong>
-    ADO is currently operating as an initiative group and is in the process of formal
-    registration. Our work is guided by transparency, accountability, and ethical practice
-    as we build sustainable programs that make a real difference in children's lives.
-  </div>
-</section>
-
-<section>
-  <div class="mission-vision-grid">
-    <div class="mission-box">
-      <h2>Our Mission</h2>
-      <p>
-        To ensure that every African child, regardless of background or circumstance,
-        has access to quality education and opportunities to thrive. We work to remove
-        barriers, provide essential resources, and create pathways to learning that
-        transform lives and communities.
-      </p>
-    </div>
-
-    <div class="vision-box">
-      <h2>Our Vision</h2>
-      <p>
-        A future where education empowers every African child to reach their full potential,
-        break cycles of poverty, and contribute meaningfully to their communities and the
-        continent's development. We envision an Africa where no child is left behind.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Our Values</h2>
-  <div class="values">
-    <div class="value-card">
-      <h3>⚖️ Equity</h3>
-      <p>Every child deserves equal access to quality education, regardless of their circumstances or background.</p>
-    </div>
-    <div class="value-card">
-      <h3>🔍 Transparency</h3>
-      <p>We operate with full accountability, ensuring our donors and partners know exactly how their contributions create impact.</p>
-    </div>
-    <div class="value-card">
-      <h3>🤝 Community-Led</h3>
-      <p>Local solutions drive lasting impact. We empower communities to identify needs and lead educational transformation.</p>
-    </div>
-    <div class="value-card">
-      <h3>🌍 Collaboration</h3>
-      <p>Partnerships strengthen our reach and effectiveness. Together, we can achieve more for Africa's children.</p>
-    </div>
+    ADO is currently operating as an initiative group and is in the process of formal registration.
   </div>
 </section>
 
 <section class="leadership">
   <h2>Meet Our Leadership Team</h2>
-  <p>
-    ADO is guided by a dedicated team of passionate individuals committed to educational equity and community empowerment.
-    Our team brings diverse experience in education, development, community organizing, and program management across Africa and the diaspora.
-  </p>
-
-  <!-- FOUNDER'S MESSAGE -->
+  
   <div class="founder-message">
     <h3>A Message from Our Founder</h3>
-    <p>
-      "Education is not just about opening doors—it's about giving children the keys to unlock their own potential. 
-      Every child we support, every barrier we remove, and every opportunity we create ripples outward to transform 
-      families, communities, and ultimately, our continent. At ADO, we believe that lasting change begins with a single 
-      child who is given the chance to learn, dream, and succeed."
-    </p>
-    <p>
-      "Our work is driven by the understanding that Africa's future depends on the education we provide today. 
-      Together with our partners, donors, and volunteers, we are building a movement that ensures no child is left behind."
-    </p>
-    <div class="signature">
-      — Founder, Africa Dynamite Organisation
-    </div>
+    <p>"Education is not just about opening doors—it's about giving children the keys to unlock their own potential. Every child we support, every barrier we remove, and every opportunity we create ripples outward to transform families, communities, and ultimately, our continent."</p>
+    <p>"Our work is driven by the understanding that Africa's future depends on the education we provide today. Together with our partners, donors, and volunteers, we are building a movement that ensures no child is left behind."</p>
+    <div class="signature">— Edwin Founwih, Founder, Africa Dynamite Organisation</div>
   </div>
 
   <div class="leaders-grid">
-    <!-- FOUNDER -->
-    <div class="leader-card founder">
-      <img src="images/team/founder.jpg" alt="Founder">
+    <div class="leader-card" style="border: 2px solid #ffc107;">
+      <img src="images/team/edwin.jpg" alt="Edwin Founwih">
       <div class="content">
-        <h3>[Founder Name]</h3>
-        <div class="role">Founder & Executive Director</div>
-        <p>Passionate education advocate with over [X] years of experience in community development and educational access programs across Africa. Founded ADO to address educational barriers and create sustainable pathways to learning.</p>
+        <h3>Edwin Founwih</h3>
+        <span class="role">Founder & Executive Director</span>
+        <div class="bio-text">
+          I am the visionary founder and strategic lead of Africa Dynamite Organisation (ADO). With an unwavering commitment to educational equity, I have dedicated my career to building sustainable frameworks that empower African youth.
+          <span class="more-text"> Under my stewardship, ADO has evolved into a high-impact initiative focused on community-driven development and the long-term advancement of children’s education across the continent of Africa.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- CO-FOUNDER -->
-    <div class="leader-card founder">
+    <div class="leader-card">
       <img src="images/team/cofounder.jpg" alt="Co-Founder">
       <div class="content">
-        <h3>[Co-Founder Name]</h3>
-        <div class="role">Co-Founder & Operations Director</div>
-        <p>Strategic leader specializing in nonprofit operations and program development. Committed to building transparent, accountable systems that maximize impact for children in need across Africa.</p>
+        <h3>[Name]</h3>
+        <span class="role">Co-Founder & Operations Director</span>
+        <div class="bio-text">
+          Strategic leader specializing in nonprofit operations and program development. 
+          <span class="more-text"> Committed to building transparent, accountable systems that maximize impact for children in need across Africa.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 3 -->
     <div class="leader-card">
       <img src="images/team/member3.jpg" alt="Program Manager">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Program Manager</div>
-        <p>Experienced in education program implementation and monitoring. Oversees day-to-day program activities and ensures quality delivery of educational support to children and communities.</p>
+        <span class="role">Program Manager</span>
+        <div class="bio-text">
+          Experienced in education program implementation and monitoring. 
+          <span class="more-text"> Oversees day-to-day activities and ensures quality delivery of educational support to children.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 4 -->
     <div class="leader-card">
-      <img src="images/team/member4.jpg" alt="Community Outreach Coordinator">
+      <img src="images/team/member4.jpg" alt="Outreach">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Community Outreach Coordinator</div>
-        <p>Builds and maintains relationships with local communities, schools, and families. Identifies children in need and coordinates on-ground support activities across multiple regions.</p>
+        <span class="role">Community Outreach Coordinator</span>
+        <div class="bio-text">
+          Builds and maintains relationships with local communities and schools. 
+          <span class="more-text"> Identifies children in need and coordinates on-ground support activities across multiple regions.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 5 -->
     <div class="leader-card">
-      <img src="images/team/member5.jpg" alt="Partnerships & Fundraising Lead">
+      <img src="images/team/member5.jpg" alt="Partnerships">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Partnerships & Fundraising Lead</div>
-        <p>Develops strategic partnerships with donors, NGOs, and corporate sponsors. Leads fundraising initiatives to secure sustainable resources for educational programs.</p>
+        <span class="role">Partnerships & Fundraising Lead</span>
+        <div class="bio-text">
+          Develops strategic partnerships with donors and corporate sponsors. 
+          <span class="more-text"> Leads fundraising initiatives to secure sustainable resources for our educational programs.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 6 -->
     <div class="leader-card">
-      <img src="images/team/member6.jpg" alt="Communications Director">
+      <img src="images/team/member6.jpg" alt="Communications">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Communications Director</div>
-        <p>Manages ADO's communications strategy, storytelling, and digital presence. Ensures transparency and keeps stakeholders informed about impact and progress.</p>
+        <span class="role">Communications Director</span>
+        <div class="bio-text">
+          Manages ADO's communications strategy and digital presence. 
+          <span class="more-text"> Ensures transparency and keeps stakeholders informed about our global impact and progress.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 7 -->
     <div class="leader-card">
-      <img src="images/team/member7.jpg" alt="Finance & Administration Officer">
+      <img src="images/team/member7.jpg" alt="Finance">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Finance & Administration Officer</div>
-        <p>Ensures financial accountability and transparency in all ADO operations. Manages budgets, financial reporting, and administrative systems to support program delivery.</p>
+        <span class="role">Finance & Administration Officer</span>
+        <div class="bio-text">
+          Ensures financial accountability and transparency in all operations. 
+          <span class="more-text"> Manages budgets, financial reporting, and administrative systems to support program delivery.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 8 -->
     <div class="leader-card">
-      <img src="images/team/member8.jpg" alt="Volunteer Coordinator">
+      <img src="images/team/member8.jpg" alt="Volunteers">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Volunteer Coordinator</div>
-        <p>Recruits, trains, and supports volunteers across Africa and the diaspora. Coordinates volunteer activities and ensures meaningful engagement opportunities.</p>
+        <span class="role">Volunteer Coordinator</span>
+        <div class="bio-text">
+          Recruits and supports volunteers across Africa and the diaspora. 
+          <span class="more-text"> Coordinates volunteer activities and ensures meaningful engagement opportunities for our supporters.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 9 -->
     <div class="leader-card">
-      <img src="images/team/member9.jpg" alt="Monitoring & Evaluation Specialist">
+      <img src="images/team/member9.jpg" alt="Monitoring">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Monitoring & Evaluation Specialist</div>
-        <p>Tracks program outcomes and impact using data-driven approaches. Ensures continuous improvement and accountability in all educational interventions.</p>
+        <span class="role">Monitoring & Evaluation Specialist</span>
+        <div class="bio-text">
+          Tracks program outcomes and impact using data-driven approaches. 
+          <span class="more-text"> Ensures continuous improvement and accountability in all educational interventions.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
 
-    <!-- TEAM MEMBER 10 -->
     <div class="leader-card">
-      <img src="images/team/member10.jpg" alt="Regional Coordinator">
+      <img src="images/team/member10.jpg" alt="Regional">
       <div class="content">
         <h3>[Name]</h3>
-        <div class="role">Regional Coordinator - [Region]</div>
-        <p>Leads ADO's programs in [specific region/country]. Works closely with local partners, schools, and families to ensure effective program implementation and community ownership.</p>
+        <span class="role">Regional Coordinator</span>
+        <div class="bio-text">
+          Leads ADO's programs in specific regional territories. 
+          <span class="more-text"> Works closely with local partners and families to ensure effective program implementation.</span>
+        </div>
+        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
   </div>
 </section>
 
-<section class="cta">
-  <h2>Work With Us</h2>
-  <p>Join us in transforming lives through education across Africa.</p>
-  <a href="get-involved.html">Get Involved Today</a>
-</section>
-
 <footer>
-  <p>
-    © 2025 Africa Dynamite Organisation (ADO). All rights reserved.<br>
-    Community-driven non-profit initiative working toward formal registration.
-  </p>
+  <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved.</p>
 </footer>
-
 <!-- STICKY SUPPORT BUTTON -->
 <div class="sticky-support">
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -778,8 +243,8 @@
     <input type="hidden" name="no_shipping" value="1">
     <button type="submit">❤️ Support ADO</button>
   </form>
-</div
+</div>
+   </script>
 
 </body>
-
 </html>
