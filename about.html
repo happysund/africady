@@ -31,7 +31,6 @@
     .mission-box { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; padding: 40px; border-radius: 12px; }
     .vision-box { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; padding: 40px; border-radius: 12px; }
 
-    /* LEADERSHIP SECTION */
     .leadership { background: #f8f9fa; }
     .founder-message { background: #f1f7f4; border-left: 6px solid #ffc107; padding: 40px; border-radius: 12px; margin: 50px 0; }
     .founder-message h3 { color: #0f5132; margin-bottom: 20px; }
@@ -45,14 +44,17 @@
     .leader-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 5px; }
     .leader-card .role { color: #ffc107; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
     
-    /* READ MORE STYLES */
     .bio-text { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 10px; }
     .more-text { display: none; }
     .read-more-btn { background: none; border: none; color: #0f5132; font-weight: 700; cursor: pointer; padding: 0; font-size: 0.85rem; text-decoration: underline; margin-top: auto; text-align: left; }
     
     .cta { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; text-align: center; padding: 90px 40px; }
     .cta a { display: inline-block; padding: 16px 40px; background: #ffc107; color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 25px; }
+    
     footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 40px; }
+
+    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-support button { background: #ffc107; color: #000; border: none; padding: 16px 26px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
   </style>
 </head>
 
@@ -125,13 +127,13 @@
     </div>
 
     <div class="leader-card">
-      <img src="images/team/member3.jpg" alt="Program Manager">
+      <img src="images/team/hanna.jpg" alt="Hanna Mbuh">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Hanna Mbuh</h3>
         <span class="role">Program Manager</span>
         <div class="bio-text">
-          Experienced in education program implementation and monitoring. 
-          <span class="more-text"> Oversees day-to-day activities and ensures quality delivery of educational support to children.</span>
+          I am a results-driven professional with extensive experience in the implementation and oversight of complex educational initiatives. 
+          <span class="more-text"> As the Program Manager for Africa Dynamite Organisation (ADO), I bridge the gap between strategic vision and community impact. I am responsible for the day-to-day management of ADO’s programs, ensuring that every project is delivered with excellence and remains focused on the core goal of providing African youth with the resources they need to thrive.</span>
         </div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
@@ -233,7 +235,7 @@
 <footer>
   <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved.</p>
 </footer>
-<!-- STICKY SUPPORT BUTTON -->
+
 <div class="sticky-support">
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
@@ -244,7 +246,20 @@
     <button type="submit">❤️ Support ADO</button>
   </form>
 </div>
-   </script>
+
+<script>
+  function toggleBio(btn) {
+    const bioContainer = btn.previousElementSibling;
+    const moreText = bioContainer.querySelector('.more-text');
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+      btn.innerHTML = "Read More";
+    } else {
+      moreText.style.display = "inline";
+      btn.innerHTML = "Read Less";
+    }
+  }
+</script>
 
 </body>
 </html>
