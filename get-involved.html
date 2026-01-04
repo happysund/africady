@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer & Get Involved | Africa Dynamite Organisation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get involved with Africa Dynamite Organisation by volunteering, partnering, or supporting children's education across Africa." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 65px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    nav a.donate-btn {
+      background: #ffc107;
+      color: #000;
+      font-weight: 600;
+      margin-left: 10px;
+      box-shadow: 0 4px 12px rgba(255,193,7,0.3);
+    }
+
+    nav a.donate-btn:hover {
+      background: #ffb300;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255,193,7,0.4);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(15,81,50,0.85), rgba(0,0,0,0.7)),
+                  url("images/ado-team-hero.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 30px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+      font-weight: 300;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 40px;
+    }
+
+    h2 {
+      color: #0f5132;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #ffc107;
+      border-radius: 2px;
+    }
+
+    .intro {
+      max-width: 950px;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* WHY GET INVOLVED */
+    .why-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .why-card {
+      background: #fff;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .why-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .why-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .why-card h3 {
+      color: #0f5132;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .why-card p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* OPTIONS GRID */
+    .options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .option-card {
+      background: #fff;
+      border: none;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .option-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #0f5132, #ffc107);
+    }
+
+    .option-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .option-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .option-card h3 {
+      color: #0f5132;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .option-card p {
+      color: #666;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .option-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .option-card li {
+      color: #666;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .option-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #0f5132;
+      font-weight: bold;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-section {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff;
+    }
+
+    .testimonials-section h2 {
+      color: #fff;
+    }
+
+    .testimonials-section h2::after {
+      background: #ffc107;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 35px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-5px);
+    }
+
+    .quote-icon {
+      font-size: 3rem;
+      color: #ffc107;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .testimonial-card p {
+      color: #fff;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      color: #ffc107;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1rem;
+    }
+
+    .testimonial-role {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    /* CTA SECTION */
+    .cta {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000;
+      text-align: center;
+      padding: 90px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+      animation: pulse 15s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .cta h2 {
+      color: #000;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2::after {
+      background: #0f5132;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cta p {
+      color: #000;
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+      position: relative;
+      z-index: 1;
+      font-weight: 500;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #0f5132;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(15,81,50,0.3);
+    }
+
+    .cta a:hover {
+      background: #1a7a4f;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(15,81,50,0.4);
+    }
+
+    /* FOOTER */
+          footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 30px;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    /* STICKY SUPPORT */
+    .sticky-support {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      z-index: 9999;
+    }
+
+    .sticky-support button {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000;
+      border: none;
+      padding: 16px 26px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255,193,7,0.4);
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .sticky-support button:hover {
+      background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(255,193,7,0.5);
+    }
+
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .sticky-support {
+        right: 15px;
+        bottom: 15px;
+      }
+
+      .sticky-support button {
+        padding: 14px 22px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo-wrapper">
+    <img src="image/logo.png" alt="Africa Dynamite Organisation" class="logo-img" />
+    <span class="logo-text">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+  </div>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="children.html">Children</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="support.html" class="support-btn">Support</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Volunteer & Get Involved</h1>
+    <p>Be part of a movement supporting education across Africa.</p>
+  </div>
+</section>
+
+<section class="why-section">
+  <h2>Why Get Involved?</h2>
+  <p class="intro">
+    Africa Dynamite Organisation (ADO) is driven by people who believe every child
+    deserves access to quality education. By getting involved, you help create
+    real opportunities and lasting change for children and communities across the continent.
+  </p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">💡</span>
+      <h3>Make Real Impact</h3>
+      <p>Your time, skills, and passion directly transform children's lives and create lasting educational opportunities.</p>
+    </div>
+
+    <div class="why-card">
+      <span class="why-icon">🌍</span>
+      <h3>Join a Movement</h3>
+      <p>Connect with like-minded individuals across Africa and the diaspora working toward educational equity.</p>
+    </div>
+
+    <div class="why-card">
+      <span class="why-icon">🎯</span>
+      <h3>Use Your Skills</h3>
+      <p>Whether you're a teacher, designer, or organizer, your unique talents can support our mission in meaningful ways.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Ways You Can Get Involved</h2>
+
+  <div class="options">
+
+    <div class="option-card">
+      <span class="option-icon">🤝</span>
+      <h3>Volunteer Your Time</h3>
+      <p>
+        Support our work remotely or on the ground by assisting with outreach,
+        coordination, research, communications, or community engagement.
+      </p>
+      <ul>
+        <li>Remote or in-person opportunities</li>
+        <li>Flexible time commitments</li>
+        <li>Various skill levels welcome</li>
+        <li>Make a difference from anywhere</li>
+      </ul>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">🌍</span>
+      <h3>Become a Country Coordinator</h3>
+      <p>
+        Help identify children in need, liaise with local schools, and support
+        program monitoring within your community.
+      </p>
+      <ul>
+        <li>Lead programs in your region</li>
+        <li>Build local partnerships</li>
+        <li>Monitor educational outcomes</li>
+        <li>Community-based leadership</li>
+      </ul>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">📣</span>
+      <h3>Advocate & Fundraise</h3>
+      <p>
+        Raise awareness, organize small fundraisers, or share our mission within
+        your network to support children's education.
+      </p>
+      <ul>
+        <li>Social media advocacy</li>
+        <li>Community fundraising events</li>
+        <li>Corporate partnerships</li>
+        <li>Educational awareness campaigns</li>
+      </ul>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">🏫</span>
+      <h3>Partner With Us</h3>
+      <p>
+        Schools, community groups, NGOs, and businesses can collaborate with us
+        to expand education access and resources.
+      </p>
+      <ul>
+        <li>Institutional partnerships</li>
+        <li>Resource sharing programs</li>
+        <li>Collaborative initiatives</li>
+        <li>Corporate social responsibility</li>
+      </ul>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">🎓</span>
+      <h3>Skills-Based Support</h3>
+      <p>
+        Contribute professional skills such as design, IT, translation, teaching,
+        or administration to strengthen our capacity.
+      </p>
+      <ul>
+        <li>Graphic design & branding</li>
+        <li>Web development & IT</li>
+        <li>Translation & language support</li>
+        <li>Program management & admin</li>
+      </ul>
+    </div>
+
+    <div class="option-card">
+      <span class="option-icon">💛</span>
+      <h3>Sponsor a Child's Education</h3>
+      <p>
+        Provide targeted support to help a child stay in school and build a better
+        future through education.
+      </p>
+      <ul>
+        <li>Direct impact on one child</li>
+        <li>Regular progress updates</li>
+        <li>Tax-deductible contributions</li>
+        <li>Transform a life permanently</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2>Voices from Our Community</h2>
+  <p class="intro" style="color: #fff; max-width: 900px; margin: 0 auto 30px;">
+    Hear from volunteers, partners, and supporters who are making a difference with ADO.
+  </p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <span class="quote-icon">"</span>
+      <p>
+        Volunteering with ADO has been one of the most rewarding experiences of my life. 
+        Seeing children return to school and thrive reminds me why education matters so much.
+      </p>
+      <div class="testimonial-author">Sarah K.</div>
+      <div class="testimonial-role">Volunteer Coordinator, Kenya</div>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="quote-icon">"</span>
+      <p>
+        As a country coordinator, I've witnessed firsthand how ADO's community-driven approach 
+        creates sustainable change. We're not just helping children—we're transforming communities.
+      </p>
+      <div class="testimonial-author">David M.</div>
+      <div class="testimonial-role">Country Coordinator, Nigeria</div>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="quote-icon">"</span>
+      <p>
+        Partnering with ADO has allowed our organization to expand our reach and impact. 
+        Their dedication to transparency and results makes them an ideal partner.
+      </p>
+      <div class="testimonial-author">Amina T.</div>
+      <div class="testimonial-role">NGO Partner, Tanzania</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Get Involved?</h2>
+  <p>
+    Whether you want to volunteer, partner, or support a child, we would love
+    to hear from you. Together, we can transform education across Africa.
+  </p>
+  <div class="cta-buttons">
+    <a href="contact.html">Contact Us</a>
+    <a href="children.html">View Children in Need</a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2025 Africa Dynamite Organisation (ADO)<br>
+    Community-driven education support across Africa.
+  </p>
+</footer>
+<!-- STICKY SUPPORT BUTTON -->
+<div class="sticky-support">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="africadynamite25@gmail.com">
+    <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="no_shipping" value="1">
+    <button type="submit">❤️ Support ADO</button>
+  </form>
+</div
+</script>
+
+
+</body>
+</html>

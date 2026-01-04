@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Children We Support | Africa Dynamite Organisation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the children supported by Africa Dynamite Organisation and help transform lives through education." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+    }
+    header img { height: 65px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
+    nav { display: flex; align-items: center; gap: 5px; }
+    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
+    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(15,81,50,0.75)), url("images/ado-team-hero.jpg") center/cover no-repeat;
+      color: #fff; text-align: center; padding: 120px 30px; position: relative;
+    }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); }
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; font-weight: 300; }
+
+    /* SECTIONS */
+    section { max-width: 1300px; margin: auto; padding: 80px 40px; }
+    h2 { color: #0f5132; margin-bottom: 15px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
+    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
+
+    /* GRID & CARDS */
+    .children-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 35px; margin-top: 50px; }
+    .child-card { border-radius: 15px; overflow: hidden; background: #fff; display: flex; flex-direction: column; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; }
+    .child-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+    .child-card img { width: 100%; height: 250px; object-fit: cover; border-bottom: 4px solid #ffc107; }
+    .child-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+    .country { display: inline-block; font-weight: 600; color: #fff; background: linear-gradient(135deg, #0f5132, #1a7a4f); padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; }
+    .success-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #28a745, #20c997); color: #fff; padding: 8px 15px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; }
+    
+    /* URGENT STYLE */
+    .urgent { background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%); border-top: 4px solid #ffc107; border-bottom: 4px solid #ffc107; }
+    .urgent-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #dc3545, #c82333); color: #fff; padding: 8px 15px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; animation: pulse-badge 2s infinite; }
+    @keyframes pulse-badge { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+    /* PROGRESS BAR */
+    .progress-container { margin: 20px 0; }
+    .progress { background: #e9ecef; border-radius: 25px; overflow: hidden; height: 22px; margin-bottom: 10px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+    .progress-bar { height: 100%; background: linear-gradient(90deg, #0f5132, #1a7a4f); display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; color: #fff; font-weight: 600; font-size: 0.85rem; }
+
+    /* BUTTON */
+    .support-btn-card { margin-top: auto; }
+    .support-btn-card button {
+      display: block; width: 100%; padding: 14px; background: linear-gradient(135deg, #ffc107, #ffb300);
+      color: #000; font-weight: 600; border-radius: 8px; border: none; cursor: pointer; font-size: 1.05rem;
+      transition: all 0.3s ease; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 15px rgba(255,193,7,0.3);
+    }
+    .support-btn-card button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,193,7,0.4); }
+
+    /* CTA SECTION */
+    .cta-section { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; text-align: center; padding: 80px 40px; }
+    .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+    .cta-buttons a { padding: 16px 35px; background: #ffc107; color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; }
+
+    footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 40px 30px; }
+
+    /* STICKY BUTTON */
+    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-support button {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600; border-radius: 50px;
+      cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4); font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+      .children-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrapper">
+    <img src="image/logo.png" alt="Africa Dynamite Organisation" class="logo-img" />
+    <span class="logo-text" style="font-weight:700; font-size:0.8rem; color:#fff; display:inline-block; line-height:1.2;">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="children.html">Children</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" class="support-btn">Support Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Children We Support</h1>
+    <p>Education changes lives — one child at a time.</p>
+  </div>
+</section>
+
+<section class="success-section">
+  <h2>Success Stories: Children We Have Helped</h2>
+  <p>These children have returned to school and are thriving thanks to support from people like you.</p>
+
+  <div class="children-grid">
+    <div class="child-card">
+      <img src="images/cases/case1.jpg" alt="Amara from Nigeria">
+      <div class="child-content">
+        <h3>Amara</h3>
+        <span class="country">🇳🇬 Nigeria</span>
+        <span class="success-badge">✓ Back in School</span>
+        <p>Amara was out of school for two years. With support, she received uniforms and school fee assistance. Today, she dreams of becoming a nurse.</p>
+      </div>
+    </div>
+
+    <div class="child-card">
+      <img src="images/cases/case2.jpg" alt="Joseph from Kenya">
+      <div class="child-content">
+        <h3>Joseph</h3>
+        <span class="country">🇰🇪 Kenya</span>
+        <span class="success-badge">✓ Back in School</span>
+        <p>Displacement disrupted Joseph's education. Through our program, he received learning materials and is now top of his class in mathematics.</p>
+      </div>
+    </div>
+
+    <div class="child-card">
+      <img src="images/cases/case3.jpg" alt="Amina from Somalia">
+      <div class="child-content">
+        <h3>Amina</h3>
+        <span class="country">🇸🇴 Somalia</span>
+        <span class="success-badge">✓ Back in School</span>
+        <p>ADO provided Amina with a uniform and supplies. She has resumed school and wants to become a teacher to inspire others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="urgent">
+  <h2>Urgent: Children Needing Education Support Now</h2>
+  <p>Your contribution can change their future. Help these children stay in school.</p>
+
+  <div class="children-grid">
+
+    <div class="child-card">
+      <img src="images/children/grace-malawi.jpg" alt="Grace from Malawi">
+      <div class="child-content">
+        <h3>Grace M.</h3>
+        <span class="country">🇲🇼 Malawi</span>
+        <span class="urgent-badge">🔴 Urgent Support Needed</span>
+        <p>Grace is 12 and needs school fees and materials to return to class and pursue her dream of becoming a doctor.</p>
+        
+        <div class="progress-container">
+          <div class="progress"><div class="progress-bar" style="width:40%">40%</div></div>
+          <div class="amounts"><strong>$120</strong> raised of <strong>$300</strong> needed</div>
+        </div>
+
+        <div class="support-btn-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="africadynamite25@gmail.com">
+            <input type="hidden" name="item_name" value="Support for Grace M - Malawi">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit">💛 Support Grace</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="child-card">
+      <img src="images/children/abdul-niger.jpg" alt="Abdul from Niger">
+      <div class="child-content">
+        <h3>Abdul S.</h3>
+        <span class="country">🇳🇪 Niger</span>
+        <span class="urgent-badge">🔴 Urgent Support Needed</span>
+        <p>Abdul, 10, wants to become a teacher. With your support, he can return to school and continue his education.</p>
+        
+        <div class="progress-container">
+          <div class="progress"><div class="progress-bar" style="width:55%">55%</div></div>
+          <div class="amounts"><strong>$220</strong> raised of <strong>$400</strong> needed</div>
+        </div>
+
+        <div class="support-btn-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="africadynamite25@gmail.com">
+            <input type="hidden" name="item_name" value="Support for Abdul S - Niger">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit">💛 Support Abdul</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="child-card">
+      <img src="images/children/lucy-tanzania.jpg" alt="Lucy from Tanzania">
+      <div class="child-content">
+        <h3>Lucy T.</h3>
+        <span class="country">🇹🇿 Tanzania</span>
+        <span class="urgent-badge">🔴 Urgent Support Needed</span>
+        <p>Lucy, 9, walks 5km daily hoping for school. Support her dream of becoming a veterinarian.</p>
+        
+        <div class="progress-container">
+          <div class="progress"><div class="progress-bar" style="width:25%">25%</div></div>
+          <div class="amounts"><strong>$75</strong> raised of <strong>$300</strong> needed</div>
+        </div>
+
+        <div class="support-btn-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="africadynamite25@gmail.com">
+            <input type="hidden" name="item_name" value="Support for Lucy T - Tanzania">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit">💛 Support Lucy</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 style="color:#fff;">Every Child Deserves a Chance</h2>
+  <p>Your support can transform a child's life. Choose a child or support our general fund.</p>
+  <div class="cta-buttons">
+    <a href="contact.html">Contact Us</a>
+    <a href="get-involved.html">How to Help</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Africa Dynamite Organisation (ADO)<br>Community-driven education support across Africa.</p>
+</footer>
+
+<div class="sticky-support">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="africadynamite25@gmail.com">
+    <input type="hidden" name="item_name" value="General Support for ADO">
+    <input type="hidden" name="currency_code" value="USD">
+    <button type="submit">❤️ Support ADO</button>
+  </form>
+</div>
+
+</body>
+</html>

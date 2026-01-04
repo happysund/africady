@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Africa Dynamite Organisation | Igniting Minds, Transforming Africa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Africa Dynamite Organisation (ADO) is a non-profit initiative working to ensure access to quality education for children across Africa." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      color: #2c3e50;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 65px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    nav a.donate-btn {
+      background: #ffc107;
+      color: #000;
+      font-weight: 600;
+      margin-left: 10px;
+      box-shadow: 0 4px 12px rgba(255,193,7,0.3);
+    }
+
+    nav a.donate-btn:hover {
+      background: #ffb300;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255,193,7,0.4);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(15,81,50,0.7), rgba(0,0,0,0.6)),
+                  url("image/ado-team-hero.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 140px 30px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 850px;
+      margin: 0 auto 35px;
+      line-height: 1.8;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      padding: 16px 35px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons a:first-child {
+      background: #ffc107;
+      color: #000;
+      box-shadow: 0 6px 20px rgba(255,193,7,0.4);
+    }
+
+    .hero-buttons a:first-child:hover {
+      background: #ffb300;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255,193,7,0.5);
+    }
+
+    .hero-buttons a:last-child {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .hero-buttons a:last-child:hover {
+      background: #fff;
+      color: #0f5132;
+      transform: translateY(-3px);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0f5132;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #ffc107;
+      border-radius: 2px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    section p strong {
+      color: #0f5132;
+      font-weight: 600;
+    }
+
+    /* CRISIS SECTION */
+    .crisis-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 5px solid #dc3545;
+      padding: 40px;
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      background: #f8f9fa;
+    }
+
+    /* PROGRAMS */
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .card {
+      border: none;
+      padding: 35px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #0f5132, #ffc107);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #0f5132;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* IMPACT */
+    .impact {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 40px;
+    }
+
+    .impact h2 {
+      color: #fff;
+    }
+
+    .impact h2::after {
+      background: #ffc107;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .impact img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    /* CHILDREN GRID */
+    .children-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .child-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .child-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+    }
+
+    .child-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .child-card > div {
+      padding: 25px;
+    }
+
+    .child-card h3 {
+      color: #0f5132;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .child-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #0f5132;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .child-card a:hover {
+      color: #ffc107;
+      border-bottom: 2px solid #ffc107;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff;
+      text-align: center;
+      padding: 90px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: pulse 15s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .cta h2 {
+      color: #fff;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta h2::after {
+      background: #ffc107;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 38px;
+      background: #ffc107;
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255,193,7,0.3);
+    }
+
+    .cta a:hover {
+      background: #ffb300;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255,193,7,0.4);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    #contact p {
+      font-size: 1.2rem;
+    }
+
+    #contact strong {
+      color: #0f5132;
+      font-size: 1.3rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 30px;
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    /* STICKY SUPPORT */
+    .sticky-support {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      z-index: 9999;
+    }
+
+    .sticky-support button {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000;
+      border: none;
+      padding: 16px 26px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255,193,7,0.4);
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .sticky-support button:hover {
+      background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(255,193,7,0.5);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .sticky-donate {
+        right: 15px;
+        bottom: 15px;
+      }
+
+      .sticky-donate button {
+        padding: 14px 22px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+   <div class="logo-wrapper">
+    <img src="image/logo.png" alt="Africa Dynamite Organisation" class="logo-img" />
+    <span class="logo-text">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="children.html">Children</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="support.html" class="support-btn">Support</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Igniting Minds, Transforming Africa</h1>
+    <p>
+      Africa Dynamite Organisation (ADO) works to ensure every African child has access to
+      quality education, safety, and opportunity.
+    </p>
+    <div class="hero-buttons">
+      <a href="support.html">Support Now</a>
+      <a href="children.html">Sponsor a Child</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The Education Crisis in Africa</h2>
+  <div class="crisis-section">
+    <p>
+      Across Africa, more than <strong>46 million school-aged children</strong> are currently
+      out of school. Barriers like poverty, conflict, gender discrimination, and lack of infrastructure 
+      deny millions the chance to learn and build a better future.
+    </p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Who We Are</h2>
+  <p>
+    Africa Dynamite Organisation (ADO) is a community-driven, non-profit initiative founded
+    in 2025 by a team of committed individuals working across Africa and the African diaspora.
+    We believe that education is the foundation for lasting change, and every child deserves 
+    the opportunity to learn, grow, and thrive regardless of their circumstances.
+  </p>
+</section>
+
+<section id="programs">
+  <h2>What We Do</h2>
+  <div class="programs">
+    <div class="card">
+      <h3>📘 Foundational Learning</h3>
+      <p>Supporting literacy and numeracy programs to build strong educational foundations for children across Africa.</p>
+    </div>
+    <div class="card">
+      <h3>🚨 Education in Emergencies</h3>
+      <p>Providing rapid educational support for children affected by conflict, displacement, and crisis situations.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Learning Recovery</h3>
+      <p>Helping children return to school and catch up after prolonged disruptions to their education.</p>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <h2>Our Impact</h2>
+  <p style="max-width: 800px; margin: 20px auto; font-size: 1.1rem;">
+    Through community partnerships and dedicated support, we're helping children overcome barriers 
+    and access the education they deserve. Every donation creates lasting change.
+  </p>
+  <img src="images/hero-image.jpg" alt="Children learning in classroom" />
+</section>
+
+<section id="children">
+  <h2>Children We Support</h2>
+  <p>Meet some of the children whose lives have been transformed through education support.</p>
+  <div class="children-grid" id="childrenGrid"></div>
+</section>
+
+<section class="cta">
+  <h2>You Can Change a Child's Future Today</h2>
+  <div class="cta-buttons">
+    <a href="support.html">Support Online</a>
+    <a href="children.html">Sponsor a Child</a>
+    <a href="get-involved.html">Volunteer With Us</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Have questions or want to get involved?</p>
+  <p>Email: <strong>africadynamite25@gmail.com</strong></p>
+</section>
+
+<footer>
+  <p>
+    © 2025 Africa Dynamite Organisation (ADO). All rights reserved.<br />
+    A community-driven non-profit initiative working toward formal registration.
+  </p>
+</footer>
+
+<!-- STICKY SUPPORT BUTTON -->
+<div class="sticky-support">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="africadynamite25@gmail.com">
+    <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="no_shipping" value="1">
+    <button type="submit">❤️ Support ADO</button>
+  </form>
+</div
+</script>
+
+</body>
+</html>
