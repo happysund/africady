@@ -44,16 +44,12 @@
       gap: 15px;
     }
 
-    header img {
-      height: 65px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
-
     .logo-text {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.2;
       text-transform: uppercase;
+      color: #fff;
     }
 
     nav {
@@ -149,6 +145,13 @@
       border-radius: 2px;
     }
 
+    section > p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
     /* CONTACT METHODS */
     .contact-methods {
       display: grid;
@@ -210,6 +213,8 @@
       text-decoration: none;
       border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
+      display: block;
+      margin: 5px 0;
     }
 
     .contact-method a:hover {
@@ -240,7 +245,7 @@
       font-weight: 600;
     }
 
-    .contact-info p {
+    .contact-info > p {
       color: #555;
       font-size: 1.05rem;
       line-height: 1.8;
@@ -261,6 +266,7 @@
       font-size: 2rem;
       margin-right: 15px;
       color: #0f5132;
+      flex-shrink: 0;
     }
 
     .info-content strong {
@@ -278,6 +284,10 @@
 
     .info-content a:hover {
       color: #ffc107;
+    }
+
+    .info-content span {
+      color: #666;
     }
 
     .note {
@@ -407,6 +417,16 @@
       margin: 0;
     }
 
+    .faq-item a {
+      color: #0f5132;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .faq-item a:hover {
+      color: #ffc107;
+    }
+
     /* FOOTER */
     footer {
       background: #1a1a1a;
@@ -444,7 +464,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    .sticky-suport button:hover {
+    .sticky-support button:hover {
       background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
       transform: translateY(-3px);
       box-shadow: 0 12px 28px rgba(255,193,7,0.5);
@@ -455,12 +475,19 @@
       header {
         flex-direction: column;
         padding: 15px 20px;
+        gap: 15px;
+      }
+
+      .logo-text {
+        font-size: 0.9rem;
+        text-align: center;
       }
 
       nav {
-        margin-top: 15px;
+        margin-top: 10px;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
       }
 
       nav a {
@@ -468,21 +495,75 @@
         font-size: 0.85rem;
       }
 
+      nav a.support-btn {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+
+      .hero {
+        padding: 80px 20px;
+      }
+
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      section > p {
+        font-size: 1rem;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .contact-method {
+        padding: 30px;
       }
 
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+      }
+
+      .contact-info,
+      .form-container {
+        padding: 30px;
+      }
+
+      .contact-info h3,
+      .form-container h3 {
+        font-size: 1.5rem;
+      }
+
+      .info-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .faq-item {
+        padding: 25px;
+      }
+
+      .faq-item h3 {
+        font-size: 1.2rem;
       }
 
       .sticky-support {
@@ -491,8 +572,45 @@
       }
 
       .sticky-support button {
-        padding: 14px 22px;
+        padding: 14px 20px;
         font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .contact-method h3 {
+        font-size: 1.3rem;
+      }
+
+      .contact-icon {
+        font-size: 3rem;
+      }
+
+      .contact-info,
+      .form-container {
+        padding: 20px;
+      }
+
+      form input,
+      form textarea,
+      form select {
+        padding: 12px;
+      }
+
+      form button {
+        padding: 14px 30px;
       }
     }
   </style>
@@ -524,7 +642,7 @@
 
 <section>
   <h2>Get in Touch</h2>
-  <p style="font-size: 1.1rem; color: #666; max-width: 900px; margin-bottom: 30px;">
+  <p>
     Africa Dynamite Organisation (ADO) welcomes inquiries from donors, partners, volunteers, 
     and community members. We're here to answer your questions and explore how we can work together.
   </p>
@@ -541,9 +659,9 @@
       <span class="contact-icon">💬</span>
       <h3>Social Media</h3>
       <p>Follow us for updates, stories, and ways to get involved in our mission.</p>
-      <a href="#" style="display: block; margin: 5px 0;">Facebook</a>
-      <a href="#" style="display: block; margin: 5px 0;">Twitter</a>
-      <a href="#" style="display: block; margin: 5px 0;">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
     </div>
 
     <div class="contact-method">
@@ -577,7 +695,7 @@
         <span class="info-icon">🌍</span>
         <div class="info-content">
           <strong>Operations</strong>
-          <span style="color: #666;">Community-based activities across Africa and the African diaspora</span>
+          <span>Community-based activities across Africa and the African diaspora</span>
         </div>
       </div>
 
@@ -585,7 +703,7 @@
         <span class="info-icon">⏰</span>
         <div class="info-content">
           <strong>Response Time</strong>
-          <span style="color: #666;">We respond to all inquiries within 24-48 hours</span>
+          <span>We respond to all inquiries within 24-48 hours</span>
         </div>
       </div>
 
@@ -639,13 +757,13 @@
 
   <div class="faq-grid">
     <div class="faq-item">
-      <h3>How can I Give to support a specific child?</h3>
-      <p>Visit our <a href="children.html" style="color: #0f5132; font-weight: 600;">Children page</a> to see profiles of children in need. Each profile has a direct donation button for targeted support.</p>
+      <h3>How can I donate to support a specific child?</h3>
+      <p>Visit our <a href="children.html">Children page</a> to see profiles of children in need. Each profile has a direct donation button for targeted support.</p>
     </div>
 
     <div class="faq-item">
       <h3>Can I volunteer remotely?</h3>
-      <p>Yes! We have many remote volunteer opportunities in communications, research, fundraising, and administration. Visit our <a href="get-involved.html" style="color: #0f5132; font-weight: 600;">Get Involved page</a> to learn more.</p>
+      <p>Yes! We have many remote volunteer opportunities in communications, research, fundraising, and administration. Visit our <a href="get-involved.html">Get Involved page</a> to learn more.</p>
     </div>
 
     <div class="faq-item">
@@ -676,7 +794,7 @@
     Community-driven education support across Africa.
   </p>
 </footer>
-<!-- STICKY SUPPORT BUTTON -->
+
 <div class="sticky-support">
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
@@ -686,11 +804,7 @@
     <input type="hidden" name="no_shipping" value="1">
     <button type="submit">❤️ Support ADO</button>
   </form>
-</div
-</script>
-
-
+</div>
 
 </body>
-
 </html>
