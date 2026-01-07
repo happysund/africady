@@ -38,20 +38,13 @@
       z-index: 1000;
     }
 
-    /* Logo with Text */
     .logo-wrapper {
       display: flex;
       align-items: center;
       gap: 15px;
     }
 
-    .logo-wrapper .logo-img {
-      height: 65px;
-      width: auto;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
-
-    .logo-wrapper .logo-text {
+    .logo-text {
       font-weight: 700;
       font-size: 1.2rem;
       color: #fff;
@@ -128,7 +121,7 @@
     }
 
     .hero p {
-      font-size: 2.3rem;
+      font-size: 1.3rem;
       max-width: 850px;
       margin: 0 auto 35px;
       line-height: 1.8;
@@ -166,7 +159,7 @@
     }
 
     .hero-buttons a:last-child {
-      background: #ffb300;
+      background: transparent;
       color: #fff;
       border: 2px solid #fff;
     }
@@ -207,7 +200,7 @@
     section p {
       font-size: 1.1rem;
       line-height: 1.8;
-      color: #d3ab4c;
+      color: #555;
     }
 
     section p strong {
@@ -215,7 +208,6 @@
       font-weight: 600;
     }
 
-    /* CRISIS SECTION */
     .crisis-section {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       border-left: 5px solid #dc3545;
@@ -224,12 +216,10 @@
       margin: 40px 0;
     }
 
-    /* ABOUT SECTION */
     #about {
       background: #f8f9fa;
     }
 
-    /* PROGRAMS */
     .programs {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -275,7 +265,6 @@
       font-size: 1rem;
     }
 
-    /* IMPACT */
     .impact {
       background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
       color: #fff;
@@ -300,7 +289,6 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     }
 
-    /* CHILDREN GRID */
     .children-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -354,7 +342,6 @@
       border-bottom: 2px solid #ffc107;
     }
 
-    /* CTA */
     .cta {
       background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
       color: #fff;
@@ -421,7 +408,6 @@
       box-shadow: 0 8px 25px rgba(255,193,7,0.4);
     }
 
-    /* CONTACT */
     #contact {
       background: #f8f9fa;
       text-align: center;
@@ -436,7 +422,6 @@
       font-size: 1.3rem;
     }
 
-    /* FOOTER */
     footer {
       background: #1a1a1a;
       color: #ccc;
@@ -450,7 +435,6 @@
       line-height: 1.8;
     }
 
-    /* STICKY SUPPORT */
     .sticky-support {
       position: fixed;
       right: 25px;
@@ -483,20 +467,19 @@
       header {
         flex-direction: column;
         padding: 15px 20px;
+        gap: 15px;
       }
 
-      .logo-wrapper .logo-text {
+      .logo-text {
         font-size: 0.9rem;
-      }
-      
-      .logo-wrapper .logo-img {
-        height: 50px;
+        text-align: center;
       }
 
       nav {
-        margin-top: 15px;
+        margin-top: 10px;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
       }
 
       nav a {
@@ -504,16 +487,65 @@
         font-size: 0.85rem;
       }
 
+      nav a.support-btn {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+
+      .hero {
+        padding: 80px 20px;
+      }
+
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
       }
 
       h2 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .programs,
+      .children-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .crisis-section {
+        padding: 25px;
+      }
+
+      .cta h2 {
         font-size: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta a {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
       }
 
       .sticky-support {
@@ -522,8 +554,30 @@
       }
 
       .sticky-support button {
-        padding: 14px 22px;
+        padding: 14px 20px;
         font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      section p {
+        font-size: 1rem;
+      }
+
+      .card {
+        padding: 25px;
       }
     }
   </style>
@@ -636,7 +690,6 @@
   </p>
 </footer>
 
-<!-- STICKY SUPPORT BUTTON -->
 <div class="sticky-support">
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
@@ -670,6 +723,3 @@
 
 </body>
 </html>
-
-
-
