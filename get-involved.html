@@ -5,613 +5,208 @@
   <title>Volunteer & Get Involved | Africa Dynamite Organisation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Get involved with Africa Dynamite Organisation by volunteering, partnering, or supporting children's education across Africa." />
+  <link rel="icon" type="image/png" href="images/favicon.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: #2c3e50;
-      overflow-x: hidden;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
 
     /* HEADER */
     header {
       background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
     }
-
-    .logo-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #fff;
-      letter-spacing: 0.5px;
-      line-height: 1.3;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    nav a {
-      color: #fff;
-      padding: 10px 18px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: rgba(255,255,255,0.15);
-      transform: translateY(-2px);
-    }
-
-    nav a.support-btn {
-      background: #ffc107;
-      color: #000;
-      font-weight: 600;
-      margin-left: 10px;
-      box-shadow: 0 4px 12px rgba(255,193,7,0.3);
-    }
-
-    nav a.support-btn:hover {
-      background: #ffb300;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255,193,7,0.4);
-    }
+    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
+    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; line-height: 1.3; }
+    nav { display: flex; align-items: center; gap: 5px; }
+    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
+    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
+    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255,193,7,0.4); }
 
     /* HERO */
     .hero {
-      background: linear-gradient(rgba(15,81,50,0.85), rgba(0,0,0,0.7)),
-                  url("Image/ado-team-hero.jpg") center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 120px 30px;
-      position: relative;
+      background: linear-gradient(rgba(15,81,50,0.85), rgba(0,0,0,0.7)), url("Image/ado-team-hero.jpg") center/cover no-repeat;
+      color: #fff; text-align: center; padding: 120px 30px; position: relative;
     }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%); }
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); letter-spacing: -0.5px; }
+    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); font-weight: 300; }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+    /* IMPACT COUNTER */
+    .impact-counter {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      padding: 60px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-      text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
-      letter-spacing: -0.5px;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
-      font-weight: 300;
-    }
+    .counter-item { text-align: center; color: #fff; }
+    .counter-number { font-size: 3.5rem; font-weight: 700; color: #ffc107; display: block; margin-bottom: 10px; }
+    .counter-label { font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
 
     /* SECTIONS */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 40px;
-    }
-
-    h2 {
-      color: #0f5132;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-      font-weight: 700;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background: #ffc107;
-      border-radius: 2px;
-    }
-
-    .intro {
-      max-width: 950px;
-      font-size: 1.15rem;
-      line-height: 1.9;
-      color: #555;
-      margin-bottom: 20px;
-    }
+    section { max-width: 1200px; margin: auto; padding: 80px 40px; }
+    h2 { color: #0f5132; margin-bottom: 30px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
+    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
+    .intro { font-size: 1.15rem; max-width: 950px; line-height: 1.9; color: #555; margin-bottom: 20px; }
 
     /* WHY GET INVOLVED */
-    .why-section {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-      margin-top: 50px;
-    }
-
-    .why-card {
-      background: #fff;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    .why-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    .why-icon {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .why-card h3 {
-      color: #0f5132;
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .why-card p {
-      color: #666;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin: 0;
-    }
+    .why-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
+    .why-card { background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-align: center; }
+    .why-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .why-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
+    .why-card h3 { color: #0f5132; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
+    .why-card p { color: #666; font-size: 1rem; line-height: 1.7; margin: 0; }
 
     /* OPTIONS GRID */
-    .options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 35px;
-      margin-top: 50px;
-    }
-
+    .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; margin-top: 50px; }
     .option-card {
-      background: #fff;
-      border: none;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      background: #fff; border: none; padding: 40px; border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease;
+      position: relative; overflow: hidden;
     }
-
-    .option-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #0f5132, #ffc107);
-    }
-
-    .option-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    }
-
-    .option-icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .option-card h3 {
-      color: #0f5132;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .option-card p {
-      color: #666;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .option-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    .option-card li {
-      color: #666;
-      font-size: 0.95rem;
-      padding: 8px 0;
-      padding-left: 25px;
-      position: relative;
-    }
-
-    .option-card li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #0f5132;
-      font-weight: bold;
-    }
+    .option-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
+    .option-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+    .option-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+    .option-card h3 { color: #0f5132; font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
+    .option-card p { color: #666; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
+    .option-card ul { list-style: none; padding: 0; margin: 20px 0; }
+    .option-card li { color: #666; font-size: 0.95rem; padding: 8px 0; padding-left: 25px; position: relative; }
+    .option-card li::before { content: '✓'; position: absolute; left: 0; color: #0f5132; font-weight: bold; }
 
     /* TESTIMONIALS */
     .testimonials-section {
       background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
       color: #fff;
     }
-
-    .testimonials-section h2 {
-      color: #fff;
-    }
-
-    .testimonials-section h2::after {
-      background: #ffc107;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-      margin-top: 50px;
-    }
-
+    .testimonials-section h2 { color: #fff; }
+    .testimonials-section h2::after { background: #ffc107; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
     .testimonial-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 35px;
-      border-radius: 12px;
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2); padding: 35px; border-radius: 12px;
       transition: all 0.3s ease;
     }
+    .testimonial-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-5px); }
+    .quote-icon { font-size: 3rem; color: #ffc107; margin-bottom: 15px; display: block; }
+    .testimonial-card p { color: #fff; font-size: 1.05rem; line-height: 1.8; font-style: italic; margin-bottom: 20px; }
+    .testimonial-author { color: #ffc107; font-weight: 600; font-style: normal; font-size: 1rem; }
+    .testimonial-role { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 5px; }
 
-    .testimonial-card:hover {
-      background: rgba(255,255,255,0.15);
-      transform: translateY(-5px);
+    /* TRANSPARENCY SECTION */
+    .transparency { background: #fff; }
+    .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+    .transparency-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-left: 4px solid #0f5132; transition: transform 0.3s ease;
     }
+    .transparency-card:hover { transform: translateY(-5px); }
+    .transparency-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .transparency-card h3 i { color: #ffc107; font-size: 1.5rem; }
+    .transparency-card p { color: #666; font-size: 1rem; line-height: 1.7; }
 
-    .quote-icon {
-      font-size: 3rem;
-      color: #ffc107;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .testimonial-card p {
-      color: #fff;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-author {
-      color: #ffc107;
-      font-weight: 600;
-      font-style: normal;
-      font-size: 1rem;
-    }
-
-    .testimonial-role {
-      color: rgba(255,255,255,0.8);
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
-
-    /* CTA SECTION */
+    /* CTA */
     .cta {
       background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000;
-      text-align: center;
-      padding: 90px 40px;
-      position: relative;
-      overflow: hidden;
+      color: #000; text-align: center; padding: 90px 40px; position: relative; overflow: hidden;
     }
-
     .cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
       background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
       animation: pulse 15s infinite;
     }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 0.3; }
-    }
-
-    .cta h2 {
-      color: #000;
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta h2::after {
-      background: #0f5132;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .cta p {
-      color: #000;
-      font-size: 1.2rem;
-      margin-bottom: 35px;
-      position: relative;
-      z-index: 1;
-      font-weight: 500;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.3; } }
+    .cta h2 { color: #000; font-size: 2.8rem; margin-bottom: 20px; position: relative; z-index: 1; }
+    .cta h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
+    .cta p { color: #000; font-size: 1.2rem; margin-bottom: 35px; position: relative; z-index: 1; font-weight: 500; }
+    .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
     .cta a {
-      display: inline-block;
-      padding: 16px 40px;
-      background: #0f5132;
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+      display: inline-block; padding: 16px 40px; background: #0f5132; color: #fff;
+      font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;
       box-shadow: 0 6px 20px rgba(15,81,50,0.3);
     }
+    .cta a:hover { background: #1a7a4f; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(15,81,50,0.4); }
 
-    .cta a:hover {
-      background: #1a7a4f;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(15,81,50,0.4);
-    }
+    /* NEWSLETTER */
+    .newsletter { background: #ffc107; padding: 60px 40px; text-align: center; }
+    .newsletter h2 { color: #000; }
+    .newsletter h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
+    .newsletter p { color: #000; font-size: 1.1rem; margin-bottom: 30px; }
+    .newsletter-form { max-width: 600px; margin: 0 auto; display: flex; gap: 15px; }
+    .newsletter-form input { flex: 1; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+    .newsletter-form button { padding: 16px 35px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+    .newsletter-form button:hover { background: #1a7a4f; transform: translateY(-2px); }
 
     /* FOOTER */
-    footer {
-      background: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 40px 30px;
-      font-size: 0.95rem;
-    }
-
-    footer p {
-      color: #ccc;
-      line-height: 1.8;
-    }
+    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
+    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
+    .footer-section a:hover { color: #ffc107; }
+    .social-links { display: flex; gap: 15px; margin-top: 20px; }
+    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
+    .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
+    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
 
     /* STICKY SUPPORT */
-    .sticky-support {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-      z-index: 9999;
-    }
-
+    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
     .sticky-support button {
       background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000;
-      border: none;
-      padding: 16px 26px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(255,193,7,0.4);
-      transition: all 0.3s ease;
-      font-family: 'Poppins', sans-serif;
+      color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600;
+      border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4);
+      transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
     }
-
-    .sticky-support button:hover {
-      background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(255,193,7,0.5);
-    }
+    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 15px;
-      }
-
-      .logo-text {
-        font-size: 0.9rem;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-      }
-
-      nav a {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-      }
-
-      nav a.support-btn {
-        margin-left: 0;
-        margin-top: 5px;
-      }
-
-      .hero {
-        padding: 80px 20px;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-      }
-
-      section {
-        padding: 60px 20px;
-      }
-
-      .intro {
-        font-size: 1rem;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .why-card {
-        padding: 25px;
-      }
-
-      .options {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .option-card {
-        padding: 30px;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .testimonial-card {
-        padding: 25px;
-      }
-
-      .cta {
-        padding: 60px 20px;
-      }
-
-      .cta h2 {
-        font-size: 2rem;
-      }
-
-      .cta p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .cta a {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-      }
-
-      .sticky-support {
-        right: 15px;
-        bottom: 15px;
-      }
-
-      .sticky-support button {
-        padding: 14px 20px;
-        font-size: 0.95rem;
-      }
+      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
+      .logo-text { font-size: 0.9rem; text-align: center; }
+      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
+      nav a { padding: 8px 12px; font-size: 0.85rem; }
+      nav a.support-btn { margin-left: 0; margin-top: 5px; }
+      .hero { padding: 80px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .impact-counter { grid-template-columns: repeat(2, 1fr); gap: 30px; padding: 40px 20px; }
+      .counter-number { font-size: 2.5rem; }
+      h2 { font-size: 1.8rem; }
+      section { padding: 60px 20px; }
+      .intro { font-size: 1rem; }
+      .why-grid { grid-template-columns: 1fr; gap: 25px; }
+      .why-card { padding: 25px; }
+      .options { grid-template-columns: 1fr; gap: 25px; }
+      .option-card { padding: 30px; }
+      .testimonials-grid { grid-template-columns: 1fr; gap: 25px; }
+      .testimonial-card { padding: 25px; }
+      .transparency-grid { grid-template-columns: 1fr; }
+      .cta { padding: 60px 20px; }
+      .cta h2 { font-size: 2rem; }
+      .cta p { font-size: 1rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta a { width: 100%; max-width: 300px; text-align: center; }
+      .newsletter-form { flex-direction: column; }
+      .footer-content { grid-template-columns: 1fr; gap: 30px; }
+      .sticky-support { right: 15px; bottom: 15px; }
+      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 1.6rem;
-      }
-
-      .hero p {
-        font-size: 0.95rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .why-card h3,
-      .option-card h3 {
-        font-size: 1.2rem;
-      }
-
-      .why-card p,
-      .option-card p,
-      .option-card li {
-        font-size: 0.95rem;
-      }
-
-      .testimonial-card p {
-        font-size: 0.95rem;
-      }
+      .hero h1 { font-size: 1.6rem; }
+      .hero p { font-size: 0.95rem; }
+      h2 { font-size: 1.5rem; }
+      .impact-counter { grid-template-columns: 1fr; }
+      .why-card h3, .option-card h3 { font-size: 1.2rem; }
+      .why-card p, .option-card p, .option-card li { font-size: 0.95rem; }
+      .testimonial-card p { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -639,6 +234,25 @@
     <p>Be part of a movement supporting education across Africa.</p>
   </div>
 </section>
+
+<div class="impact-counter">
+  <div class="counter-item">
+    <span class="counter-number" data-target="75">0</span>
+    <span class="counter-label">Active Volunteers</span>
+  </div>
+  <div class="counter-item">
+    <span class="counter-number" data-target="25">0</span>
+    <span class="counter-label">Partner Organizations</span>
+  </div>
+  <div class="counter-item">
+    <span class="counter-number" data-target="12">0</span>
+    <span class="counter-label">Countries Active</span>
+  </div>
+  <div class="counter-item">
+    <span class="counter-number" data-target="500">0</span>
+    <span class="counter-label">Volunteer Hours/Month</span>
+  </div>
+</div>
 
 <section class="why-section">
   <h2>Why Get Involved?</h2>
@@ -767,6 +381,25 @@
   </div>
 </section>
 
+<section class="transparency">
+  <h2>Volunteer Support & Development</h2>
+  <p class="intro">We value our volunteers and provide comprehensive support.</p>
+  <div class="transparency-grid">
+    <div class="transparency-card">
+      <h3><i class="fas fa-graduation-cap"></i> Training & Orientation</h3>
+      <p>All volunteers receive thorough training and orientation to ensure they're equipped with the knowledge and tools needed for success.</p>
+    </div>
+    <div class="transparency-card">
+      <h3><i class="fas fa-users"></i> Community & Support</h3>
+      <p>Join a supportive community of volunteers. We provide regular check-ins, mentorship, and opportunities to connect with fellow volunteers.</p>
+    </div>
+    <div class="transparency-card">
+      <h3><i class="fas fa-certificate"></i> Recognition & Growth</h3>
+      <p>We recognize volunteer contributions through certificates, references, and opportunities for leadership roles within the organization.</p>
+    </div>
+  </div>
+</section>
+
 <section class="testimonials-section">
   <h2>Voices from Our Community</h2>
   <p class="intro" style="color: #fff; max-width: 900px; margin: 0 auto 30px;">
@@ -818,11 +451,49 @@
   </div>
 </section>
 
+<section class="newsletter">
+  <h2>Stay Connected</h2>
+  <p>Subscribe to receive volunteer opportunities, program updates, and ways to get involved.</p>
+  <form class="newsletter-form" action="mailto:africadynamite25@gmail.com" method="post" enctype="text/plain">
+    <input type="email" name="email" placeholder="Enter your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
 <footer>
-  <p>
-    © 2025 Africa Dynamite Organisation (ADO)<br>
-    Community-driven education support across Africa.
-  </p>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Africa Dynamite Organisation</h3>
+      <p>A community-driven non-profit initiative working to ensure every African child has access to quality education.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="children.html">Children</a>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> africadynamite25@gmail.com</p>
+      <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
+      <p><i class="fas fa-clock"></i> Response time: 24-48 hours</p>
+    </div>
+    <div class="footer-section">
+      <h3>Support Our Mission</h3>
+      <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
+      <a href="support.html" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">Donate Now</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+  </div>
 </footer>
 
 <div class="sticky-support">
@@ -835,6 +506,45 @@
     <button type="submit">❤️ Support ADO</button>
   </form>
 </div>
+
+<script>
+  // Animated Counter
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        element.textContent = target.toLocaleString() + (target >= 100 ? '+' : '');
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current).toLocaleString();
+      }
+    }, 16);
+  }
+
+  // Trigger counters when in viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('.counter-number');
+        counters.forEach(counter => {
+          if (counter.textContent === '0') {
+            animateCounter(counter);
+          }
+        });
+      }
+    });
+  });
+
+  const impactCounter = document.querySelector('.impact-counter');
+  if (impactCounter) {
+    observer.observe(impactCounter);
+  }
+</script>
 
 </body>
 </html>
