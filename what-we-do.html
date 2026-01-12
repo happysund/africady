@@ -471,6 +471,12 @@
     <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
+    <!-- NEW: Return URL after successful payment -->
+  <input type="hidden" name="return" value="https://yourwebsite.com/thank-you.html">
+  
+  <!-- NEW: Cancel URL if user cancels -->
+  <input type="hidden" name="cancel_return" value="https://yourwebsite.com/support.html">
+  
     <button type="submit">❤️ Support ADO</button>
 </form> 
 </div>
@@ -516,6 +522,7 @@
 
 </body>
 </html>
+
 
 
 
