@@ -170,6 +170,23 @@
     .sticky-support button { background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%); color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4); transition: all 0.3s ease; font-family: 'Poppins', sans-serif; }
     .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
 
+    /* STICKY WHATSAPP */
+    .sticky-whatsapp { position: fixed; left: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-whatsapp a { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: #25D366; color: #fff; border-radius: 50%; font-size: 2rem; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s ease; text-decoration: none; }
+    .sticky-whatsapp a:hover { background: #128C7E; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5); }
+
+    /* DONATION PROGRESS BAR */
+    .donation-progress { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); padding: 50px 40px; text-align: center; color: #fff; }
+    .donation-progress h2 { color: #fff; margin-bottom: 15px; }
+    .donation-progress h2::after { background: #ffc107; left: 50%; transform: translateX(-50%); }
+    .progress-info { max-width: 700px; margin: 0 auto 30px; }
+    .progress-stats { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1rem; font-weight: 600; }
+    .progress-bar-container { background: rgba(255,255,255,0.2); height: 40px; border-radius: 20px; overflow: hidden; margin-bottom: 20px; position: relative; }
+    .progress-bar-fill { background: linear-gradient(90deg, #ffc107 0%, #ffb300 100%); height: 100%; border-radius: 20px; transition: width 1s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; font-weight: 700; color: #000; }
+    .progress-message { font-size: 1.1rem; margin-bottom: 25px; }
+    .progress-cta { display: inline-block; padding: 16px 40px; background: #ffc107; color: #000; font-weight: 700; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(255,193,7,0.3); font-size: 1.1rem; }
+    .progress-cta:hover { background: #ffb300; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,193,7,0.4); }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       header { flex-direction: column; padding: 15px 20px; gap: 15px; }
@@ -195,6 +212,8 @@
       .footer-content { grid-template-columns: 1fr; gap: 30px; }
       .sticky-support { right: 15px; bottom: 15px; }
       .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
+      .sticky-whatsapp { left: 15px; bottom: 15px; }
+      .sticky-whatsapp a { width: 55px; height: 55px; font-size: 1.8rem; }
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 1.6rem; }
@@ -253,6 +272,22 @@
     <span class="counter-label">Books Distributed</span>
   </div>
 </div>
+
+<!-- NEW: DONATION PROGRESS BAR -->
+<section class="donation-progress">
+  <h2>Current Campaign: Back to School 2025</h2>
+  <div class="progress-info">
+    <div class="progress-stats">
+      <span>$6,500 Raised</span>
+      <span>Goal: $10,000</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" style="width: 65%;">65%</div>
+    </div>
+    <p class="progress-message">Help us provide school supplies, uniforms, and books for 200 children this school year!</p>
+    <a href="support.html" class="progress-cta">Contribute Now</a>
+  </div>
+</section>
 
 <section>
   <h2>The Education Crisis in Africa</h2>
@@ -484,6 +519,13 @@
   </form>
 </div>
 
+<!-- NEW: STICKY WHATSAPP BUTTON -->
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
 <script>
   // Animated Counter
   function animateCounter(element) {
@@ -541,4 +583,3 @@
 
 </body>
 </html>
-
