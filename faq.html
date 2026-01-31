@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frequently Asked Questions | Africa Dynamite Organisation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get answers to common questions about Africa Dynamite Organisation's programs, donations, and impact." />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; color: #2c3e50; line-height: 1.7; overflow-x: hidden; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+    }
+    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
+    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; line-height: 1.3; }
+    nav { display: flex; align-items: center; gap: 5px; }
+    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
+    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
+    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255,193,7,0.4); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
+      color: #fff; text-align: center; padding: 80px 40px;
+    }
+    .page-header h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 700; }
+    .page-header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+    /* FAQ SECTION */
+    .faq-container { max-width: 900px; margin: 80px auto; padding: 0 40px; }
+    .faq-intro { text-align: center; margin-bottom: 60px; }
+    .faq-intro h2 { color: #0f5132; font-size: 2rem; margin-bottom: 15px; }
+    .faq-intro p { color: #666; font-size: 1.1rem; }
+
+    .faq-categories { display: grid; gap: 50px; }
+    .faq-category h3 { color: #0f5132; font-size: 1.8rem; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 3px solid #ffc107; }
+
+    .faq-item { background: #f8f9fa; padding: 25px 30px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #0f5132; cursor: pointer; transition: all 0.3s ease; }
+    .faq-item:hover { background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transform: translateX(5px); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: #0f5132; font-size: 1.2rem; }
+    .faq-question i { color: #ffc107; font-size: 1.3rem; transition: transform 0.3s ease; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #555; font-size: 1.05rem; line-height: 1.8; padding-top: 0; }
+    .faq-answer.active { max-height: 500px; padding-top: 20px; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+    /* CTA */
+    .faq-cta { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; text-align: center; padding: 70px 40px; margin-top: 80px; }
+    .faq-cta h2 { color: #fff; font-size: 2.3rem; margin-bottom: 20px; }
+    .faq-cta p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .faq-cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .faq-cta a { display: inline-block; padding: 16px 35px; background: #ffc107; color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(255,193,7,0.3); }
+    .faq-cta a:hover { background: #ffb300; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,193,7,0.4); }
+    .faq-cta a.secondary { background: transparent; border: 2px solid #fff; color: #fff; }
+    .faq-cta a.secondary:hover { background: #fff; color: #0f5132; }
+
+    /* FOOTER */
+    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
+    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
+    .footer-section a:hover { color: #ffc107; }
+    .social-links { display: flex; gap: 15px; margin-top: 20px; }
+    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
+    .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
+    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
+
+    /* STICKY BUTTONS */
+    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-support button { background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%); color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4); transition: all 0.3s ease; font-family: 'Poppins', sans-serif; }
+    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
+    .sticky-whatsapp { position: fixed; left: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-whatsapp a { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: #25D366; color: #fff; border-radius: 50%; font-size: 2rem; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s ease; text-decoration: none; }
+    .sticky-whatsapp a:hover { background: #128C7E; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
+      .logo-text { font-size: 0.9rem; text-align: center; }
+      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
+      nav a { padding: 8px 12px; font-size: 0.85rem; }
+      nav a.support-btn { margin-left: 0; margin-top: 5px; }
+      .page-header h1 { font-size: 2rem; }
+      .page-header { padding: 60px 20px; }
+      .faq-container { padding: 0 20px; margin: 60px auto; }
+      .faq-question { font-size: 1.05rem; }
+      .faq-answer { font-size: 1rem; }
+      .faq-cta h2 { font-size: 1.8rem; }
+      .faq-cta-buttons { flex-direction: column; align-items: center; }
+      .faq-cta a { width: 100%; max-width: 300px; text-align: center; }
+      .sticky-support { right: 15px; bottom: 15px; }
+      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
+      .sticky-whatsapp { left: 15px; bottom: 15px; }
+      .sticky-whatsapp a { width: 55px; height: 55px; font-size: 1.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrapper">
+    <span class="logo-text">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="children.html">Children</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <a href="support.html" class="support-btn">Support</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <h1>Frequently Asked Questions</h1>
+  <p>Find answers to common questions about ADO, our programs, and how you can make a difference</p>
+</section>
+
+<div class="faq-container">
+  <div class="faq-intro">
+    <h2>We're Here to Help</h2>
+    <p>Have a question? Browse our FAQ below or contact us directly via email or WhatsApp.</p>
+  </div>
+
+  <div class="faq-categories">
+    <!-- ABOUT ADO -->
+    <div class="faq-category">
+      <h3><i class="fas fa-info-circle"></i> About ADO</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What is Africa Dynamite Organisation?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Africa Dynamite Organisation (ADO) is a community-driven non-profit initiative founded in 2025 by a team of committed individuals working across Africa and the African diaspora. We focus on providing quality education, safety, and opportunities to children across Africa who face barriers like poverty, conflict, and lack of infrastructure.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is ADO a registered charity?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          ADO is currently operating as a community initiative and actively working toward formal registration as a recognized non-profit organization. Throughout this process, we maintain full transparency in our operations and follow ethical practices in all our activities. All donations are tracked and documented, and we provide regular updates to our supporters.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Where does ADO operate?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We currently operate across 12 African countries, partnering with local schools and communities. Our team includes members working both on the ground in Africa and in the diaspora, allowing us to leverage local knowledge and international support to maximize our impact.
+        </div>
+      </div>
+    </div>
+
+    <!-- DONATIONS & FUNDING -->
+    <div class="faq-category">
+      <h3><i class="fas fa-hand-holding-heart"></i> Donations & Funding</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I know my donation is being used effectively?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Transparency is central to our mission. All donations are tracked using secure systems, and we maintain detailed records of every contribution. Donors receive regular updates via email showing exactly how their money is being used, including photos, stories, and impact metrics. You can also request a detailed breakdown of how your specific donation was allocated.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What percentage of my donation goes directly to programs?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          As a community-driven initiative, we operate with minimal overhead. Approximately 85-90% of donations go directly to program activities (educational materials, school supplies, scholarships, teacher training). The remaining 10-15% covers essential operational costs like payment processing, communication tools, and program coordination.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I donate in currencies other than USD?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Currently, our PayPal system accepts USD donations. However, PayPal automatically converts many major currencies. If you prefer to donate in a different currency or via bank transfer, please contact us at africadynamite25@gmail.com or via WhatsApp at +237676092268, and we'll arrange an alternative method.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I set up a monthly recurring donation?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! Monthly donations help us plan long-term and provide consistent support to children. You can set up recurring donations through PayPal, or contact us directly to arrange a monthly giving plan. We offer different tiers: $10/month (School Supplies Champion), $25/month (Education Champion), and $50/month (Future Leader Champion).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is my donation tax-deductible?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          As we are currently working toward formal charitable registration, we cannot yet provide tax receipts for deductions. However, once our registration is complete, we will be able to issue tax receipts to eligible donors. Please check back with us or subscribe to our newsletter for updates on our registration status.
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRAMS & IMPACT -->
+    <div class="faq-category">
+      <h3><i class="fas fa-graduation-cap"></i> Programs & Impact</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What programs does ADO run?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We focus on three main areas: (1) Foundational Learning - supporting literacy and numeracy programs; (2) Education in Emergencies - providing rapid educational support for children in conflict or crisis; (3) Learning Recovery - helping children return to school and catch up after disruptions. We also distribute books, provide school supplies, and offer teacher training.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How do you select children for support?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We work closely with local schools, community leaders, and teachers to identify children who face the greatest barriers to education. Priority is given to children from families experiencing extreme poverty, those affected by conflict or displacement, orphans, and girls in communities where gender discrimination limits educational access.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I sponsor a specific child?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! Our child sponsorship program allows you to support a specific child's education journey. Sponsors receive regular updates, photos, and progress reports about their sponsored child. You can browse available children on our Children page and select a child to sponsor. Sponsorship typically covers school fees, uniforms, supplies, and meals.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How many children has ADO helped so far?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Since our founding in 2025, we've supported over 150 children across 12 countries, partnered with 20 schools, and distributed over 5,000 books. We're growing rapidly and aim to reach 500 children by the end of 2025. You can see our current impact metrics on our homepage.
+        </div>
+      </div>
+    </div>
+
+    <!-- GETTING INVOLVED -->
+    <div class="faq-category">
+      <h3><i class="fas fa-users"></i> Getting Involved</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I volunteer with ADO?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Absolutely! We welcome volunteers with various skills - from teaching and program coordination to marketing, fundraising, and web design. Both on-ground volunteers in Africa and remote volunteers from the diaspora are needed. Visit our Get Involved page or contact us to discuss volunteer opportunities that match your skills and availability.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I visit the schools or children you support?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes, we welcome visits from donors and supporters who want to see our work firsthand! However, we require advance notice to coordinate with local partners and ensure child safety protocols are followed. Please contact us at least 4-6 weeks before your planned visit, and we'll help arrange a meaningful and respectful visit experience.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How can my school/organization partner with ADO?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          We're always looking for partnerships with schools, community organizations, businesses, and faith groups. Partnerships can include fundraising drives, book donations, volunteer programs, or awareness campaigns. Contact us at africadynamite25@gmail.com to discuss partnership opportunities that align with both our missions.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I donate books or supplies instead of money?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! We accept donations of new or gently-used educational materials, books, school supplies, and uniforms. However, due to shipping costs and logistics, we often recommend monetary donations which allow us to purchase materials locally (supporting local economies) and ensure items match specific needs. Contact us to discuss in-kind donations.
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT & COMMUNICATION -->
+    <div class="faq-category">
+      <h3><i class="fas fa-envelope"></i> Contact & Communication</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I contact ADO?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          You can reach us via email at africadynamite25@gmail.com (we respond within 24-48 hours) or WhatsApp at +237676092268 for immediate questions. You can also use the contact form on our Contact page or reach out via our social media channels.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How often will I receive updates about my donation?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          General donors receive quarterly updates via our newsletter, featuring success stories, program updates, and financial summaries. Child sponsors receive more frequent updates (typically monthly or bi-monthly) with specific information about their sponsored child's progress. You can also subscribe to our newsletter for regular updates even if you haven't donated yet.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I update my contact information or donation preferences?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Please email us at africadynamite25@gmail.com with your updated information, or contact us via WhatsApp. We'll update our records promptly and confirm the changes with you.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="faq-cta">
+  <h2>Still Have Questions?</h2>
+  <p>We're here to help! Reach out to us directly and we'll get back to you within 24-48 hours.</p>
+  <div class="faq-cta-buttons">
+    <a href="contact.html">Contact Us</a>
+    <a href="mailto:africadynamite25@gmail.com" class="secondary">Email Us</a>
+    <a href="https://wa.me/237676092268" class="secondary">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Africa Dynamite Organisation</h3>
+      <p>A community-driven non-profit initiative working to ensure every African child has access to quality education.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="about.html">About Us</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="children.html">Children</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> africadynamite25@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +237676092268 (WhatsApp)</p>
+      <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
+    </div>
+    <div class="footer-section">
+      <h3>Support Our Mission</h3>
+      <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
+      <a href="support.html" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">Support Now</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+  </div>
+</footer>
+
+<div class="sticky-support">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="africadynamite25@gmail.com">
+    <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="no_shipping" value="1">
+    <input type="hidden" name="return" value="https://yourwebsite.com/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://yourwebsite.com/support.html">
+    <button type="submit">❤️ Support ADO</button>
+  </form>
+</div>
+
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<script>
+  // FAQ Accordion functionality
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const answer = this.querySelector('.faq-answer');
+      const isActive = this.classList.contains('active');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').classList.remove('active');
+      });
+      
+      // Toggle current FAQ
+      if (!isActive) {
+        this.classList.add('active');
+        answer.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
