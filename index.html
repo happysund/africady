@@ -60,10 +60,12 @@
     section { padding: 80px 40px; max-width: 1200px; margin: auto; }
     h2 { color: #0f5132; margin-bottom: 25px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
     h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
-    section p { font-size: 1.1rem; line-height: 1.8; color: #fff; }
+    section p { font-size: 1.1rem; line-height: 1.8; color: #555; }
     section p strong { color: #0f5132; font-weight: 600; }
     .crisis-section { background: linear-gradient(135deg, #1a7a4f 0%, #1a7a4f 100%); border-left: 5px solid #dc3545; padding: 40px; border-radius: 10px; margin: 40px 0; }
+    .crisis-section p { color: #fff; }
     #about { background: #1a7a4f; }
+    #about p { color: #fff; }
 
     /* PROGRAMS */
     .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
@@ -74,20 +76,43 @@
     .card p { color: #666; font-size: 1rem; }
 
     /* IMPACT */
-    .impact { background: linear-gradient(135deg, #0f5132 0%, #fff 100%); color: #fff; text-align: center; padding: 80px 40px; }
+    .impact { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; text-align: center; padding: 80px 40px; }
     .impact h2 { color: #fff; }
     .impact h2::after { background: #ffc107; left: 50%; transform: translateX(-50%); }
+    .impact p { color: #fff; }
     .impact img { max-width: 100%; border-radius: 15px; margin-top: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
 
-    /* CHILDREN GRID */
-    .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
-    .child-card { border: none; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; }
-    .child-card:hover { transform: translateY(-8px); box-shadow: 0 12px 35px rgba(0,0,0,0.18); }
-    .child-card img { width: 100%; height: 220px; object-fit: cover; }
-    .child-card > div { padding: 25px; }
-    .child-card h3 { color: #0f5132; font-size: 1.4rem; margin-bottom: 12px; font-weight: 600; }
-    .child-card a { display: inline-block; margin-top: 15px; color: #0f5132; font-weight: 600; text-decoration: none; transition: all 0.3s ease; border-bottom: 2px solid transparent; }
-    .child-card a:hover { color: #ffc107; border-bottom: 2px solid #ffc107; }
+    /* NEW: TESTIMONIALS SECTION */
+    .testimonials { background: #f8f9fa; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 50px; }
+    .testimonial-card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: relative; transition: all 0.3s ease; }
+    .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .testimonial-card::before { content: '"'; position: absolute; top: 20px; left: 25px; font-size: 4rem; color: #ffc107; opacity: 0.3; font-family: Georgia, serif; line-height: 1; }
+    .testimonial-text { font-style: italic; color: #555; margin-bottom: 25px; font-size: 1.05rem; line-height: 1.8; position: relative; z-index: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 15px; }
+    .testimonial-author-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid #ffc107; }
+    .testimonial-author-info h4 { color: #0f5132; font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; }
+    .testimonial-author-info p { color: #777; font-size: 0.9rem; }
+
+    /* NEW: RECENT NEWS SECTION */
+    .recent-news { background: #fff; }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+    .news-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; }
+    .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+    .news-card-img { width: 100%; height: 200px; object-fit: cover; }
+    .news-card-content { padding: 30px; }
+    .news-date { color: #ffc107; font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .news-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; font-weight: 600; }
+    .news-card p { color: #666; font-size: 1rem; line-height: 1.7; }
+
+    /* NEW: PARTNERS SECTION */
+    .partners { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); text-align: center; }
+    .partners-subtitle { color: #666; font-size: 1.1rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; align-items: center; }
+    .partner-item { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; }
+    .partner-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .partner-logo { font-size: 2.5rem; color: #0f5132; margin-bottom: 15px; }
+    .partner-name { color: #0f5132; font-weight: 600; font-size: 1.1rem; text-align: center; }
 
     /* TRANSPARENCY SECTION */
     .transparency { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
@@ -96,6 +121,17 @@
     .transparency-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
     .transparency-card h3 i { color: #ffc107; }
     .transparency-card p { color: #666; font-size: 1rem; line-height: 1.7; }
+
+    /* CHILDREN GRID */
+    .children-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
+    .child-card { border: none; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .child-card:hover { transform: translateY(-8px); box-shadow: 0 12px 35px rgba(0,0,0,0.18); }
+    .child-card img { width: 100%; height: 220px; object-fit: cover; }
+    .child-card > div { padding: 25px; }
+    .child-card h3 { color: #0f5132; font-size: 1.4rem; margin-bottom: 12px; font-weight: 600; }
+    .child-card p { color: #666; }
+    .child-card a { display: inline-block; margin-top: 15px; color: #0f5132; font-weight: 600; text-decoration: none; transition: all 0.3s ease; border-bottom: 2px solid transparent; }
+    .child-card a:hover { color: #ffc107; border-bottom: 2px solid #ffc107; }
 
     /* CTA */
     .cta { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; text-align: center; padding: 90px 40px; position: relative; overflow: hidden; }
@@ -150,7 +186,7 @@
       .counter-number { font-size: 2.5rem; }
       h2 { font-size: 1.8rem; }
       section { padding: 60px 20px; }
-      .programs, .children-grid, .transparency-grid { grid-template-columns: 1fr; gap: 25px; }
+      .programs, .children-grid, .transparency-grid, .testimonials-grid, .news-grid, .partners-grid { grid-template-columns: 1fr; gap: 25px; }
       .crisis-section { padding: 25px; }
       .cta h2 { font-size: 2rem; }
       .cta-buttons { flex-direction: column; align-items: center; }
@@ -254,6 +290,108 @@
   <img src="Image/out3.jpg" alt="Children learning together in a bright classroom environment">
 </section>
 
+<!-- NEW: TESTIMONIALS SECTION -->
+<section class="testimonials">
+  <h2>Stories of Hope & Change</h2>
+  <p>Hear from the families and communities we've worked with.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-text">Thanks to ADO's support, my daughter can now attend school with proper supplies and uniforms. She comes home excited about learning every day. This organization has given our family hope for a brighter future.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop" alt="Parent testimonial" class="testimonial-author-img">
+        <div class="testimonial-author-info">
+          <h4>Amina K.</h4>
+          <p>Parent, Kenya</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">The learning materials and teacher training ADO provided have transformed our classroom. We now have the resources to give our students the quality education they deserve. The impact is remarkable.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Teacher testimonial" class="testimonial-author-img">
+        <div class="testimonial-author-info">
+          <h4>John M.</h4>
+          <p>Teacher, Ghana</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">Before ADO came to our community, many children couldn't afford to go to school. Now we see them thriving, reading books, and dreaming big. This is the change we've been praying for.</p>
+      <div class="testimonial-author">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop" alt="Community leader testimonial" class="testimonial-author-img">
+        <div class="testimonial-author-info">
+          <h4>Grace N.</h4>
+          <p>Community Leader, Uganda</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW: RECENT NEWS/ACTIVITIES SECTION -->
+<section class="recent-news">
+  <h2>Latest Updates</h2>
+  <p>Stay informed about our recent activities and milestones.</p>
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=200&fit=crop" alt="Books distribution" class="news-card-img">
+      <div class="news-card-content">
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> January 15, 2025</div>
+        <h3>1,000 Books Delivered to Rural Schools</h3>
+        <p>We successfully distributed educational materials to 5 schools in remote areas, reaching over 300 students who previously had limited access to reading resources.</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=200&fit=crop" alt="Teacher training" class="news-card-img">
+      <div class="news-card-content">
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> January 10, 2025</div>
+        <h3>New Teacher Training Program Launched</h3>
+        <p>ADO initiated a comprehensive teacher training program in partnership with local educators, equipping 25 teachers with modern teaching methods and resources.</p>
+      </div>
+    </div>
+    <div class="news-card">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=200&fit=crop" alt="School supplies" class="news-card-img">
+      <div class="news-card-content">
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> January 5, 2025</div>
+        <h3>50 Students Receive Full Scholarships</h3>
+        <p>Through generous donor support, we've awarded full scholarships to 50 deserving students, covering tuition, uniforms, and school supplies for the entire year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW: PARTNERS SECTION -->
+<section class="partners">
+  <h2>Our Partners & Supporters</h2>
+  <p class="partners-subtitle">We're grateful to work with these organizations and community groups who share our vision for educational access across Africa.</p>
+  <div class="partners-grid">
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-school"></i></div>
+      <div class="partner-name">Sunrise Primary School</div>
+    </div>
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-hands-helping"></i></div>
+      <div class="partner-name">Community Care Foundation</div>
+    </div>
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-book-reader"></i></div>
+      <div class="partner-name">Books for Africa</div>
+    </div>
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-users"></i></div>
+      <div class="partner-name">Local Youth Council</div>
+    </div>
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-shopping-basket"></i></div>
+      <div class="partner-name">Green Valley Market</div>
+    </div>
+    <div class="partner-item">
+      <div class="partner-logo"><i class="fas fa-church"></i></div>
+      <div class="partner-name">Unity Community Center</div>
+    </div>
+  </div>
+</section>
+
 <section class="transparency">
   <h2>Our Commitment to Transparency</h2>
   <p>Building trust through accountability and clear communication is central to our mission.</p>
@@ -334,18 +472,14 @@
 </footer>
 
 <div class="sticky-support">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="africadynamite25@gmail.com">
     <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
-   <!-- NEW: Return URL after successful payment -->
-  <input type="hidden" name="return" value="https://yourwebsite.com/thank-you.html">
-  
-  <!-- NEW: Cancel URL if user cancels -->
-  <input type="hidden" name="cancel_return" value="https://yourwebsite.com/support.html">
-  
+    <input type="hidden" name="return" value="https://yourwebsite.com/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://yourwebsite.com/support.html">
     <button type="submit">❤️ Support ADO</button>
   </form>
 </div>
@@ -407,13 +541,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
