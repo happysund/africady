@@ -14,7 +14,7 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; color: #2c3e50; line-height: 1.7; background: #7a6f1a9c; overflow-x: hidden; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; color: #2c3e50; line-height: 1.7; background: #f8f9fa; overflow-x: hidden; }
 
     header { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
     
@@ -34,7 +34,7 @@
     h2 { color: #0f5132; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; position: relative; display: inline-block; }
     h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
 
-    section p { font-size: 1.1rem; line-height: 1.8; color: #fff; }
+    section p { font-size: 1.1rem; line-height: 1.8; color: #555; }
 
     .highlight { background: linear-gradient(135deg, #1a7a4f 0%, #1a7a4f 100%); border-left: 6px solid #0f5132; padding: 30px; border-radius: 10px; margin: 35px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
     .highlight strong { color: #0f5132; font-size: 1.15rem; display: block; margin-bottom: 10px; }
@@ -43,7 +43,10 @@
     .mission-box { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; padding: 40px; border-radius: 12px; }
     .vision-box { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; padding: 40px; border-radius: 12px; }
     .mission-box h3, .vision-box h3 { font-size: 1.8rem; margin-bottom: 20px; }
-    .mission-box p, .vision-box p { font-size: 1.05rem; line-height: 1.8; }
+    .mission-box p { font-size: 1.05rem; line-height: 1.8; color: #fff !important; }
+    .vision-box p { font-size: 1.05rem; line-height: 1.8; color: #000 !important; }
+    .mission-box h3 { color: #fff !important; }
+    .vision-box h3 { color: #000 !important; }
 
     /* IMPACT METRICS */
     .impact-metrics { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); padding: 60px 40px; }
@@ -155,14 +158,19 @@
       .leader-card h3 { font-size: 1.2rem; }
       .metrics-grid { grid-template-columns: 1fr; }
     }
-  </style>
+  
+    /* HAMBURGER MENU */
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
+    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px!important}}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="logo-wrapper">
-    <span class="logo-text">AFRICA DYNAMITE<br>ORGANISATION (ADO)</span>
+    <img src="Image/logo.png" alt="ADO Logo" style="height:46px;width:46px;object-fit:contain;border-radius:6px;background:#fff;padding:3px"><div class="logo-text">AFRICA DYNAMITE ORGANISATION<span style="display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase">Igniting Minds, Transforming Africa</span></div>
   </div>
   <nav>
     <a href="index.html">Home</a>
@@ -261,7 +269,7 @@
 
   <div class="leaders-grid">
     <div class="leader-card" style="border: 2px solid #ffc107;">
-      <img src="images/team/edwin.jpg" alt="Portrait of Edwin Founwih, Founder and Executive Director of Africa Dynamite Organisation">
+      <img src="Image/imagehero.png" alt="Portrait of Edwin Founwih, Founder and Executive Director of Africa Dynamite Organisation">
       <div class="content">
         <h3>Edwin Founwih</h3>
         <span class="role">Founder & Executive Director</span>
@@ -274,9 +282,9 @@
     </div>
 
     <div class="leader-card">
-      <img src="images/team/cofounder.jpg" alt="Portrait of ADO Co-Founder and Operations Director">
+      <img src="Image/larinete.jpg" alt="Portrait of ADO Co-Founder and Operations Director">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Co-Founder & Operations Director</span>
         <div class="bio-text">
           Strategic leader specializing in nonprofit operations and program development. 
@@ -302,7 +310,7 @@
     <div class="leader-card">
       <img src="images/team/member4.jpg" alt="Portrait of ADO Community Outreach Coordinator">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Community Outreach Coordinator</span>
         <div class="bio-text">
           Builds and maintains relationships with local communities and schools. 
@@ -315,7 +323,7 @@
     <div class="leader-card">
       <img src="images/team/member5.jpg" alt="Portrait of ADO Partnerships and Fundraising Lead">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Partnerships & Fundraising Lead</span>
         <div class="bio-text">
           Develops strategic partnerships with donors and corporate sponsors. 
@@ -341,7 +349,7 @@
     <div class="leader-card">
       <img src="images/team/member7.jpg" alt="Portrait of ADO Finance and Administration Officer">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Finance & Administration Officer</span>
         <div class="bio-text">
           Ensures financial accountability and transparency in all operations. 
@@ -354,7 +362,7 @@
     <div class="leader-card">
       <img src="images/team/member8.jpg" alt="Portrait of ADO Volunteer Coordinator">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Volunteer Coordinator</span>
         <div class="bio-text">
           Recruits and supports volunteers across Africa and the diaspora. 
@@ -367,7 +375,7 @@
     <div class="leader-card">
       <img src="images/team/member9.jpg" alt="Portrait of ADO Monitoring and Evaluation Specialist">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Monitoring & Evaluation Specialist</span>
         <div class="bio-text">
           Tracks program outcomes and impact using data-driven approaches. 
@@ -380,7 +388,7 @@
     <div class="leader-card">
       <img src="images/team/member10.jpg" alt="Portrait of ADO Regional Coordinator">
       <div class="content">
-        <h3>[Name]</h3>
+        <h3>Larinete M.</h3>
         <span class="role">Regional Coordinator</span>
         <div class="bio-text">
           Leads ADO's programs in specific regional territories. 
@@ -407,10 +415,10 @@
       <h3>Africa Dynamite Organisation</h3>
       <p>A community-driven non-profit initiative working to ensure every African child has access to quality education.</p>
       <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com/africadynamiteorganisation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/africadynamite" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/africadynamiteorganisation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/africa-dynamite-organisation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
     <div class="footer-section">
@@ -445,10 +453,10 @@
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
      <!-- NEW: Return URL after successful payment -->
-  <input type="hidden" name="return" value="https://yourwebsite.com/thank-you.html">
+  <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
   
   <!-- NEW: Cancel URL if user cancels -->
-  <input type="hidden" name="cancel_return" value="https://yourwebsite.com/support.html">
+  <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
   
     <button type="submit">❤️ Support ADO</button>
   </form>
@@ -509,6 +517,7 @@
 
 </body>
 </html>
+
 
 
 
