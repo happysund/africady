@@ -267,7 +267,7 @@
       <span class="stat-label">Million Children Out of School</span>
     </div>
     <div class="stat-item">
-      <span class="stat-number" data-target="150">0</span>
+      <span class="stat-number" data-target="43">0</span>
       <span class="stat-label">Children Supported</span>
     </div>
     <div class="stat-item">
@@ -275,7 +275,7 @@
       <span class="stat-label">Partner Communities</span>
     </div>
     <div class="stat-item">
-      <span class="stat-number" data-target="5+">0</span>
+      <span class="stat-number" data-target="4">0</span>
       <span class="stat-label">Countries Reached</span>
     </div>
   </div>
@@ -498,7 +498,7 @@
     const timer = setInterval(() => {
       current += step;
       if (current >= target) {
-        element.textContent = target.toLocaleString() + (target >= 1000 ? '+' : '');
+        element.textContent = target.toLocaleString() + (target >= 4 ? '+' : '');
         clearInterval(timer);
       } else {
         element.textContent = Math.floor(current).toLocaleString();
@@ -528,10 +528,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
