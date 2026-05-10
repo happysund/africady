@@ -219,7 +219,7 @@
 
 <div class="impact-counter">
   <div class="counter-item">
-    <span class="counter-number" data-target="43+">0</span>
+    <span class="counter-number" data-target="43">0</span>
     <span class="counter-label">Children Supported</span>
   </div>
   <div class="counter-item">
@@ -227,8 +227,8 @@
     <span class="counter-label">Back in School</span>
   </div>
   <div class="counter-item">
-    <span class="counter-number" data-target="4+">0</span>
-    <span class="counter-label">Countries</span>
+    <span class="counter-number" data-target="4">0</span>
+    <span class="counter-label">Countries Reach</span>
   </div>
   <div class="counter-item">
     <span class="counter-number" data-target="95">0</span>
@@ -472,7 +472,12 @@
     const timer = setInterval(() => {
       current += step;
       if (current >= target) {
-        element.textContent = target.toLocaleString() + (target >= 100 && target < 1000 ? '%' : target >= 1000 ? '+' : '');
+        // Logic to add '+' for 43 and 4, and '%' for success rate
+        let suffix = '';
+        if (target === 43 || target === 4) suffix = '+';
+        else if (target === 95) suffix = '%';
+        
+        element.textContent = target.toLocaleString() + suffix;
         clearInterval(timer);
       } else {
         element.textContent = Math.floor(current).toLocaleString();
@@ -502,9 +507,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
