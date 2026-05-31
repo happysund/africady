@@ -5,40 +5,35 @@
   <title>About Us | Africa Dynamite Organisation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Learn about Africa Dynamite Organisation (ADO), our mission, vision, leadership team, and commitment to education across Africa." />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  
+  <link rel="icon" type="image/png" href="Image/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', Arial, Helvetica, sans-serif; color: #2c3e50; line-height: 1.7; background: #f8f9fa; overflow-x: hidden; }
-
-    header { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-    
-    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
-    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; line-height: 1.3; }
-    
-    nav { display: flex; align-items: center; gap: 5px; }
-    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: 0.3s; }
-    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
-    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; }
-
+    header { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-wrapper img { height: 50px; width: 50px; object-fit: contain; border-radius: 6px; background: #fff; padding: 3px; }
+    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 0.72rem; font-weight: 400; color: #ffc107; letter-spacing: .8px; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { color: #fff; padding: 9px 13px; text-decoration: none; font-weight: 500; font-size: .88rem; border-radius: 6px; transition: all .3s; }
+    nav a:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 700; margin-left: 8px; box-shadow: 0 4px 12px rgba(255,193,7,.3); }
+    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; transition: all .3s; }
     .page-hero { background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.1)), url("Image/out.jpg") center/cover no-repeat; color: #fff; padding: 120px 30px; text-align: center; }
     .page-hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); }
     .page-hero p { font-size: 1.25rem; font-weight: 300; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); }
-
     section { max-width: 1200px; margin: auto; padding: 80px 40px; }
     h2 { color: #0f5132; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; position: relative; display: inline-block; }
     h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
-
     section p { font-size: 1.1rem; line-height: 1.8; color: #555; }
-
     .highlight { background: linear-gradient(135deg, #1a7a4f 0%, #1a7a4f 100%); border-left: 6px solid #0f5132; padding: 30px; border-radius: 10px; margin: 35px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
     .highlight strong { color: #0f5132; font-size: 1.15rem; display: block; margin-bottom: 10px; }
-
     .mission-vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; margin-top: 50px; }
     .mission-box { background: linear-gradient(135deg, #0f5132, #1a7a4f); color: #fff; padding: 40px; border-radius: 12px; }
     .vision-box { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; padding: 40px; border-radius: 12px; }
@@ -47,21 +42,16 @@
     .vision-box p { font-size: 1.05rem; line-height: 1.8; color: #000 !important; }
     .mission-box h3 { color: #fff !important; }
     .vision-box h3 { color: #000 !important; }
-
-    /* IMPACT METRICS */
     .impact-metrics { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); padding: 60px 40px; }
     .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
     .metric-item { text-align: center; color: #fff; }
     .metric-number { font-size: 3.5rem; font-weight: 700; color: #ffc107; display: block; margin-bottom: 10px; }
     .metric-label { font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-    /* LEADERSHIP SECTION */
     .leadership { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
     .founder-message { background: #f1f7f4; border-left: 6px solid #ffc107; padding: 40px; border-radius: 12px; margin: 50px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
     .founder-message h3 { color: #0f5132; margin-bottom: 20px; font-size: 1.6rem; }
     .founder-message p { font-style: italic; margin-bottom: 15px; color: #555; line-height: 1.8; }
     .signature { font-weight: 600; color: #0f5132; margin-top: 25px; font-style: normal; }
-
     .leaders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
     .leader-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: 0.3s; display: flex; flex-direction: column; }
     .leader-card:hover { transform: translateY(-8px); box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
@@ -69,112 +59,57 @@
     .leader-card .content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
     .leader-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 5px; }
     .leader-card .role { color: #ffc107; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
-    
     .bio-text { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 10px; }
-    .more-text { 
-      display: none; 
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.4s ease, max-height 0.4s ease;
-    }
-    .more-text.show {
-      display: inline;
-      opacity: 1;
-      max-height: 500px;
-    }
+    .more-text { display: none; opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.4s ease, max-height 0.4s ease; }
+    .more-text.show { display: inline; opacity: 1; max-height: 500px; }
     .read-more-btn { background: none; border: none; color: #0f5132; font-weight: 700; cursor: pointer; padding: 0; font-size: 0.85rem; text-decoration: underline; margin-top: auto; text-align: left; font-family: 'Poppins', sans-serif; transition: color 0.3s ease; }
     .read-more-btn:hover { color: #ffc107; }
-
-    /* TRANSPARENCY SECTION */
     .transparency { background: #fff; }
     .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-    .transparency-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid #0f5132; transition: transform 0.3s ease; }
+    .transparency-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 32px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border-left: 4px solid #0f5132; transition: transform 0.3s ease; }
     .transparency-card:hover { transform: translateY(-5px); }
-    .transparency-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-    .transparency-card h3 i { color: #ffc107; font-size: 1.5rem; }
+    .transparency-card h3 { color: #0f5132; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .transparency-card h3 i { color: #ffc107; }
     .transparency-card p { color: #666; font-size: 1rem; line-height: 1.7; }
-
-    /* NEWSLETTER */
     .newsletter { background: #ffc107; padding: 60px 40px; text-align: center; }
-    .newsletter h2 { color: #000; }
+    .newsletter h2 { color: #000; display: inline-block; }
     .newsletter h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
-    .newsletter p { color: #000; font-size: 1.1rem; margin-bottom: 30px; }
-    .newsletter-form { max-width: 600px; margin: 0 auto; display: flex; gap: 15px; }
-    .newsletter-form input { flex: 1; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .newsletter-form button { padding: 16px 35px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+    .newsletter > p { color: #000; font-size: 1.05rem; margin: 15px auto 28px; max-width: 580px; }
+    .newsletter-form { max-width: 540px; margin: 0 auto; display: flex; gap: 12px; }
+    .newsletter-form input { flex: 1; padding: 14px 18px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+    .newsletter-form button { padding: 14px 28px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all .3s; white-space: nowrap; }
     .newsletter-form button:hover { background: #1a7a4f; transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
-    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
-    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
-    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
-    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
+    .newsletter-note { color: rgba(0,0,0,.6); font-size: .82rem; margin-top: 12px; }
+    footer { background: #111; color: #ccc; padding: 60px 40px 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 38px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-section h3 { color: #ffc107; margin-bottom: 16px; font-size: 1.1rem; }
+    .footer-section p { font-size: .88rem; line-height: 1.8; margin-bottom: 10px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 7px; font-size: .88rem; transition: color .3s; }
     .footer-section a:hover { color: #ffc107; }
-    .social-links { display: flex; gap: 15px; margin-top: 20px; }
-    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
+    .social-links { display: flex; gap: 10px; margin-top: 16px; }
+    .social-links a { width: 36px; height: 36px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all .3s; font-size: .85rem; }
     .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
-    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
-
+    .footer-bottom { text-align: center; padding-top: 26px; border-top: 1px solid #222; color: #777; font-size: .82rem; }
+    .footer-bottom a { color: #aaa; text-decoration: none; }
+    .footer-bottom a:hover { color: #ffc107; }
     .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
-    .sticky-support button { background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%); color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4); transition: all 0.3s ease; font-family: 'Poppins', sans-serif; }
-    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
-      .logo-text { font-size: 0.9rem; text-align: center; }
-      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
-      nav a { padding: 8px 12px; font-size: 0.85rem; }
-      nav a.support-btn { margin-left: 0; margin-top: 5px; }
-      .page-hero { padding: 80px 20px; }
-      .page-hero h1 { font-size: 2rem; }
-      .page-hero p { font-size: 1rem; }
-      section { padding: 60px 20px; }
-      h2 { font-size: 1.8rem; }
-      section p { font-size: 1rem; }
-      .highlight { padding: 20px; }
-      .mission-vision-grid { grid-template-columns: 1fr; gap: 25px; }
-      .mission-box, .vision-box { padding: 30px; }
-      .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-      .metric-number { font-size: 2.5rem; }
-      .founder-message { padding: 25px; }
-      .founder-message h3 { font-size: 1.4rem; }
-      .leaders-grid { grid-template-columns: 1fr; gap: 25px; }
-      .leader-card img { height: 250px; }
-      .transparency-grid { grid-template-columns: 1fr; }
-      .newsletter-form { flex-direction: column; }
-      .footer-content { grid-template-columns: 1fr; gap: 30px; }
-      .sticky-support { right: 15px; bottom: 15px; }
-      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
-    }
-
-    @media (max-width: 480px) {
-      .page-hero h1 { font-size: 1.6rem; }
-      .page-hero p { font-size: 0.95rem; }
-      h2 { font-size: 1.5rem; }
-      .leader-card .content { padding: 20px; }
-      .leader-card h3 { font-size: 1.2rem; }
-      .metrics-grid { grid-template-columns: 1fr; }
-    }
-  
-    /* HAMBURGER MENU */
-    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
-    .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
-    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px!important}}
+    .sticky-support button { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; border: none; padding: 14px 22px; font-size: .95rem; font-weight: 700; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,.4); transition: all .3s; font-family: 'Poppins', sans-serif; }
+    .sticky-support button:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,.5); }
+    .sticky-whatsapp { position: fixed; left: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-whatsapp a { display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: #25D366; color: #fff; border-radius: 50%; font-size: 1.7rem; box-shadow: 0 8px 20px rgba(37,211,102,.4); transition: all .3s; text-decoration: none; }
+    .sticky-whatsapp a:hover { background: #128C7E; transform: translateY(-3px); }
+    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px}}
+    @media(max-width:768px){.page-hero{padding:80px 20px}.page-hero h1{font-size:2rem}.page-hero p{font-size:1rem}section{padding:60px 20px}h2{font-size:1.8rem}.mission-vision-grid{grid-template-columns:1fr}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric-number{font-size:2.5rem}.leaders-grid{grid-template-columns:1fr}.transparency-grid{grid-template-columns:1fr}.newsletter-form{flex-direction:column}.footer-content{grid-template-columns:1fr;gap:26px}}
+    @media(max-width:480px){.page-hero h1{font-size:1.7rem}h2{font-size:1.5rem}.metrics-grid{grid-template-columns:1fr}}
   </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo-wrapper">
-    <img src="Image/logo.png" alt="ADO Logo" style="height:46px;width:46px;object-fit:contain;border-radius:6px;background:#fff;padding:3px"><div class="logo-text">AFRICA DYNAMITE ORGANISATION<span style="display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase">Igniting Minds, Transforming Africa</span></div>
-  </div>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="index.html" class="logo-wrapper">
+    <img src="Image/logo.png" alt="ADO Logo">
+    <div class="logo-text">AFRICA DYNAMITE ORGANISATION<span>Igniting Minds, Transforming Africa</span></div>
+  </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -183,7 +118,7 @@
     <a href="get-involved.html">Get Involved</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
-    <a href="support.html" class="support-btn">Support</a>
+    <a href="support.html" class="support-btn">❤️ Support</a>
   </nav>
 </header>
 
@@ -192,36 +127,20 @@
   <p>Building futures through education, collaboration, and community leadership.</p>
 </section>
 
-<!-- COUNTERS: aligned to milestone facts — 43 children, 5 schools, 4 countries, 342 books -->
 <div class="impact-metrics">
   <div class="metrics-grid">
-    <div class="metric-item">
-      <span class="metric-number" data-target="43">0</span>
-      <span class="metric-label">Children Supported</span>
-    </div>
-    <div class="metric-item">
-      <span class="metric-number" data-target="5">0</span>
-      <span class="metric-label">Partner Schools</span>
-    </div>
-    <div class="metric-item">
-      <span class="metric-number" data-target="4">0</span>
-      <span class="metric-label">Countries Reached</span>
-    </div>
-    <div class="metric-item">
-      <span class="metric-number" data-target="342">0</span>
-      <span class="metric-label">Books Distributed</span>
-    </div>
+    <div class="metric-item"><span class="metric-number" data-target="43">0</span><span class="metric-label">Children Supported</span></div>
+    <div class="metric-item"><span class="metric-number" data-target="5">0</span><span class="metric-label">Partner Schools</span></div>
+    <div class="metric-item"><span class="metric-number" data-target="4">0</span><span class="metric-label">Countries Reached</span></div>
+    <div class="metric-item"><span class="metric-number" data-target="342">0</span><span class="metric-label">Books Distributed</span></div>
   </div>
 </div>
 
 <section>
   <h2>Who We Are</h2>
   <p>The African Dynamite Organization (ADO), founded in 2025 by individuals from the African diaspora and some African countries, is deeply committed to championing child education in Africa. Our core mission is to ensure that every child, regardless of their background, has access to quality education.</p>
-  
-  <p style="margin-top: 20px;">Alarmingly, around 46 million school-aged children in Africa are currently out of school. This puts them at severe risk of exploitation, including forced child marriage, child labor, and recruitment into armed groups.</p>
-  
-  <p style="margin-top: 20px;">At ADO, we firmly believe that investing in every child's education is crucial for their well-being and the development of the entire African continent. We aim to decrease learning poverty rates by focusing on foundational learning, providing high-quality education in emergencies, and helping children recover lost learning.</p>
-  
+  <p style="margin-top:20px">Alarmingly, around 46 million school-aged children in Africa are currently out of school. This puts them at severe risk of exploitation, including forced child marriage, child labor, and recruitment into armed groups.</p>
+  <p style="margin-top:20px">At ADO, we firmly believe that investing in every child's education is crucial for their well-being and the development of the entire African continent. We aim to decrease learning poverty rates by focusing on foundational learning, providing high-quality education in emergencies, and helping children recover lost learning.</p>
   <div class="highlight">
     <strong>Current Status</strong>
     <p>ADO is currently operating as an initiative group and is in the process of formal registration.</p>
@@ -231,14 +150,8 @@
 <section>
   <h2>Our Mission & Vision</h2>
   <div class="mission-vision-grid">
-    <div class="mission-box">
-      <h3>Our Mission</h3>
-      <p>To ensure every African child has access to quality education by removing barriers, building partnerships, and creating sustainable community-led solutions.</p>
-    </div>
-    <div class="vision-box">
-      <h3>Our Vision</h3>
-      <p>A future where every child in Africa can learn, grow, and reach their full potential through accessible, quality education.</p>
-    </div>
+    <div class="mission-box"><h3>Our Mission</h3><p>To ensure every African child has access to quality education by removing barriers, building partnerships, and creating sustainable community-led solutions.</p></div>
+    <div class="vision-box"><h3>Our Vision</h3><p>A future where every child in Africa can learn, grow, and reach their full potential through accessible, quality education.</p></div>
   </div>
 </section>
 
@@ -246,164 +159,66 @@
   <h2>Transparency & Accountability</h2>
   <p>Building trust through clear communication and ethical practices is at the heart of everything we do.</p>
   <div class="transparency-grid">
-    <div class="transparency-card">
-      <h3><i class="fas fa-file-invoice-dollar"></i> Financial Management</h3>
-      <p>Every donation is tracked using secure systems. We maintain detailed records of contributions and expenditures, ensuring funds directly support our educational programs.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-clipboard-check"></i> Registration Process</h3>
-      <p>ADO is actively pursuing formal registration as a non-profit organization. We operate with full transparency during this process and follow ethical guidelines in all our activities.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-chart-line"></i> Regular Reporting</h3>
-      <p>Donors and partners receive periodic updates on program outcomes, financial usage, and the impact of their support on children's lives across Africa.</p>
-    </div>
+    <div class="transparency-card"><h3><i class="fas fa-file-invoice-dollar"></i> Financial Management</h3><p>Every donation is tracked using secure systems. We maintain detailed records of contributions and expenditures, ensuring funds directly support our educational programs.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-clipboard-check"></i> Registration Process</h3><p>ADO is actively pursuing formal registration as a non-profit organization. We operate with full transparency during this process and follow ethical guidelines in all our activities.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-chart-line"></i> Regular Reporting</h3><p>Donors and partners receive periodic updates on program outcomes, financial usage, and the impact of their support on children's lives across Africa.</p></div>
   </div>
 </section>
 
 <section class="leadership">
   <h2>Meet Our Leadership Team</h2>
-  
   <div class="founder-message">
     <h3>A Message from Our Founder</h3>
     <p>"Education is not just about opening doors—it's about giving children the keys to unlock their own potential. Every child we support, every barrier we remove, and every opportunity we create ripples outward to transform families, communities, and ultimately, our continent."</p>
     <p>"Our work is driven by the understanding that Africa's future depends on the education we provide today. Together with our partners, donors, and volunteers, we are building a movement that ensures no child is left behind."</p>
     <div class="signature">— Edwin Founwih, Founder, Africa Dynamite Organisation</div>
   </div>
-
   <div class="leaders-grid">
-    <div class="leader-card" style="border: 2px solid #ffc107;">
-      <img src="Image/imagehero.png" alt="Portrait of Edwin Founwih, Founder and Executive Director of Africa Dynamite Organisation">
+    <div class="leader-card" style="border:2px solid #ffc107">
+      <img src="Image/imagehero.png" alt="Portrait of Edwin Founwih, Founder and Executive Director">
       <div class="content">
-        <h3>Edwin Founwih</h3>
-        <span class="role">Founder & Executive Director</span>
-        <div class="bio-text">
-          Edwin Founwih is the Founder and Executive Director of Africa Dynamite Organisation (ADO), established in 2025 with a clear mission: to ensure that no African child is denied the right to quality education.
-          <span class="more-text">Driven by first-hand understanding of the barriers children across Africa face, Edwin built ADO from the ground up as a community-centred initiative — one that prioritises transparency, dignity, and long-term impact over quick fixes. He leads the organisation's overall strategy, partnerships, and growth, while keeping the needs of children at the core of every decision.
-Edwin believes that education is the most powerful tool for transforming Africa from within, and that lasting change must be driven by Africans, for Africans. Through ADO, he is working to build the kind of organisation that communities across the continent can trust, grow with, and be proud of.</span>
-        </div>
+        <h3>Edwin Founwih</h3><span class="role">Founder & Executive Director</span>
+        <div class="bio-text">Edwin Founwih is the Founder and Executive Director of Africa Dynamite Organisation (ADO), established in 2025 with a clear mission: to ensure that no African child is denied the right to quality education.<span class="more-text"> Driven by first-hand understanding of the barriers children across Africa face, Edwin built ADO from the ground up as a community-centred initiative — one that prioritises transparency, dignity, and long-term impact over quick fixes. He leads the organisation's overall strategy, partnerships, and growth, while keeping the needs of children at the core of every decision. Edwin believes that education is the most powerful tool for transforming Africa from within, and that lasting change must be driven by Africans, for Africans.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
     <div class="leader-card">
-      <img src="Image/larinete.jpg" alt="Portrait of ADO Co-Founder and Operations Director">
+      <img src="Image/larinete.jpg" alt="Portrait of Larinete M., Co-Founder and Operations Director">
       <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Co-Founder & Operations Director</span>
-        <div class="bio-text">
-          Enda Mbuya is the Co-Founder and Operations Director of Africa Dynamite Organisation (ADO), bringing a wealth of hands-on experience in child welfare and project delivery across Cameroon. 
-          <span class="more-text">Before co-founding ADO, Enda served as a Child Protection Officer, working directly with vulnerable children and families to ensure their safety, rights, and access to essential services. She also worked as a Project Manager across multiple community-focused organisations in Cameroon, where she developed a strong track record of turning vision into measurable impact on the ground.
-At ADO, Enda oversees the day-to-day operations of the organisation, ensuring that every program runs efficiently, transparently, and with the children's best interests at heart. Her background in child protection gives her a unique lens through which she approaches every decision — one that puts the dignity and future of each child first.
-Enda believes that sustainable change in Africa starts with education, and that every child deserves a safe environment in which to learn and grow. She is committed to building ADO into an organisation that communities across Africa can trust and rely on for generations to come.</span>
-        </div>
+        <h3>Larinete M.</h3><span class="role">Co-Founder & Operations Director</span>
+        <div class="bio-text">Enda Mbuya is the Co-Founder and Operations Director of Africa Dynamite Organisation (ADO), bringing a wealth of hands-on experience in child welfare and project delivery across Cameroon.<span class="more-text"> Before co-founding ADO, Enda served as a Child Protection Officer, working directly with vulnerable children and families to ensure their safety, rights, and access to essential services. At ADO, Enda oversees the day-to-day operations of the organisation, ensuring that every program runs efficiently, transparently, and with the children's best interests at heart.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
     <div class="leader-card">
-      <img src="Image/hanna.jpg" alt="Portrait of Hanna Mbuh, Program Manager at Africa Dynamite Organisation">
+      <img src="Image/hanna.jpg" alt="Portrait of Hanna Mbuh, Program Manager">
       <div class="content">
-        <h3>Hanna Mbuh</h3>
-        <span class="role">Program Manager</span>
-        <div class="bio-text">
-           Hanna Mbuh is a results-driven professional and trained pedagogue with extensive experience in the implementation and oversight of educational programs across Africa. Her background in pedagogy gives her a deep understanding of how children learn, allowing ADO's programs to be designed not just for access, but for genuine educational quality and impact.
-          <span class="more-text">As Program Manager at Africa Dynamite Organisation, she is responsible for the day-to-day coordination of ADO's initiatives, ensuring every project is delivered efficiently and remains firmly focused on its core goal: getting children into school and keeping them there.
-Hanna brings strong organisational skills and a deep commitment to community-centred delivery, bridging the gap between strategic planning and on-the-ground impact. She works closely with partners, volunteers, and local communities to ensure that ADO's programs reach the children who need them most.
-She believes that well-managed, pedagogically sound programs are the backbone of lasting change — and that every child deserves not just access to education, but a high-quality learning experience that equips them for life.</span>
-        </div>
+        <h3>Hanna Mbuh</h3><span class="role">Program Manager</span>
+        <div class="bio-text">Hanna Mbuh is a results-driven professional and trained pedagogue with extensive experience in the implementation and oversight of educational programs across Africa.<span class="more-text"> As Program Manager at Africa Dynamite Organisation, she is responsible for the day-to-day coordination of ADO's initiatives, ensuring every project is delivered efficiently and remains firmly focused on its core goal: getting children into school and keeping them there.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
     <div class="leader-card">
-      <img src="images/team/member4.jpg" alt="Portrait of ADO Community Outreach Coordinator">
+      <img src="images/team/member4.jpg" alt="Portrait of Collette Earliness, Community Outreach Coordinator">
       <div class="content">
-        <h3>Collette Earliness .</h3>
-        <span class="role">Community Outreach Coordinator</span>
-        <div class="bio-text">
-          Collette Earliness is the Community Outreach Coordinator at Africa Dynamite Organisation, responsible for building and maintaining strong relationships between ADO and the communities it serves. She works in close collaboration with field officers on the ground to identify children in need and ensure that ADO's support reaches the families who need it most. 
-          <span class="more-text">She also partners directly with the various schools within ADO's network, coordinating with teachers and school administrators to track children's progress and address barriers to their continued education.
-Collette believes that real change begins at the community level — and that every child deserves a reliable support system both inside and outside the classroom. Through her work, she ensures that ADO's mission is felt not just at the organisational level, but in the everyday lives of the children and communities the organisation exists to serve.</span>
-        </div>
+        <h3>Collette Earliness</h3><span class="role">Community Outreach Coordinator</span>
+        <div class="bio-text">Collette Earliness is the Community Outreach Coordinator at Africa Dynamite Organisation, responsible for building and maintaining strong relationships between ADO and the communities it serves.<span class="more-text"> She works in close collaboration with field officers on the ground to identify children in need and ensure that ADO's support reaches the families who need it most. She also partners directly with the various schools within ADO's network, coordinating with teachers and school administrators to track children's progress.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
     <div class="leader-card">
-      <img src="images/team/member5.jpg" alt="Portrait of ADO Partnerships and Fundraising Lead">
+      <img src="Image/larinete.jpg" alt="Portrait of ADO Partnerships and Fundraising Lead">
       <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Partnerships & Fundraising Lead</span>
-        <div class="bio-text">
-          Develops strategic partnerships with donors and corporate sponsors. 
-          <span class="more-text">Leads fundraising initiatives to secure sustainable resources for our educational programs.</span>
-        </div>
+        <h3>Partnerships Lead</h3><span class="role">Partnerships & Fundraising Lead</span>
+        <div class="bio-text">Develops strategic partnerships with donors and corporate sponsors.<span class="more-text"> Leads fundraising initiatives to secure sustainable resources for our educational programs.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
-
     <div class="leader-card">
-      <img src="Image/larinete.jpg" alt="Portrait of Kum Larinette, Communications Director at Africa Dynamite Organisation">
+      <img src="Image/larinete.jpg" alt="Portrait of Kum Larinette, Communications Director">
       <div class="content">
-        <h3>Kum Larinette</h3>
-        <span class="role">Communications Director</span>
-        <div class="bio-text">
-          I am a passionate communicator dedicated to amplifying the voices of underserved communities through strategic storytelling. 
-          <span class="more-text">As the Communications Director for Africa Dynamite Organisation (ADO), I manage our global brand presence and digital strategy. My goal is to ensure absolute transparency while sharing the powerful stories of the children we serve, bridging the gap between our mission and the world.</span>
-        </div>
-        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
-      </div>
-    </div>
-
-    <div class="leader-card">
-      <img src="images/team/member7.jpg" alt="Portrait of ADO Finance and Administration Officer">
-      <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Finance & Administration Officer</span>
-        <div class="bio-text">
-          Ensures financial accountability and transparency in all operations. 
-          <span class="more-text">Manages budgets, financial reporting, and administrative systems to support program delivery.</span>
-        </div>
-        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
-      </div>
-    </div>
-
-    <div class="leader-card">
-      <img src="images/team/member8.jpg" alt="Portrait of ADO Volunteer Coordinator">
-      <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Volunteer Coordinator</span>
-        <div class="bio-text">
-          Recruits and supports volunteers across Africa and the diaspora. 
-          <span class="more-text">Coordinates volunteer activities and ensures meaningful engagement opportunities for our supporters.</span>
-        </div>
-        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
-      </div>
-    </div>
-
-    <div class="leader-card">
-      <img src="images/team/member9.jpg" alt="Portrait of ADO Monitoring and Evaluation Specialist">
-      <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Monitoring & Evaluation Specialist</span>
-        <div class="bio-text">
-          Tracks program outcomes and impact using data-driven approaches. 
-          <span class="more-text">Ensures continuous improvement and accountability in all educational interventions.</span>
-        </div>
-        <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
-      </div>
-    </div>
-
-    <div class="leader-card">
-      <img src="images/team/member10.jpg" alt="Portrait of ADO Regional Coordinator">
-      <div class="content">
-        <h3>Larinete M.</h3>
-        <span class="role">Regional Coordinator</span>
-        <div class="bio-text">
-          Leads ADO's programs in specific regional territories. 
-          <span class="more-text">Works closely with local partners and families to ensure effective program implementation.</span>
-        </div>
+        <h3>Kum Larinette</h3><span class="role">Communications Director</span>
+        <div class="bio-text">A passionate communicator dedicated to amplifying the voices of underserved communities through strategic storytelling.<span class="more-text"> As the Communications Director for ADO, she manages our global brand presence and digital strategy, ensuring absolute transparency while sharing the powerful stories of the children we serve.</span></div>
         <button class="read-more-btn" onclick="toggleBio(this)">Read More</button>
       </div>
     </div>
@@ -412,11 +227,12 @@ Collette believes that real change begins at the community level — and that ev
 
 <section class="newsletter">
   <h2>Stay Connected</h2>
-  <p>Subscribe to receive updates about our programs, success stories, and ways to get involved.</p>
-  <form class="newsletter-form" action="mailto:info@africadynamite.org" method="post" enctype="text/plain">
+  <p>Subscribe to receive updates about our programs, success stories, and ways to get involved. We send no more than 2 emails per month.</p>
+  <form class="newsletter-form" action="https://formspree.io/f/mnjryzrn" method="POST">
     <input type="email" name="email" placeholder="Enter your email address" required>
     <button type="submit">Subscribe</button>
   </form>
+  <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
 </section>
 
 <footer>
@@ -437,21 +253,24 @@ Collette believes that real change begins at the community level — and that ev
       <a href="what-we-do.html">What We Do</a>
       <a href="children.html">Children</a>
       <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-section">
       <h3>Contact Us</h3>
-      <p><i class="fas fa-envelope"></i> info@africadynamite.org</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@africadynamite.org">info@africadynamite.org</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237676092268" target="_blank">WhatsApp Us</a></p>
       <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
-      <p><i class="fas fa-clock"></i> Response time: 24-48 hours</p>
+      <p><i class="fas fa-clock"></i> Response time: 24–48 hours</p>
     </div>
     <div class="footer-section">
       <h3>Support Our Mission</h3>
       <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
-      <a href="support.html" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">Support Now</a>
+      <a href="support.html" style="display:inline-block;margin-top:12px;padding:11px 22px;background:#ffc107;color:#000;border-radius:8px;font-weight:700">❤️ Support Now</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | Community-driven initiative working toward formal registration.</p>
+    <p style="margin-top:8px"><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
   </div>
 </footer>
 
@@ -463,19 +282,20 @@ Collette believes that real change begins at the community level — and that ev
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
     <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
-    <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
+    <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
     <button type="submit">❤️ Support ADO</button>
   </form>
+</div>
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
 <script>
   document.getElementById('hamburgerBtn').addEventListener('click', function() {
     document.getElementById('mainNav').classList.toggle('open');
   });
-
   function toggleBio(btn) {
-    const bioContainer = btn.previousElementSibling;
-    const moreText = bioContainer.querySelector('.more-text');
+    var moreText = btn.previousElementSibling.querySelector('.more-text');
     if (moreText.classList.contains('show')) {
       moreText.classList.remove('show');
       btn.innerHTML = "Read More";
@@ -484,24 +304,15 @@ Collette believes that real change begins at the community level — and that ev
       btn.innerHTML = "Read Less";
     }
   }
-
-  // Animated counters — fires once only
-  function animateCounter(element) {
-    var target = parseInt(element.getAttribute('data-target'));
-    var duration = 2000;
-    var step = target / (duration / 16);
-    var current = 0;
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'));
+    var duration = 2000; var step = target / (duration / 16); var cur = 0;
     var timer = setInterval(function() {
-      current += step;
-      if (current >= target) {
-        element.textContent = target.toLocaleString() + '+';
-        clearInterval(timer);
-      } else {
-        element.textContent = Math.floor(current).toLocaleString();
-      }
+      cur += step;
+      if (cur >= target) { el.textContent = target.toLocaleString() + '+'; clearInterval(timer); }
+      else { el.textContent = Math.floor(cur).toLocaleString(); }
     }, 16);
   }
-
   var triggered = false;
   var metricsSection = document.querySelector('.impact-metrics');
   if (metricsSection) {
@@ -509,15 +320,12 @@ Collette believes that real change begins at the community level — and that ev
       entries.forEach(function(entry) {
         if (entry.isIntersecting && !triggered) {
           triggered = true;
-          entry.target.querySelectorAll('.metric-number').forEach(function(counter) {
-            animateCounter(counter);
-          });
+          entry.target.querySelectorAll('.metric-number').forEach(function(c) { animateCounter(c); });
         }
       });
     }, { threshold: 0.3 });
     observer.observe(metricsSection);
   }
 </script>
-
 </body>
 </html>
