@@ -5,235 +5,128 @@
   <title>Support Us | Africa Dynamite Organisation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Support Africa Dynamite Organisation to empower children's education across Africa through direct contributions." />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  
+  <link rel="icon" type="image/png" href="Image/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
-
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
-    }
-    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
-    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; line-height: 1.3; }
-    nav { display: flex; align-items: center; gap: 5px; }
-    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
-    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
-    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)), url("images/ado-team-hero.jpg") center/cover no-repeat;
-      color: #fff; text-align: center; padding: 120px 30px; position: relative;
-    }
-    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); }
-    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; font-weight: 300; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); }
-
-    /* IMPACT COUNTER */
-    .impact-counter {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      padding: 60px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;
-    }
-    .counter-item { text-align: center; color: #fff; }
-    .counter-number { font-size: 3.5rem; font-weight: 700; color: #ffc107; display: block; margin-bottom: 10px; }
-    .counter-label { font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-    /* SECTIONS */
-    section { max-width: 1200px; margin: auto; padding: 80px 40px; }
-    h2 { color: #0f5132; margin-bottom: 30px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
-    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
-    section > p { font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 30px; }
-
-    /* CONTACT METHODS */
-    .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin: 50px 0; }
-    .contact-method { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; position: relative; overflow: hidden; transition: all 0.3s ease; }
-    .contact-method::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
-    .contact-method:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
-    .contact-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
-    .contact-method h3 { color: #0f5132; margin-bottom: 15px; font-size: 1.5rem; font-weight: 600; }
-    .contact-method p { color: #666; font-size: 1rem; line-height: 1.7; margin-bottom: 15px; }
-    .contact-method a { color: #0f5132; font-weight: 600; display: block; margin: 5px 0; text-decoration: none; }
-    .contact-method a:hover { color: #ffc107; }
-
-    /* PAYMENT BOX */
-    .payment-box {
-      background: #fdfdfd; border: 1px solid #e9ecef; border-radius: 20px;
-      padding: 50px 40px; margin-top: 50px; box-shadow: 0 15px 40px rgba(0,0,0,0.04);
-    }
-    .payment-box h2 { text-align: center; display: block; margin-bottom: 10px; }
-    .payment-box > p { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 40px; }
-    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-    .payment-card {
-      padding: 30px; background: white; border-radius: 15px; text-align: center;
-      transition: all 0.3s ease; border-left: 8px solid #ccc; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .payment-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-    .card-paypal { border-left-color: #ffc107; background: #fffdf2; }
-    .card-bank { border-left-color: #1a7a4f; background: #f2faf6; }
-    .card-mobile { border-left-color: #dc3545; background: #fff5f5; }
-    .payment-card .pay-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-    .payment-card strong { color: #2c3e50; font-size: 1.3rem; display: block; margin-bottom: 10px; }
-    .payment-card p { color: #555; font-size: 0.9rem; margin-bottom: 15px; }
-    .pay-now-btn {
-      background: #0f5132; color: white; text-decoration: none; padding: 10px 25px; border-radius: 50px;
-      display: inline-block; font-size: 0.95rem; font-weight: 600; margin-top: 15px; border: none;
-      cursor: pointer; transition: background 0.3s; font-family: 'Poppins', sans-serif;
-    }
-    .pay-now-btn:hover { background: #1a7a4f; }
-    .btn-yellow { background: #ffc107; color: #000; }
-    .btn-yellow:hover { background: #eab106; }
-    .btn-red { background: #dc3545; color: #fff; }
-    .btn-red:hover { background: #c82333; }
-
-    /* TRANSPARENCY SECTION */
-    .transparency { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-    .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-    .transparency-card {
-      background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      border-left: 4px solid #0f5132; transition: transform 0.3s ease;
-    }
-    .transparency-card:hover { transform: translateY(-5px); }
-    .transparency-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-    .transparency-card h3 i { color: #ffc107; font-size: 1.5rem; }
-    .transparency-card p { color: #666; font-size: 1rem; line-height: 1.7; }
-
-    /* WAYS TO GIVE */
-    .ways-to-give { background: #fff; }
-    .give-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; margin-top: 50px; }
-    .give-card {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease; position: relative; overflow: hidden;
-    }
-    .give-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
-    .give-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
-    .give-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-    .give-card h3 { color: #0f5132; font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
-    .give-card p { color: #666; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
-    .give-card ul { list-style: none; padding: 0; margin: 20px 0; }
-    .give-card li { color: #666; font-size: 0.95rem; padding: 8px 0; padding-left: 25px; position: relative; }
-    .give-card li::before { content: '✓'; position: absolute; left: 0; color: #0f5132; font-weight: bold; }
-
-    /* CONTACT GRID */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px; }
-    .contact-info { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 40px; border-radius: 15px; border-left: 6px solid #0f5132; }
-    .info-item { display: flex; align-items: flex-start; margin-bottom: 25px; padding: 20px; background: #fff; border-radius: 10px; }
-    .info-icon { font-size: 2rem; margin-right: 15px; color: #0f5132; flex-shrink: 0; }
-    .info-content strong { display: block; color: #0f5132; font-size: 1.1rem; margin-bottom: 5px; }
-    .info-content a { color: #0f5132; text-decoration: none; }
-    .info-content a:hover { color: #ffc107; }
-    .note { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 20px; border-radius: 8px; margin-top: 30px; }
-    .note p { font-size: 0.95rem; color: #555; margin: 0; }
-
-    /* FAQ SECTION */
-    .faq-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-    .faq-grid { display: grid; gap: 20px; margin-top: 40px; }
-    .faq-item { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border-left: 4px solid #ffc107; transition: transform 0.3s ease; }
-    .faq-item:hover { transform: translateY(-3px); }
-    .faq-item h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; font-weight: 600; }
-    .faq-item p { color: #666; font-size: 1rem; line-height: 1.8; margin: 0; }
-
-    /* NEWSLETTER */
-    .newsletter { background: #ffc107; padding: 60px 40px; text-align: center; }
-    .newsletter h2 { color: #000; }
-    .newsletter h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
-    .newsletter p { color: #000; font-size: 1.1rem; margin-bottom: 30px; }
-    .newsletter-form { max-width: 600px; margin: 0 auto; display: flex; gap: 15px; }
-    .newsletter-form input { flex: 1; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .newsletter-form button { padding: 16px 35px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
-    .newsletter-form button:hover { background: #1a7a4f; transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
-    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
-    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
-    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
-    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
-    .footer-section a:hover { color: #ffc107; }
-    .social-links { display: flex; gap: 15px; margin-top: 20px; }
-    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
-    .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
-    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
-
-    /* STICKY SUPPORT */
-    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
-    .sticky-support button {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600;
-      border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4);
-      transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
-    }
-    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
-      .logo-text { font-size: 0.9rem; text-align: center; }
-      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
-      nav a { padding: 8px 12px; font-size: 0.85rem; }
-      nav a.support-btn { margin-left: 0; margin-top: 5px; }
-      .hero { padding: 80px 20px; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      .impact-counter { grid-template-columns: repeat(2, 1fr); gap: 30px; padding: 40px 20px; }
-      .counter-number { font-size: 2.5rem; }
-      section { padding: 60px 20px; }
-      h2 { font-size: 1.8rem; }
-      section > p { font-size: 1rem; }
-      .contact-methods { grid-template-columns: 1fr; gap: 25px; }
-      .contact-method { padding: 30px; }
-      .payment-box { padding: 30px 20px; }
-      .payment-grid { grid-template-columns: 1fr; gap: 20px; }
-      .payment-card { padding: 25px; }
-      .transparency-grid { grid-template-columns: 1fr; }
-      .give-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .contact-info { padding: 30px; }
-      .info-item { flex-direction: column; text-align: center; }
-      .info-icon { margin-right: 0; margin-bottom: 10px; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .newsletter-form { flex-direction: column; }
-      .footer-content { grid-template-columns: 1fr; gap: 30px; }
-      .sticky-support { right: 15px; bottom: 15px; }
-      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.95rem; }
-      h2 { font-size: 1.5rem; }
-      .impact-counter { grid-template-columns: 1fr; }
-      .contact-method { padding: 25px; }
-      .contact-method h3 { font-size: 1.3rem; }
-      .contact-icon { font-size: 3rem; }
-      .payment-box { padding: 20px 15px; }
-      .payment-card { padding: 20px; }
-      .payment-card strong { font-size: 1.2rem; }
-      .pay-now-btn { padding: 10px 20px; font-size: 0.9rem; }
-    }
-  
-    /* HAMBURGER MENU */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',Arial,Helvetica,sans-serif;line-height:1.7;color:#2c3e50;overflow-x:hidden}
+    header{background:linear-gradient(135deg,#0f5132 0%,#1a7a4f 100%);color:#fff;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 15px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
+    .logo-wrapper{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-wrapper img{height:50px;width:50px;object-fit:contain;border-radius:6px;background:#fff;padding:3px}
+    .logo-text{font-weight:700;font-size:1.2rem;color:#fff;line-height:1.2}
+    .logo-text span{display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:4px}
+    nav a{color:#fff;padding:9px 13px;text-decoration:none;font-weight:500;font-size:.88rem;border-radius:6px;transition:all .3s}
+    nav a:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+    nav a.support-btn{background:#ffc107;color:#000;font-weight:700;margin-left:8px;box-shadow:0 4px 12px rgba(255,193,7,.3)}
+    nav a.support-btn:hover{background:#ffb300;transform:translateY(-2px)}
     .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
     .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
-    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px!important}}
-</style>
+    .hero{background:linear-gradient(rgba(15,81,50,0.88),rgba(0,0,0,0.7)),url("Image/ado-team-hero.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:120px 30px}
+    .hero h1{font-size:3.2rem;margin-bottom:15px;font-weight:700;text-shadow:2px 4px 8px rgba(0,0,0,0.3)}
+    .hero p{font-size:1.25rem;max-width:800px;margin:0 auto;font-weight:300;text-shadow:1px 2px 4px rgba(0,0,0,0.3)}
+    .impact-counter{background:linear-gradient(135deg,#0f5132 0%,#1a7a4f 100%);padding:60px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px}
+    .counter-item{text-align:center;color:#fff}
+    .counter-number{font-size:3.5rem;font-weight:700;color:#ffc107;display:block;margin-bottom:10px}
+    .counter-label{font-size:1.1rem;font-weight:500;text-transform:uppercase;letter-spacing:1px}
+    section{max-width:1200px;margin:auto;padding:80px 40px}
+    h2{color:#0f5132;margin-bottom:30px;font-size:2.5rem;font-weight:700;position:relative;display:inline-block}
+    h2::after{content:'';position:absolute;bottom:-10px;left:0;width:60px;height:4px;background:#ffc107;border-radius:2px}
+    section>p{font-size:1.1rem;color:#666;line-height:1.8;margin-bottom:30px}
+    .contact-methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;margin:50px 0}
+    .contact-method{background:#fff;padding:40px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);text-align:center;position:relative;overflow:hidden;transition:all 0.3s ease}
+    .contact-method::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#0f5132,#ffc107)}
+    .contact-method:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
+    .contact-icon{font-size:3.5rem;margin-bottom:20px;display:block}
+    .contact-method h3{color:#0f5132;margin-bottom:15px;font-size:1.5rem;font-weight:600}
+    .contact-method p{color:#666;font-size:1rem;line-height:1.7;margin-bottom:15px}
+    .contact-method a{color:#0f5132;font-weight:600;display:block;margin:5px 0;text-decoration:none}
+    .contact-method a:hover{color:#ffc107}
+    .payment-box{background:#fdfdfd;border:1px solid #e9ecef;border-radius:20px;padding:50px 40px;margin-top:50px;box-shadow:0 15px 40px rgba(0,0,0,0.04)}
+    .payment-box h2{text-align:center;display:block;margin-bottom:10px}
+    .payment-box>p{text-align:center;color:#666;font-size:1.1rem;margin-bottom:40px}
+    .payment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+    .payment-card{padding:30px;background:white;border-radius:15px;text-align:center;transition:all 0.3s ease;border-left:8px solid #ccc;box-shadow:0 4px 15px rgba(0,0,0,0.05)}
+    .payment-card:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,0.1)}
+    .card-paypal{border-left-color:#ffc107;background:#fffdf2}
+    .card-bank{border-left-color:#1a7a4f;background:#f2faf6}
+    .card-mobile{border-left-color:#dc3545;background:#fff5f5}
+    .payment-card .pay-icon{font-size:2.5rem;margin-bottom:15px;display:block}
+    .payment-card strong{color:#2c3e50;font-size:1.3rem;display:block;margin-bottom:10px}
+    .payment-card p{color:#555;font-size:0.9rem;margin-bottom:15px}
+    .pay-now-btn{background:#0f5132;color:white;text-decoration:none;padding:10px 25px;border-radius:50px;display:inline-block;font-size:0.95rem;font-weight:600;margin-top:15px;border:none;cursor:pointer;transition:background 0.3s;font-family:'Poppins',sans-serif}
+    .pay-now-btn:hover{background:#1a7a4f}
+    .btn-yellow{background:#ffc107;color:#000}
+    .btn-yellow:hover{background:#eab106}
+    .btn-red{background:#dc3545;color:#fff}
+    .btn-red:hover{background:#c82333}
+    .ways-to-give{background:#fff}
+    .give-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;margin-top:50px}
+    .give-card{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);padding:40px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:all 0.3s ease;position:relative;overflow:hidden}
+    .give-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#0f5132,#ffc107)}
+    .give-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
+    .give-icon{font-size:3rem;margin-bottom:20px;display:block}
+    .give-card h3{color:#0f5132;font-size:1.5rem;margin-bottom:15px;font-weight:600}
+    .give-card p{color:#666;font-size:1.05rem;line-height:1.8;margin-bottom:20px}
+    .give-card ul{list-style:none;padding:0;margin:20px 0}
+    .give-card li{color:#666;font-size:0.95rem;padding:8px 0;padding-left:25px;position:relative}
+    .give-card li::before{content:'✓';position:absolute;left:0;color:#0f5132;font-weight:bold}
+    .transparency{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%)}
+    .transparency-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px}
+    .transparency-card{background:#fff;padding:32px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.06);border-left:4px solid #0f5132;transition:transform 0.3s ease}
+    .transparency-card:hover{transform:translateY(-5px)}
+    .transparency-card h3{color:#0f5132;font-size:1.15rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .transparency-card h3 i{color:#ffc107}
+    .transparency-card p{color:#666;font-size:1rem;line-height:1.7}
+    .faq-section{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%)}
+    .faq-grid{display:grid;gap:20px;margin-top:40px}
+    .faq-item{background:#fff;padding:30px;border-radius:12px;box-shadow:0 3px 15px rgba(0,0,0,0.08);border-left:4px solid #ffc107;transition:transform 0.3s ease}
+    .faq-item:hover{transform:translateY(-3px)}
+    .faq-item h3{color:#0f5132;font-size:1.3rem;margin-bottom:15px;font-weight:600}
+    .faq-item p{color:#666;font-size:1rem;line-height:1.8;margin:0}
+    .newsletter{background:#ffc107;padding:60px 40px;text-align:center}
+    .newsletter h2{color:#000;display:inline-block}
+    .newsletter h2::after{background:#0f5132;left:50%;transform:translateX(-50%)}
+    .newsletter>p{color:#000;font-size:1.05rem;margin:15px auto 28px;max-width:580px}
+    .newsletter-form{max-width:540px;margin:0 auto;display:flex;gap:12px}
+    .newsletter-form input{flex:1;padding:14px 18px;border:none;border-radius:8px;font-size:1rem;font-family:'Poppins',sans-serif}
+    .newsletter-form button{padding:14px 28px;background:#0f5132;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .3s;white-space:nowrap}
+    .newsletter-form button:hover{background:#1a7a4f;transform:translateY(-2px)}
+    .newsletter-note{color:rgba(0,0,0,.6);font-size:.82rem;margin-top:12px}
+    footer{background:#111;color:#ccc;padding:60px 40px 30px}
+    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:38px;max-width:1200px;margin:0 auto 40px}
+    .footer-section h3{color:#ffc107;margin-bottom:16px;font-size:1.1rem}
+    .footer-section p{font-size:.88rem;line-height:1.8;margin-bottom:10px}
+    .footer-section a{color:#ccc;text-decoration:none;display:block;margin-bottom:7px;font-size:.88rem;transition:color .3s}
+    .footer-section a:hover{color:#ffc107}
+    .social-links{display:flex;gap:10px;margin-top:16px}
+    .social-links a{width:36px;height:36px;background:#222;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s;font-size:.85rem}
+    .social-links a:hover{background:#ffc107;color:#000;transform:translateY(-3px)}
+    .footer-bottom{text-align:center;padding-top:26px;border-top:1px solid #222;color:#777;font-size:.82rem}
+    .footer-bottom a{color:#aaa;text-decoration:none}
+    .footer-bottom a:hover{color:#ffc107}
+    .sticky-support{position:fixed;right:25px;bottom:25px;z-index:9999}
+    .sticky-support button{background:linear-gradient(135deg,#ffc107,#ffb300);color:#000;border:none;padding:14px 22px;font-size:.95rem;font-weight:700;border-radius:50px;cursor:pointer;box-shadow:0 8px 20px rgba(255,193,7,.4);transition:all .3s;font-family:'Poppins',sans-serif}
+    .sticky-support button:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(255,193,7,.5)}
+    .sticky-whatsapp{position:fixed;left:25px;bottom:25px;z-index:9999}
+    .sticky-whatsapp a{display:flex;align-items:center;justify-content:center;width:54px;height:54px;background:#25D366;color:#fff;border-radius:50%;font-size:1.7rem;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+    .sticky-whatsapp a:hover{background:#128C7E;transform:translateY(-3px)}
+    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px}}
+    @media(max-width:768px){.hero{padding:80px 20px}.hero h1{font-size:2rem}.hero p{font-size:1rem}.impact-counter{grid-template-columns:repeat(2,1fr);gap:25px;padding:40px 20px}.counter-number{font-size:2.5rem}h2{font-size:1.8rem}section{padding:60px 20px}.contact-methods,.payment-grid,.give-grid,.transparency-grid,.faq-grid{grid-template-columns:1fr}.payment-box{padding:30px 20px}.newsletter-form{flex-direction:column}.footer-content{grid-template-columns:1fr;gap:26px}}
+    @media(max-width:480px){.hero h1{font-size:1.7rem}h2{font-size:1.5rem}.impact-counter{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo-wrapper">
-    <img src="Image/logo.png" alt="ADO Logo" style="height:46px;width:46px;object-fit:contain;border-radius:6px;background:#fff;padding:3px"><div class="logo-text">AFRICA DYNAMITE ORGANISATION<span style="display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase">Igniting Minds, Transforming Africa</span></div>
-  </div>
-  <nav>
+  <a href="index.html" class="logo-wrapper">
+    <img src="Image/logo.png" alt="ADO Logo">
+    <div class="logo-text">AFRICA DYNAMITE ORGANISATION<span>Igniting Minds, Transforming Africa</span></div>
+  </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="what-we-do.html">What We Do</a>
@@ -241,97 +134,55 @@
     <a href="get-involved.html">Get Involved</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
-    <a href="support.html" class="support-btn">Support</a>
+    <a href="support.html" class="support-btn">❤️ Support</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Support Our Mission</h1>
-    <p>Every contribution helps transform a child's future through education.</p>
-  </div>
+  <h1>Support Our Mission</h1>
+  <p>Every contribution helps transform a child's future through education.</p>
 </section>
 
 <div class="impact-counter">
-  <div class="counter-item">
-    <span class="counter-number" data-target="150">0</span>
-    <span class="counter-label">Children Supported</span>
-  </div>
-  <div class="counter-item">
-    <span class="counter-number" data-target="300">0</span>
-    <span class="counter-label">Average Cost Per Child</span>
-  </div>
-  <div class="counter-item">
-    <span class="counter-number" data-target="95">0</span>
-    <span class="counter-label">Success Rate %</span>
-  </div>
-  <div class="counter-item">
-    <span class="counter-number" data-target="12">0</span>
-    <span class="counter-label">Countries Reached</span>
-  </div>
+  <div class="counter-item"><span class="counter-number" data-target="43">0</span><span class="counter-label">Children Supported</span></div>
+  <div class="counter-item"><span class="counter-number" data-target="300" data-prefix="$">0</span><span class="counter-label">Avg Cost Per Child</span></div>
+  <div class="counter-item"><span class="counter-number" data-target="95" data-suffix="%">0</span><span class="counter-label">Success Rate</span></div>
+  <div class="counter-item"><span class="counter-number" data-target="4">0</span><span class="counter-label">Countries Reached</span></div>
 </div>
 
 <section>
-  <h2>Get in Touch</h2>
-  <p>
-    Africa Dynamite Organisation (ADO) welcomes inquiries from supporters, partners, volunteers, 
-    and community members.
-  </p>
-
+  <h2>How to Support</h2>
+  <p>Africa Dynamite Organisation (ADO) welcomes support from donors, partners, and community members. Choose the method that works best for you.</p>
   <div class="contact-methods">
-    <div class="contact-method">
-      <span class="contact-icon">📧</span>
-      <h3>Email Us</h3>
-      <p>Send us a message anytime. We typically respond within 24-48 hours.</p>
-      <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>
-    </div>
-
-    <div class="contact-method">
-      <span class="contact-icon">💬</span>
-      <h3>Social Media</h3>
-      <p>Follow us for updates, stories, and ways to get involved in our mission.</p>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-    </div>
-
-    <div class="contact-method">
-      <span class="contact-icon">🌍</span>
-      <h3>Our Reach</h3>
-      <p>Community-based activities across Africa and the diaspora.</p>
-      <a href="about.html">Learn More About Us</a>
-    </div>
+    <div class="contact-method"><span class="contact-icon">📧</span><h3>Email Us</h3><p>Send us a message anytime. We typically respond within 24-48 hours.</p><a href="mailto:info@africadynamite.org">info@africadynamite.org</a></div>
+    <div class="contact-method"><span class="contact-icon">💬</span><h3>WhatsApp</h3><p>Reach us directly on WhatsApp for quick responses.</p><a href="https://wa.me/237676092268" target="_blank">Chat on WhatsApp</a></div>
+    <div class="contact-method"><span class="contact-icon">🌍</span><h3>Our Reach</h3><p>Community-based activities across Africa and the diaspora.</p><a href="about.html">Learn More About Us</a></div>
   </div>
 
   <div class="payment-box">
     <h2>Direct Support Methods</h2>
     <p>Empower African children through your direct contribution.</p>
-    
     <div class="payment-grid">
       <div class="payment-card card-paypal">
         <span class="pay-icon">💳</span>
         <strong>PayPal / Credit Card</strong>
         <p>Fastest way to support from anywhere in the world.</p>
-       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="africadynamite25@gmail.com">
           <input type="hidden" name="item_name" value="Support for AFRICA DYNAMITE ORGANISATION">
           <input type="hidden" name="currency_code" value="USD">
-         <!-- NEW: Return URL -->
-  <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
-  
-  <!-- NEW: Cancel URL -->
-  <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
+          <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+          <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
           <button type="submit" class="pay-now-btn btn-yellow">Support via PayPal</button>
-</form>
+        </form>
       </div>
-
       <div class="payment-card card-bank">
         <span class="pay-icon">🏛️</span>
         <strong>Bank Transfer</strong>
         <p>For larger donations or recurring monthly support.</p>
         <a href="mailto:info@africadynamite.org?subject=Bank%20Details%20Inquiry" class="pay-now-btn">Request Details</a>
       </div>
-
       <div class="payment-card card-mobile">
         <span class="pay-icon">📱</span>
         <strong>Mobile Money</strong>
@@ -345,79 +196,13 @@
 <section class="ways-to-give">
   <h2>Ways to Give</h2>
   <p>Choose the support option that works best for you.</p>
-
   <div class="give-grid">
-    <div class="give-card">
-      <span class="give-icon">👤</span>
-      <h3>Sponsor a Child</h3>
-      <p>Provide comprehensive support for one child's entire education journey.</p>
-      <ul>
-        <li>Direct impact on one child</li>
-        <li>Regular progress updates</li>
-        <li>Personal connection</li>
-        <li>$300-500 per year</li>
-      </ul>
-    </div>
-
-    <div class="give-card">
-      <span class="give-icon">💝</span>
-      <h3>One-Time Donation</h3>
-      <p>Make an immediate impact with a one-time contribution of any amount.</p>
-      <ul>
-        <li>Flexible amount</li>
-        <li>Immediate impact</li>
-        <li>Tax-deductible</li>
-        <li>Support where needed most</li>
-      </ul>
-    </div>
-
-    <div class="give-card">
-      <span class="give-icon">🔄</span>
-      <h3>Monthly Giving</h3>
-      <p>Become a sustaining partner with automated monthly contributions.</p>
-      <ul>
-        <li>Predictable support</li>
-        <li>Automatic payments</li>
-        <li>Cancel anytime</li>
-        <li>Greater long-term impact</li>
-      </ul>
-    </div>
-
-    <div class="give-card">
-      <span class="give-icon">🎁</span>
-      <h3>Honor & Memorial Gifts</h3>
-      <p>Make a donation in honor or memory of a loved one.</p>
-      <ul>
-        <li>Meaningful tribute</li>
-        <li>Acknowledgment sent</li>
-        <li>Tax-deductible</li>
-        <li>Creates lasting impact</li>
-      </ul>
-    </div>
-
-    <div class="give-card">
-      <span class="give-icon">🏢</span>
-      <h3>Corporate Partnership</h3>
-      <p>Partner with us through corporate giving or matching programs.</p>
-      <ul>
-        <li>CSR opportunities</li>
-        <li>Employee engagement</li>
-        <li>Brand visibility</li>
-        <li>Impact reporting</li>
-      </ul>
-    </div>
-
-    <div class="give-card">
-      <span class="give-icon">📚</span>
-      <h3>In-Kind Donations</h3>
-      <p>Donate books, supplies, or other educational materials.</p>
-      <ul>
-        <li>Physical resources</li>
-        <li>Educational materials</li>
-        <li>Technology equipment</li>
-        <li>Contact us for details</li>
-      </ul>
-    </div>
+    <div class="give-card"><span class="give-icon">👤</span><h3>Sponsor a Child</h3><p>Provide comprehensive support for one child's entire education journey.</p><ul><li>Direct impact on one child</li><li>Regular progress updates</li><li>Personal connection</li><li>$300–500 per year</li></ul></div>
+    <div class="give-card"><span class="give-icon">💝</span><h3>One-Time Donation</h3><p>Make an immediate impact with a one-time contribution of any amount.</p><ul><li>Flexible amount</li><li>Immediate impact</li><li>Support where needed most</li><li>Any amount helps</li></ul></div>
+    <div class="give-card"><span class="give-icon">🔄</span><h3>Monthly Giving</h3><p>Become a sustaining partner with automated monthly contributions.</p><ul><li>Predictable support</li><li>Automatic payments</li><li>Cancel anytime</li><li>Greater long-term impact</li></ul></div>
+    <div class="give-card"><span class="give-icon">🎁</span><h3>Honor & Memorial Gifts</h3><p>Make a donation in honor or memory of a loved one.</p><ul><li>Meaningful tribute</li><li>Acknowledgment sent</li><li>Creates lasting impact</li><li>Any amount welcome</li></ul></div>
+    <div class="give-card"><span class="give-icon">🏢</span><h3>Corporate Partnership</h3><p>Partner with us through corporate giving or matching programs.</p><ul><li>CSR opportunities</li><li>Employee engagement</li><li>Brand visibility</li><li>Impact reporting</li></ul></div>
+    <div class="give-card"><span class="give-icon">📚</span><h3>In-Kind Donations</h3><p>Donate books, supplies, or other educational materials.</p><ul><li>Physical resources</li><li>Educational materials</li><li>Technology equipment</li><li>Contact us for details</li></ul></div>
   </div>
 </section>
 
@@ -425,109 +210,32 @@
   <h2>Our Commitment to Transparency</h2>
   <p>Building trust through accountability and clear communication is central to our mission.</p>
   <div class="transparency-grid">
-    <div class="transparency-card">
-      <h3><i class="fas fa-file-invoice-dollar"></i> Financial Tracking</h3>
-      <p>All donations are tracked using secure systems. We maintain detailed records of every contribution and how it's used to support children's education.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-clipboard-check"></i> Registration Status</h3>
-      <p>ADO is currently operating as a community initiative and actively working toward formal registration. We follow ethical practices and maintain transparency throughout this process.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-chart-line"></i> Impact Reports</h3>
-      <p>Donors receive regular updates on program activities, success stories, and how their contributions are making a difference in children's lives.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h3>Contact Information</h3>
-      <p>We're a community-driven organization operating across Africa.</p>
-
-      <div class="info-item">
-        <span class="info-icon">📧</span>
-        <div class="info-content">
-          <strong>Email Address</strong>
-          <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <span class="info-icon">⏰</span>
-        <div class="info-content">
-          <strong>Response Time</strong>
-          <span style="color: #666;">24-48 Hours</span>
-        </div>
-      </div>
-
-      <div class="note">
-        <p>
-          <strong>Note:</strong> ADO is currently a community-driven initiative in the process of formal registration.
-        </p>
-      </div>
-    </div>
-
-    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 40px; border-radius: 15px;">
-      <h3 style="color: #0f5132; font-size: 1.8rem; margin-bottom: 25px; font-weight: 600;">Frequently Asked Questions</h3>
-      
-      <div style="background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
-        <h4 style="color: #0f5132; margin-bottom: 10px; font-size: 1.2rem;">How can I support a specific child?</h4>
-        <p style="color: #666; font-size: 0.95rem; margin: 0;">Visit our <a href="children.html" style="color: #0f5132; font-weight: 600;">Children page</a> to see profiles and click "Support" to help them directly.</p>
-      </div>
-      
-      <div style="background: #fff; padding: 25px; border-radius: 12px; border-left: 4px solid #ffc107;">
-        <h4 style="color: #0f5132; margin-bottom: 10px; font-size: 1.2rem;">How do you ensure transparency?</h4>
-        <p style="color: #666; font-size: 0.95rem; margin: 0;">We provide regular updates and documentation for all activities to our community of supporters.</p>
-      </div>
-    </div>
+    <div class="transparency-card"><h3><i class="fas fa-file-invoice-dollar"></i> Financial Tracking</h3><p>All donations are tracked using secure systems. We maintain detailed records of every contribution and how it's used to support children's education.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-clipboard-check"></i> Registration Status</h3><p>ADO is currently operating as a community initiative and actively working toward formal registration. We follow ethical practices and maintain transparency throughout this process.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-chart-line"></i> Impact Reports</h3><p>Donors receive regular updates on program activities, success stories, and how their contributions are making a difference in children's lives.</p></div>
   </div>
 </section>
 
 <section class="faq-section">
-  <h2>More Questions About Giving</h2>
-
+  <h2>Questions About Giving</h2>
   <div class="faq-grid">
-    <div class="faq-item">
-      <h3>Are donations tax-deductible?</h3>
-      <p>As we are in the process of formal registration, tax-deductibility will be available once we receive official nonprofit status. We maintain detailed records for all donations.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can I donate in currencies other than USD?</h3>
-      <p>Yes! PayPal automatically converts your local currency to USD. For bank transfers in other currencies, please contact us for specific instructions.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How much of my donation goes directly to programs?</h3>
-      <p>We strive to maximize program impact. Currently, the majority of funds go directly to educational support, with minimal operational costs as we operate primarily through volunteers.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can I set up recurring monthly donations?</h3>
-      <p>Yes! Contact us at info@africadynamite.org to set up automatic monthly giving through PayPal or bank transfer.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Will I receive updates about my donation's impact?</h3>
-      <p>Absolutely! All donors receive regular updates about program activities, success stories, and the specific impact of their contributions.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can I donate educational materials instead of money?</h3>
-      <p>Yes! We accept in-kind donations of books, school supplies, and educational materials. Contact us to coordinate donation details and shipping.</p>
-    </div>
+    <div class="faq-item"><h3>Are donations tax-deductible?</h3><p>As we are in the process of formal registration, tax-deductibility will be available once we receive official nonprofit status. We maintain detailed records for all donations.</p></div>
+    <div class="faq-item"><h3>Can I donate in currencies other than USD?</h3><p>Yes! PayPal automatically converts your local currency to USD. For bank transfers in other currencies, please contact us for specific instructions.</p></div>
+    <div class="faq-item"><h3>How much of my donation goes directly to programs?</h3><p>We strive to maximize program impact. Currently, the majority of funds go directly to educational support, with minimal operational costs as we operate primarily through volunteers.</p></div>
+    <div class="faq-item"><h3>Can I set up recurring monthly donations?</h3><p>Yes! Contact us at <a href="mailto:info@africadynamite.org" style="color:#0f5132;font-weight:600">info@africadynamite.org</a> to set up automatic monthly giving through PayPal or bank transfer.</p></div>
+    <div class="faq-item"><h3>Will I receive updates about my donation's impact?</h3><p>Absolutely! All donors receive regular updates about program activities, success stories, and the specific impact of their contributions.</p></div>
+    <div class="faq-item"><h3>Can I donate educational materials instead of money?</h3><p>Yes! We accept in-kind donations of books, school supplies, and educational materials. Contact us to coordinate donation details and shipping.</p></div>
   </div>
 </section>
 
 <section class="newsletter">
   <h2>Stay Connected</h2>
-  <p>Subscribe to receive impact stories, program updates, and ways to support our mission.</p>
-  <form class="newsletter-form" action="mailto:info@africadynamite.org" method="post" enctype="text/plain">
+  <p>Subscribe to receive impact stories, program updates, and ways to support our mission. We send no more than 2 emails per month.</p>
+  <form class="newsletter-form" action="https://formspree.io/f/mnjryzrn" method="POST">
     <input type="email" name="email" placeholder="Enter your email address" required>
     <button type="submit">Subscribe</button>
   </form>
+  <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
 </section>
 
 <footer>
@@ -549,102 +257,75 @@
       <a href="what-we-do.html">What We Do</a>
       <a href="children.html">Children</a>
       <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-section">
       <h3>Contact Us</h3>
-      <p><i class="fas fa-envelope"></i> info@africadynamite.org</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@africadynamite.org">info@africadynamite.org</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237676092268" target="_blank">WhatsApp Us</a></p>
       <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
-      <p><i class="fas fa-clock"></i> Response time: 24-48 hours</p>
+      <p><i class="fas fa-clock"></i> Response time: 24–48 hours</p>
     </div>
     <div class="footer-section">
       <h3>Support Our Mission</h3>
       <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
-      <a href="#" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">Support Now</a>
+      <a href="support.html" style="display:inline-block;margin-top:12px;padding:11px 22px;background:#ffc107;color:#000;border-radius:8px;font-weight:700">❤️ Support Now</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | Community-driven initiative working toward formal registration.</p>
+    <p style="margin-top:8px"><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
   </div>
 </footer>
 
 <div class="sticky-support">
-   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="africadynamite25@gmail.com">
     <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
-
-     <!-- NEW: Return URL -->
-  <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
-  
-  <!-- NEW: Cancel URL -->
-  <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
+    <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
     <button type="submit">❤️ Support ADO</button>
-</form>
+  </form>
+</div>
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
 <script>
-  // Animated Counter
-  function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-target'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        if (target === 300) {
-          element.textContent = '$' + target.toLocaleString();
-        } else if (target === 95) {
-          element.textContent = target + '%';
-        } else {
-          element.textContent = target.toLocaleString() + (target >= 100 ? '+' : '');
-        }
+  document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'));
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '+';
+    var duration = 2000; var step = target / (duration / 16); var cur = 0;
+    var timer = setInterval(function() {
+      cur += step;
+      if (cur >= target) {
+        el.textContent = prefix + target.toLocaleString() + suffix;
         clearInterval(timer);
       } else {
-        if (target === 300) {
-          element.textContent = '$' + Math.floor(current).toLocaleString();
-        } else if (target === 95) {
-          element.textContent = Math.floor(current) + '%';
-        } else {
-          element.textContent = Math.floor(current).toLocaleString();
-        }
+        el.textContent = prefix + Math.floor(cur).toLocaleString();
       }
     }, 16);
   }
-
-  // Trigger counters when in viewport
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counters = entry.target.querySelectorAll('.counter-number');
-        counters.forEach(counter => {
-          if (counter.textContent === '0') {
-            animateCounter(counter);
-          }
-        });
-      }
-    });
-  });
-
-  const impactCounter = document.querySelector('.impact-counter');
-  if (impactCounter) {
-    observer.observe(impactCounter);
+  var counterSection = document.querySelector('.impact-counter');
+  if (counterSection) {
+    var triggered = false;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting && !triggered) {
+          triggered = true;
+          e.target.querySelectorAll('.counter-number').forEach(function(c) { animateCounter(c); });
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(counterSection);
   }
 </script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
