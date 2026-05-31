@@ -5,233 +5,118 @@
   <title>What We Do | Africa Dynamite Organisation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn about Africa Dynamite Organisation's education programs and how we support children across Africa." />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  
+  <link rel="icon" type="image/png" href="Image/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
-
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
-    }
-    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
-    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; letter-spacing: 0.5px; line-height: 1.3; }
-    nav { display: flex; align-items: center; gap: 5px; }
-    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
-    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
-    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
-    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255,193,7,0.4); }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.1)), url("Image/build.jpg") center/cover no-repeat;
-      color: #fff; text-align: center; padding: 120px 30px; position: relative;
-    }
-    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%); }
-    .hero-content { position: relative; z-index: 1; }
-    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); letter-spacing: -0.5px; }
-    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); font-weight: 300; }
-
-    /* SECTIONS */
-    section { max-width: 1200px; margin: auto; padding: 80px 40px; }
-    h2 { color: #0f5132; margin-bottom: 30px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
-    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
-    .intro { font-size: 1.15rem; max-width: 950px; line-height: 1.9; color: #555; margin-bottom: 20px; }
-
-    /* STATISTICS BAR */
-    .stats-bar {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
-      margin: 50px 0; padding: 40px; background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      border-radius: 15px; box-shadow: 0 8px 30px rgba(15,81,50,0.3);
-    }
-    .stat-item { text-align: center; color: #fff; }
-    .stat-number { font-size: 3rem; font-weight: 700; color: #ffc107; display: block; margin-bottom: 10px; }
-    .stat-label { font-size: 1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-    /* PROGRAMS GRID */
-    .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; margin-top: 50px; }
-    .program-card {
-      background: #fff; border: none; border-radius: 15px; padding: 40px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease;
-      position: relative; overflow: hidden;
-    }
-    .program-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
-    .program-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
-    .program-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-    .program-card h3 { color: #0f5132; font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
-    .program-card p { color: #666; font-size: 1.05rem; line-height: 1.8; margin: 0; }
-
-    /* APPROACH SECTION */
-    .approach { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin-top: 50px; }
-    .step {
-      background: #fff; border: none; padding: 35px; border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s ease;
-      position: relative;
-    }
-    .step::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: #ffc107; border-radius: 0 0 4px 4px; }
-    .step:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
-    .step-number {
-      width: 60px; height: 60px; background: linear-gradient(135deg, #0f5132, #1a7a4f);
-      color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(15,81,50,0.3);
-    }
-    .step h3 { color: #0f5132; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
-    .step p { color: #666; font-size: 1rem; line-height: 1.7; margin: 0; }
-
-    /* IMPACT STORIES */
-    .impact-stories {
-      background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff; padding: 80px 40px;
-    }
-    .impact-stories h2 { color: #fff; }
-    .impact-stories h2::after { background: #ffc107; }
-    .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 50px; }
-    .story-card {
-      background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2); padding: 35px; border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-    .story-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-5px); }
-    .story-card h3 { color: #ffc107; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
-    .story-card p { color: #fff; font-size: 1.05rem; line-height: 1.8; margin: 0; }
-    .story-location {
-      display: inline-block; margin-top: 15px; padding: 6px 15px;
-      background: rgba(255,193,7,0.2); color: #ffc107; border-radius: 20px;
-      font-size: 0.9rem; font-weight: 600;
-    }
-
-    /* TRANSPARENCY SECTION */
-    .transparency { background: #fff; }
-    .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-    .transparency-card {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      border-left: 4px solid #0f5132; transition: transform 0.3s ease;
-    }
-    .transparency-card:hover { transform: translateY(-5px); }
-    .transparency-card h3 { color: #0f5132; font-size: 1.3rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-    .transparency-card h3 i { color: #ffc107; font-size: 1.5rem; }
-    .transparency-card p { color: #666; font-size: 1rem; line-height: 1.7; }
-
-    /* CTA */
-    .cta {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000; text-align: center; padding: 90px 40px; position: relative; overflow: hidden;
-    }
-    .cta::before {
-      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-      animation: pulse 15s infinite;
-    }
-    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.3; } }
-    .cta h2 { color: #000; font-size: 2.8rem; margin-bottom: 20px; position: relative; z-index: 1; }
-    .cta h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
-    .cta p { color: #000; font-size: 1.2rem; margin-bottom: 35px; position: relative; z-index: 1; font-weight: 500; }
-    .cta a {
-      display: inline-block; padding: 16px 40px; background: #0f5132; color: #fff;
-      font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(15,81,50,0.3); position: relative; z-index: 1;
-    }
-    .cta a:hover { background: #1a7a4f; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(15,81,50,0.4); }
-
-    /* NEWSLETTER */
-    .newsletter { background: #ffc107; padding: 60px 40px; text-align: center; }
-    .newsletter h2 { color: #000; }
-    .newsletter h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
-    .newsletter p { color: #000; font-size: 1.1rem; margin-bottom: 30px; }
-    .newsletter-form { max-width: 600px; margin: 0 auto; display: flex; gap: 15px; }
-    .newsletter-form input { flex: 1; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .newsletter-form button { padding: 16px 35px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
-    .newsletter-form button:hover { background: #1a7a4f; transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
-    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
-    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
-    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
-    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
-    .footer-section a:hover { color: #ffc107; }
-    .social-links { display: flex; gap: 15px; margin-top: 20px; }
-    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
-    .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
-    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
-
-    /* STICKY SUPPORT */
-    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
-    .sticky-support button {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600;
-      border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4);
-      transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
-    }
-    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
-      .logo-text { font-size: 0.9rem; text-align: center; }
-      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
-      nav a { padding: 8px 12px; font-size: 0.85rem; }
-      nav a.support-btn { margin-left: 0; margin-top: 5px; }
-      .hero { padding: 80px 20px; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      h2 { font-size: 1.8rem; }
-      section { padding: 60px 20px; }
-      .intro { font-size: 1rem; }
-      .stat-number { font-size: 2.2rem; }
-      .stats-bar { padding: 30px 20px; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-      .programs { grid-template-columns: 1fr; gap: 25px; }
-      .program-card { padding: 30px; }
-      .steps { grid-template-columns: 1fr; gap: 25px; }
-      .step { padding: 25px; }
-      .stories-grid { grid-template-columns: 1fr; gap: 25px; }
-      .story-card { padding: 25px; }
-      .transparency-grid { grid-template-columns: 1fr; }
-      .cta { padding: 60px 20px; }
-      .cta h2 { font-size: 2rem; }
-      .cta p { font-size: 1rem; }
-      .cta a { width: 100%; max-width: 300px; }
-      .newsletter-form { flex-direction: column; }
-      .footer-content { grid-template-columns: 1fr; gap: 30px; }
-      .sticky-support { right: 15px; bottom: 15px; }
-      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.95rem; }
-      h2 { font-size: 1.5rem; }
-      .stat-number { font-size: 1.8rem; }
-      .stat-label { font-size: 0.85rem; }
-      .stats-bar { grid-template-columns: 1fr; padding: 20px 15px; }
-      .program-card h3, .step h3, .story-card h3 { font-size: 1.2rem; }
-      .program-card p, .step p, .story-card p { font-size: 0.95rem; }
-    }
-  
-    /* HAMBURGER MENU */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',Arial,Helvetica,sans-serif;line-height:1.7;color:#2c3e50;overflow-x:hidden}
+    header{background:linear-gradient(135deg,#0f5132 0%,#1a7a4f 100%);color:#fff;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 15px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
+    .logo-wrapper{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-wrapper img{height:50px;width:50px;object-fit:contain;border-radius:6px;background:#fff;padding:3px}
+    .logo-text{font-weight:700;font-size:1.2rem;color:#fff;line-height:1.2}
+    .logo-text span{display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:4px}
+    nav a{color:#fff;padding:9px 13px;text-decoration:none;font-weight:500;font-size:.88rem;border-radius:6px;transition:all .3s}
+    nav a:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+    nav a.support-btn{background:#ffc107;color:#000;font-weight:700;margin-left:8px;box-shadow:0 4px 12px rgba(255,193,7,.3)}
+    nav a.support-btn:hover{background:#ffb300;transform:translateY(-2px)}
     .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
     .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
-    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px!important}}
-</style>
+    .hero{background:linear-gradient(rgba(15,81,50,0.88),rgba(0,0,0,0.1)),url("Image/build.jpg") center/cover no-repeat;color:#fff;text-align:center;padding:120px 30px;position:relative}
+    .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at center,transparent 0%,rgba(0,0,0,0.3) 100%)}
+    .hero-content{position:relative;z-index:1}
+    .hero h1{font-size:3.2rem;margin-bottom:15px;font-weight:700;text-shadow:2px 4px 8px rgba(0,0,0,0.3)}
+    .hero p{font-size:1.25rem;max-width:800px;margin:0 auto;font-weight:300;text-shadow:1px 2px 4px rgba(0,0,0,0.3)}
+    section{max-width:1200px;margin:auto;padding:80px 40px}
+    h2{color:#0f5132;margin-bottom:30px;font-size:2.5rem;font-weight:700;position:relative;display:inline-block}
+    h2::after{content:'';position:absolute;bottom:-10px;left:0;width:60px;height:4px;background:#ffc107;border-radius:2px}
+    .intro{font-size:1.15rem;max-width:950px;line-height:1.9;color:#555;margin-bottom:20px}
+    .stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin:50px 0;padding:40px;background:linear-gradient(135deg,#0f5132 0%,#1a7a4f 100%);border-radius:15px;box-shadow:0 8px 30px rgba(15,81,50,0.3)}
+    .stat-item{text-align:center;color:#fff}
+    .stat-number{font-size:3rem;font-weight:700;color:#ffc107;display:block;margin-bottom:10px}
+    .stat-label{font-size:1rem;font-weight:500;text-transform:uppercase;letter-spacing:1px}
+    .programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;margin-top:50px}
+    .program-card{background:#fff;border-radius:15px;padding:40px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:all 0.3s ease;position:relative;overflow:hidden}
+    .program-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#0f5132,#ffc107)}
+    .program-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.15)}
+    .program-icon{font-size:3rem;margin-bottom:20px;display:block}
+    .program-card h3{color:#0f5132;font-size:1.5rem;margin-bottom:15px;font-weight:600}
+    .program-card p{color:#666;font-size:1.05rem;line-height:1.8;margin:0}
+    .approach{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%)}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:50px}
+    .step{background:#fff;padding:35px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.08);text-align:center;transition:all 0.3s ease;position:relative}
+    .step::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:4px;background:#ffc107;border-radius:0 0 4px 4px}
+    .step:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+    .step-number{width:60px;height:60px;background:linear-gradient(135deg,#0f5132,#1a7a4f);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700;margin:0 auto 20px;box-shadow:0 4px 15px rgba(15,81,50,0.3)}
+    .step h3{color:#0f5132;font-size:1.4rem;margin-bottom:15px;font-weight:600}
+    .step p{color:#666;font-size:1rem;line-height:1.7;margin:0}
+    .impact-stories{background:linear-gradient(135deg,#0f5132 0%,#1a7a4f 100%);color:#fff;padding:80px 40px}
+    .impact-stories h2{color:#fff}
+    .impact-stories h2::after{background:#ffc107}
+    .stories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;margin-top:50px}
+    .story-card{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:35px;border-radius:12px;transition:all 0.3s ease}
+    .story-card:hover{background:rgba(255,255,255,0.15);transform:translateY(-5px)}
+    .story-card h3{color:#ffc107;font-size:1.4rem;margin-bottom:15px;font-weight:600}
+    .story-card p{color:#fff;font-size:1.05rem;line-height:1.8;margin:0}
+    .story-location{display:inline-block;margin-top:15px;padding:6px 15px;background:rgba(255,193,7,0.2);color:#ffc107;border-radius:20px;font-size:0.9rem;font-weight:600}
+    .transparency{background:#fff}
+    .transparency-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:40px}
+    .transparency-card{background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);padding:32px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.06);border-left:4px solid #0f5132;transition:transform 0.3s ease}
+    .transparency-card:hover{transform:translateY(-5px)}
+    .transparency-card h3{color:#0f5132;font-size:1.15rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .transparency-card h3 i{color:#ffc107}
+    .transparency-card p{color:#666;font-size:1rem;line-height:1.7}
+    .cta{background:linear-gradient(135deg,#ffc107 0%,#ffb300 100%);color:#000;text-align:center;padding:90px 40px;position:relative;overflow:hidden}
+    .cta::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.2) 0%,transparent 70%);animation:pulse 15s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:0.5}50%{transform:scale(1.1);opacity:0.3}}
+    .cta h2{color:#000;font-size:2.8rem;margin-bottom:20px;position:relative;z-index:1}
+    .cta h2::after{background:#0f5132;left:50%;transform:translateX(-50%)}
+    .cta p{color:#000;font-size:1.2rem;margin-bottom:35px;position:relative;z-index:1;font-weight:500}
+    .cta a{display:inline-block;padding:16px 40px;background:#0f5132;color:#fff;font-weight:600;text-decoration:none;border-radius:8px;transition:all 0.3s ease;box-shadow:0 6px 20px rgba(15,81,50,0.3);position:relative;z-index:1}
+    .cta a:hover{background:#1a7a4f;transform:translateY(-3px)}
+    .newsletter{background:#ffc107;padding:60px 40px;text-align:center}
+    .newsletter h2{color:#000;display:inline-block}
+    .newsletter h2::after{background:#0f5132;left:50%;transform:translateX(-50%)}
+    .newsletter>p{color:#000;font-size:1.05rem;margin:15px auto 28px;max-width:580px}
+    .newsletter-form{max-width:540px;margin:0 auto;display:flex;gap:12px}
+    .newsletter-form input{flex:1;padding:14px 18px;border:none;border-radius:8px;font-size:1rem;font-family:'Poppins',sans-serif}
+    .newsletter-form button{padding:14px 28px;background:#0f5132;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .3s;white-space:nowrap}
+    .newsletter-form button:hover{background:#1a7a4f;transform:translateY(-2px)}
+    .newsletter-note{color:rgba(0,0,0,.6);font-size:.82rem;margin-top:12px}
+    footer{background:#111;color:#ccc;padding:60px 40px 30px}
+    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:38px;max-width:1200px;margin:0 auto 40px}
+    .footer-section h3{color:#ffc107;margin-bottom:16px;font-size:1.1rem}
+    .footer-section p{font-size:.88rem;line-height:1.8;margin-bottom:10px}
+    .footer-section a{color:#ccc;text-decoration:none;display:block;margin-bottom:7px;font-size:.88rem;transition:color .3s}
+    .footer-section a:hover{color:#ffc107}
+    .social-links{display:flex;gap:10px;margin-top:16px}
+    .social-links a{width:36px;height:36px;background:#222;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s;font-size:.85rem}
+    .social-links a:hover{background:#ffc107;color:#000;transform:translateY(-3px)}
+    .footer-bottom{text-align:center;padding-top:26px;border-top:1px solid #222;color:#777;font-size:.82rem}
+    .footer-bottom a{color:#aaa;text-decoration:none}
+    .footer-bottom a:hover{color:#ffc107}
+    .sticky-support{position:fixed;right:25px;bottom:25px;z-index:9999}
+    .sticky-support button{background:linear-gradient(135deg,#ffc107,#ffb300);color:#000;border:none;padding:14px 22px;font-size:.95rem;font-weight:700;border-radius:50px;cursor:pointer;box-shadow:0 8px 20px rgba(255,193,7,.4);transition:all .3s;font-family:'Poppins',sans-serif}
+    .sticky-support button:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(255,193,7,.5)}
+    .sticky-whatsapp{position:fixed;left:25px;bottom:25px;z-index:9999}
+    .sticky-whatsapp a{display:flex;align-items:center;justify-content:center;width:54px;height:54px;background:#25D366;color:#fff;border-radius:50%;font-size:1.7rem;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+    .sticky-whatsapp a:hover{background:#128C7E;transform:translateY(-3px)}
+    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px}}
+    @media(max-width:768px){.hero{padding:80px 20px}.hero h1{font-size:2rem}.hero p{font-size:1rem}h2{font-size:1.8rem}section{padding:60px 20px}.stats-bar{padding:30px 20px;gap:20px}.programs,.steps,.stories-grid,.transparency-grid{grid-template-columns:1fr}.cta{padding:60px 20px}.cta h2{font-size:2rem}.newsletter-form{flex-direction:column}.footer-content{grid-template-columns:1fr;gap:26px}}
+    @media(max-width:480px){.hero h1{font-size:1.7rem}h2{font-size:1.5rem}.stats-bar{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo-wrapper">
-    <img src="Image/logo.png" alt="ADO Logo" style="height:46px;width:46px;object-fit:contain;border-radius:6px;background:#fff;padding:3px"><div class="logo-text">AFRICA DYNAMITE ORGANISATION<span style="display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase">Igniting Minds, Transforming Africa</span></div>
-  </div>
-  <nav>
+  <a href="index.html" class="logo-wrapper">
+    <img src="Image/logo.png" alt="ADO Logo">
+    <div class="logo-text">AFRICA DYNAMITE ORGANISATION<span>Igniting Minds, Transforming Africa</span></div>
+  </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="what-we-do.html">What We Do</a>
@@ -239,7 +124,7 @@
     <a href="get-involved.html">Get Involved</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
-    <a href="support.html" class="support-btn">Support</a>
+    <a href="support.html" class="support-btn">❤️ Support</a>
   </nav>
 </header>
 
@@ -252,114 +137,36 @@
 
 <section>
   <h2>Our Focus</h2>
-  <p class="intro">
-    Africa Dynamite Organisation (ADO) focuses on addressing educational barriers
-    faced by children across Africa. We work with communities, families, and partners
-    to ensure children not only return to school, but are supported to remain and thrive.
-    Our programs are designed to create lasting change by removing obstacles and building
-    sustainable pathways to quality education.
-  </p>
-
-  <!-- IMPACT STATISTICS -->
+  <p class="intro">Africa Dynamite Organisation (ADO) focuses on addressing educational barriers faced by children across Africa. We work with communities, families, and partners to ensure children not only return to school, but are supported to remain and thrive. Our programs are designed to create lasting change by removing obstacles and building sustainable pathways to quality education.</p>
   <div class="stats-bar">
-    <div class="stat-item">
-      <span class="stat-number" data-target="46">0</span>
-      <span class="stat-label">Million Children Out of School</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="43">0</span>
-      <span class="stat-label">Children Supported</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="20">0</span>
-      <span class="stat-label">Partner Communities</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="4">0</span>
-      <span class="stat-label">Countries Reached</span>
-    </div>
+    <div class="stat-item"><span class="stat-number" data-target="46">0</span><span class="stat-label">Million Children Out of School</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="43">0</span><span class="stat-label">Children Supported</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="20">0</span><span class="stat-label">Partner Communities</span></div>
+    <div class="stat-item"><span class="stat-number" data-target="4">0</span><span class="stat-label">Countries Reached</span></div>
   </div>
 </section>
 
 <section>
   <h2>Our Core Programs</h2>
-
   <div class="programs">
-    <div class="program-card">
-      <span class="program-icon">📘</span>
-      <h3>Foundational Learning</h3>
-      <p>Supporting literacy and numeracy through quality learning materials, teacher training, and safe learning spaces. We focus on building strong educational foundations that enable children to succeed throughout their academic journey.</p>
-    </div>
-
-    <div class="program-card">
-      <span class="program-icon">🚨</span>
-      <h3>Education in Emergencies</h3>
-      <p>Rapid education support for children affected by conflict, displacement, or crisis situations. We provide emergency learning materials, temporary learning spaces, and psychological support to help children continue learning during difficult times.</p>
-    </div>
-
-    <div class="program-card">
-      <span class="program-icon">🔄</span>
-      <h3>Learning Recovery</h3>
-      <p>Helping children return to school and catch up after long disruptions due to poverty, illness, or family circumstances. We provide accelerated learning programs, tutoring support, and remedial education to bridge learning gaps.</p>
-    </div>
-
-    <div class="program-card">
-      <span class="program-icon">🎒</span>
-      <h3>School Supplies & Uniforms</h3>
-      <p>Providing essential items like uniforms, books, pens, and bags so children can attend school with dignity and be ready to learn. We believe every child deserves to feel confident and prepared in the classroom.</p>
-    </div>
-
-    <div class="program-card">
-      <span class="program-icon">🥗</span>
-      <h3>Nutrition & Wellbeing</h3>
-      <p>Supporting school feeding programs and wellbeing initiatives so children can focus on learning. Proper nutrition is essential for cognitive development and academic success.</p>
-    </div>
-
-    <div class="program-card">
-      <span class="program-icon">🤝</span>
-      <h3>Community Engagement</h3>
-      <p>Working with local leaders, parents, and communities to develop sustainable, community-led solutions that ensure long-term educational access and support for all children.</p>
-    </div>
+    <div class="program-card"><span class="program-icon">📘</span><h3>Foundational Learning</h3><p>Supporting literacy and numeracy through quality learning materials, teacher training, and safe learning spaces. We focus on building strong educational foundations that enable children to succeed throughout their academic journey.</p></div>
+    <div class="program-card"><span class="program-icon">🚨</span><h3>Education in Emergencies</h3><p>Rapid education support for children affected by conflict, displacement, or crisis situations. We provide emergency learning materials, temporary learning spaces, and psychological support to help children continue learning during difficult times.</p></div>
+    <div class="program-card"><span class="program-icon">🔄</span><h3>Learning Recovery</h3><p>Helping children return to school and catch up after long disruptions due to poverty, illness, or family circumstances. We provide accelerated learning programs, tutoring support, and remedial education to bridge learning gaps.</p></div>
+    <div class="program-card"><span class="program-icon">🎒</span><h3>School Supplies & Uniforms</h3><p>Providing essential items like uniforms, books, pens, and bags so children can attend school with dignity and be ready to learn. We believe every child deserves to feel confident and prepared in the classroom.</p></div>
+    <div class="program-card"><span class="program-icon">🥗</span><h3>Nutrition & Wellbeing</h3><p>Supporting school feeding programs and wellbeing initiatives so children can focus on learning. Proper nutrition is essential for cognitive development and academic success.</p></div>
+    <div class="program-card"><span class="program-icon">🤝</span><h3>Community Engagement</h3><p>Working with local leaders, parents, and communities to develop sustainable, community-led solutions that ensure long-term educational access and support for all children.</p></div>
   </div>
 </section>
 
 <section class="approach">
   <h2>How We Work</h2>
-  <p class="intro">
-    Our approach is systematic, community-centered, and focused on long-term sustainability.
-    We believe that lasting educational change requires partnership, accountability, and continuous engagement.
-  </p>
-
+  <p class="intro">Our approach is systematic, community-centered, and focused on long-term sustainability. We believe that lasting educational change requires partnership, accountability, and continuous engagement.</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-number">1</div>
-      <h3>Identify</h3>
-      <p>Children at risk of dropping out or already out of school are identified through community partnerships and local coordinators.</p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">2</div>
-      <h3>Assess</h3>
-      <p>We assess each child's specific needs, barriers to education, and family circumstances to provide targeted support.</p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">3</div>
-      <h3>Support</h3>
-      <p>Tailored educational assistance is provided, including school fees, materials, uniforms, and additional learning support as needed.</p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">4</div>
-      <h3>Monitor</h3>
-      <p>We follow up regularly to ensure children remain in school, track academic progress, and address emerging challenges promptly.</p>
-    </div>
-
-    <div class="step">
-      <div class="step-number">5</div>
-      <h3>Sustain</h3>
-      <p>Long-term stability is promoted through community ownership, partnerships, and ongoing engagement to prevent future dropouts.</p>
-    </div>
+    <div class="step"><div class="step-number">1</div><h3>Identify</h3><p>Children at risk of dropping out or already out of school are identified through community partnerships and local coordinators.</p></div>
+    <div class="step"><div class="step-number">2</div><h3>Assess</h3><p>We assess each child's specific needs, barriers to education, and family circumstances to provide targeted support.</p></div>
+    <div class="step"><div class="step-number">3</div><h3>Support</h3><p>Tailored educational assistance is provided, including school fees, materials, uniforms, and additional learning support as needed.</p></div>
+    <div class="step"><div class="step-number">4</div><h3>Monitor</h3><p>We follow up regularly to ensure children remain in school, track academic progress, and address emerging challenges promptly.</p></div>
+    <div class="step"><div class="step-number">5</div><h3>Sustain</h3><p>Long-term stability is promoted through community ownership, partnerships, and ongoing engagement to prevent future dropouts.</p></div>
   </div>
 </section>
 
@@ -367,55 +174,19 @@
   <h2>Our Commitment to Transparency</h2>
   <p class="intro">We maintain the highest standards of accountability in all our operations.</p>
   <div class="transparency-grid">
-    <div class="transparency-card">
-      <h3><i class="fas fa-clipboard-list"></i> Program Tracking</h3>
-      <p>Every program activity is documented and tracked. We maintain detailed records of children supported, materials distributed, and outcomes achieved.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-chart-bar"></i> Impact Measurement</h3>
-      <p>We use data-driven approaches to measure program effectiveness, track educational outcomes, and ensure continuous improvement in our interventions.</p>
-    </div>
-    <div class="transparency-card">
-      <h3><i class="fas fa-users"></i> Community Accountability</h3>
-      <p>Local communities are involved in program design, implementation, and monitoring to ensure our work truly meets the needs of the children we serve.</p>
-    </div>
+    <div class="transparency-card"><h3><i class="fas fa-clipboard-list"></i> Program Tracking</h3><p>Every program activity is documented and tracked. We maintain detailed records of children supported, materials distributed, and outcomes achieved.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-chart-bar"></i> Impact Measurement</h3><p>We use data-driven approaches to measure program effectiveness, track educational outcomes, and ensure continuous improvement in our interventions.</p></div>
+    <div class="transparency-card"><h3><i class="fas fa-users"></i> Community Accountability</h3><p>Local communities are involved in program design, implementation, and monitoring to ensure our work truly meets the needs of the children we serve.</p></div>
   </div>
 </section>
 
 <section class="impact-stories">
   <h2>Stories of Impact</h2>
-  <p class="intro" style="color: #fff; max-width: 900px; margin: 0 auto 30px;">
-    Every child we support represents a life transformed and a future made brighter.
-    Here are just a few examples of the real change happening across Africa.
-  </p>
-
+  <p class="intro" style="color:#fff;max-width:900px;margin:0 auto 30px;">Every child we support represents a life transformed and a future made brighter.</p>
   <div class="stories-grid">
-    <div class="story-card">
-      <h3>Amara's Journey Back</h3>
-      <p>
-        After missing two years of school due to family hardship, Amara returned to the classroom 
-        with ADO's support. Today, she's top of her class and dreams of becoming a doctor.
-      </p>
-      <span class="story-location">📍 Lagos, Nigeria</span>
-    </div>
-
-    <div class="story-card">
-      <h3>Joseph's New Beginning</h3>
-      <p>
-        Displaced by conflict, Joseph thought his education was over. Through our emergency education 
-        program, he's now back in school and thriving with his peers.
-      </p>
-      <span class="story-location">📍 Nairobi, Kenya</span>
-    </div>
-
-    <div class="story-card">
-      <h3>Amina's Success</h3>
-      <p>
-        With learning materials and consistent support, Amina went from struggling to excelling. 
-        She recently graduated primary school with honors and dreams of becoming a teacher.
-      </p>
-      <span class="story-location">📍 Mogadishu, Somalia</span>
-    </div>
+    <div class="story-card"><h3>Amara's Journey Back</h3><p>After missing two years of school due to family hardship, Amara returned to the classroom with ADO's support. Today, she's top of her class and dreams of becoming a doctor.</p><span class="story-location">📍 Lagos, Nigeria</span></div>
+    <div class="story-card"><h3>Joseph's New Beginning</h3><p>Displaced by conflict, Joseph thought his education was over. Through our emergency education program, he's now back in school and thriving with his peers.</p><span class="story-location">📍 Nairobi, Kenya</span></div>
+    <div class="story-card"><h3>Amina's Success</h3><p>With learning materials and consistent support, Amina went from struggling to excelling. She recently graduated primary school with honors and dreams of becoming a teacher.</p><span class="story-location">📍 Mogadishu, Somalia</span></div>
   </div>
 </section>
 
@@ -427,11 +198,12 @@
 
 <section class="newsletter">
   <h2>Stay Connected</h2>
-  <p>Subscribe to receive updates about our programs, success stories, and ways to get involved.</p>
-  <form class="newsletter-form" action="mailto:info@africadynamite.org" method="post" enctype="text/plain">
+  <p>Subscribe to receive updates about our programs, success stories, and ways to get involved. We send no more than 2 emails per month.</p>
+  <form class="newsletter-form" action="https://formspree.io/f/mnjryzrn" method="POST">
     <input type="email" name="email" placeholder="Enter your email address" required>
     <button type="submit">Subscribe</button>
   </form>
+  <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
 </section>
 
 <footer>
@@ -452,79 +224,69 @@
       <a href="about.html">About Us</a>
       <a href="children.html">Children</a>
       <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-section">
       <h3>Contact Us</h3>
-      <p><i class="fas fa-envelope"></i> info@africadynamite.org</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@africadynamite.org">info@africadynamite.org</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237676092268" target="_blank">WhatsApp Us</a></p>
       <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
-      <p><i class="fas fa-clock"></i> Response time: 24-48 hours</p>
+      <p><i class="fas fa-clock"></i> Response time: 24–48 hours</p>
     </div>
     <div class="footer-section">
       <h3>Support Our Mission</h3>
       <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
-      <a href="support.html" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">SUpport Now</a>
+      <a href="support.html" style="display:inline-block;margin-top:12px;padding:11px 22px;background:#ffc107;color:#000;border-radius:8px;font-weight:700">❤️ Support Now</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | Community-driven initiative working toward formal registration.</p>
+    <p style="margin-top:8px"><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
   </div>
 </footer>
 
 <div class="sticky-support">
- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="africadynamite25@gmail.com">
     <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
-    <!-- NEW: Return URL after successful payment -->
-  <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
-  
-  <!-- NEW: Cancel URL if user cancels -->
-  <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
-  
+    <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
     <button type="submit">❤️ Support ADO</button>
-</form> 
+  </form>
+</div>
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
 <script>
-  // Animated Counter
-  function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-target'));
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        element.textContent = target.toLocaleString() + (target >= 4 ? '+' : '');
-        clearInterval(timer);
-      } else {
-        element.textContent = Math.floor(current).toLocaleString();
-      }
+  document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'));
+    var duration = 2000; var step = target / (duration / 16); var cur = 0;
+    var timer = setInterval(function() {
+      cur += step;
+      if (cur >= target) { el.textContent = target.toLocaleString() + '+'; clearInterval(timer); }
+      else { el.textContent = Math.floor(cur).toLocaleString(); }
     }, 16);
   }
-
-  // Trigger counters when in viewport
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counters = entry.target.querySelectorAll('.stat-number');
-        counters.forEach(counter => {
-          if (counter.textContent === '0') {
-            animateCounter(counter);
-          }
-        });
-      }
-    });
-  });
-
-  const statsBar = document.querySelector('.stats-bar');
+  var statsBar = document.querySelector('.stats-bar');
   if (statsBar) {
-    observer.observe(statsBar);
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.stat-number').forEach(function(c) {
+            if (c.textContent === '0') animateCounter(c);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(statsBar);
   }
 </script>
-
 </body>
 </html>
