@@ -5,8 +5,7 @@
   <title>Contact Us | Africa Dynamite Organisation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Africa Dynamite Organisation to support children's education, partner with us, or learn more about our work." />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  
+  <link rel="icon" type="image/png" href="Image/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,36 +15,36 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
 
-    /* HEADER */
     header {
       background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%);
-      color: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between;
+      color: #fff; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between;
       box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
     }
-    .logo-wrapper { display: flex; align-items: center; gap: 15px; }
-    .logo-text { font-weight: 700; font-size: 1.2rem; line-height: 1.2; text-transform: uppercase; color: #fff; }
-    nav { display: flex; align-items: center; gap: 5px; }
-    nav a { color: #fff; padding: 10px 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: all 0.3s ease; }
-    nav a:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
-    nav a.support-btn { background: #ffc107; color: #000; font-weight: 600; margin-left: 10px; box-shadow: 0 4px 12px rgba(255,193,7,0.3); }
-    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255,193,7,0.4); }
+    .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-wrapper img { height: 50px; width: 50px; object-fit: contain; border-radius: 6px; background: #fff; padding: 3px; }
+    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 0.72rem; font-weight: 400; color: #ffc107; letter-spacing: .8px; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { color: #fff; padding: 9px 13px; text-decoration: none; font-weight: 500; font-size: .88rem; border-radius: 6px; transition: all .3s; }
+    nav a:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 700; margin-left: 8px; box-shadow: 0 4px 12px rgba(255,193,7,.3); }
+    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; transition: all .3s; }
 
-    /* HERO */
     .hero {
-      background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)), url("images/ado-team-hero.jpg") center/cover no-repeat;
-      color: #fff; text-align: center; padding: 120px 30px; position: relative;
+      background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)), url("Image/ado-team-hero.jpg") center/cover no-repeat;
+      color: #fff; text-align: center; padding: 120px 30px;
     }
     .hero-content { position: relative; z-index: 1; }
-    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); letter-spacing: -0.5px; }
-    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); font-weight: 300; }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); }
+    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; font-weight: 300; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); }
 
-    /* SECTIONS */
     section { max-width: 1200px; margin: auto; padding: 80px 40px; }
     h2 { color: #0f5132; margin-bottom: 30px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
     h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
     section > p { font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 30px; }
 
-    /* CONTACT METHODS */
     .contact-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin: 50px 0; }
     .contact-method { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; position: relative; overflow: hidden; transition: all 0.3s ease; }
     .contact-method::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
@@ -56,10 +55,7 @@
     .contact-method a { color: #0f5132; font-weight: 600; display: block; margin: 5px 0; text-decoration: none; transition: color 0.3s; }
     .contact-method a:hover { color: #ffc107; }
 
-    /* CONTACT GRID */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 50px; }
-    
-    /* CONTACT INFO */
     .contact-info { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 40px; border-radius: 15px; border-left: 6px solid #0f5132; }
     .contact-info h3 { color: #0f5132; font-size: 1.8rem; margin-bottom: 25px; font-weight: 600; }
     .contact-info > p { color: #555; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; }
@@ -72,7 +68,7 @@
     .note { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 20px; border-radius: 8px; margin-top: 30px; }
     .note p { color: #555; font-size: 0.95rem; margin: 0; }
 
-    /* FORM */
+    /* CONTACT FORM — uses Formspree for reliable delivery */
     .form-container { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
     .form-container h3 { color: #0f5132; font-size: 1.8rem; margin-bottom: 25px; font-weight: 600; }
     form label { display: block; font-weight: 600; margin-bottom: 8px; color: #2c3e50; font-size: 1rem; }
@@ -90,8 +86,8 @@
     }
     form button:hover { background: linear-gradient(135deg, #1a7a4f, #0f5132); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(15,81,50,0.4); }
     .form-note { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 20px; font-size: 0.9rem; color: #666; text-align: center; }
+    .form-success { display: none; background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 20px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: 600; }
 
-    /* FAQ SECTION */
     .faq-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
     .faq-grid { display: grid; gap: 20px; margin-top: 40px; }
     .faq-item { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border-left: 4px solid #ffc107; transition: transform 0.3s ease; }
@@ -101,91 +97,55 @@
     .faq-item a { color: #0f5132; font-weight: 600; text-decoration: none; }
     .faq-item a:hover { color: #ffc107; }
 
-    /* NEWSLETTER */
     .newsletter { background: #ffc107; padding: 60px 40px; text-align: center; }
-    .newsletter h2 { color: #000; }
+    .newsletter h2 { color: #000; display: inline-block; }
     .newsletter h2::after { background: #0f5132; left: 50%; transform: translateX(-50%); }
-    .newsletter p { color: #000; font-size: 1.1rem; margin-bottom: 30px; }
-    .newsletter-form { max-width: 600px; margin: 0 auto; display: flex; gap: 15px; }
-    .newsletter-form input { flex: 1; padding: 16px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .newsletter-form button { padding: 16px 35px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+    .newsletter > p { color: #000; font-size: 1.05rem; margin: 15px auto 28px; max-width: 580px; }
+    .newsletter-form { max-width: 540px; margin: 0 auto; display: flex; gap: 12px; }
+    .newsletter-form input { flex: 1; padding: 14px 18px; border: none; border-radius: 8px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+    .newsletter-form button { padding: 14px 28px; background: #0f5132; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; transition: all .3s; white-space: nowrap; }
     .newsletter-form button:hover { background: #1a7a4f; transform: translateY(-2px); }
+    .newsletter-note { color: rgba(0,0,0,.6); font-size: .82rem; margin-top: 12px; }
 
-    /* FOOTER */
-    footer { background: #1a1a1a; color: #ccc; padding: 60px 40px 30px; }
-    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; }
-    .footer-section h3 { color: #ffc107; margin-bottom: 20px; font-size: 1.3rem; }
-    .footer-section p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
-    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
+    footer { background: #111; color: #ccc; padding: 60px 40px 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 38px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-section h3 { color: #ffc107; margin-bottom: 16px; font-size: 1.1rem; }
+    .footer-section p { font-size: .88rem; line-height: 1.8; margin-bottom: 10px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 7px; font-size: .88rem; transition: color .3s; }
     .footer-section a:hover { color: #ffc107; }
-    .social-links { display: flex; gap: 15px; margin-top: 20px; }
-    .social-links a { width: 40px; height: 40px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all 0.3s; }
+    .social-links { display: flex; gap: 10px; margin-top: 16px; }
+    .social-links a { width: 36px; height: 36px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all .3s; font-size: .85rem; }
     .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
-    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #999; font-size: 0.9rem; }
+    .footer-bottom { text-align: center; padding-top: 26px; border-top: 1px solid #222; color: #777; font-size: .82rem; }
+    .footer-bottom a { color: #aaa; text-decoration: none; }
+    .footer-bottom a:hover { color: #ffc107; }
 
-    /* STICKY SUPPORT */
     .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
-    .sticky-support button {
-      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
-      color: #000; border: none; padding: 16px 26px; font-size: 1.05rem; font-weight: 600;
-      border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,0.4);
-      transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
-    }
-    .sticky-support button:hover { background: linear-gradient(135deg, #ffb300 0%, #ffa000 100%); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,0.5); }
+    .sticky-support button { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; border: none; padding: 14px 22px; font-size: .95rem; font-weight: 700; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,.4); transition: all .3s; font-family: 'Poppins', sans-serif; }
+    .sticky-support button:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,.5); }
+    .sticky-whatsapp { position: fixed; left: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-whatsapp a { display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: #25D366; color: #fff; border-radius: 50%; font-size: 1.7rem; box-shadow: 0 8px 20px rgba(37,211,102,.4); transition: all .3s; text-decoration: none; }
+    .sticky-whatsapp a:hover { background: #128C7E; transform: translateY(-3px); }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 15px 20px; gap: 15px; }
-      .logo-text { font-size: 0.9rem; text-align: center; }
-      nav { margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 100%; }
-      nav a { padding: 8px 12px; font-size: 0.85rem; }
-      nav a.support-btn { margin-left: 0; margin-top: 5px; }
-      .hero { padding: 80px 20px; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      h2 { font-size: 1.8rem; }
-      section { padding: 60px 20px; }
-      section > p { font-size: 1rem; }
-      .contact-methods { grid-template-columns: 1fr; gap: 25px; }
-      .contact-method { padding: 30px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 30px; }
-      .contact-info, .form-container { padding: 30px; }
-      .contact-info h3, .form-container h3 { font-size: 1.5rem; }
-      .info-item { flex-direction: column; text-align: center; }
-      .info-icon { margin-right: 0; margin-bottom: 10px; }
-      .faq-item { padding: 25px; }
-      .faq-item h3 { font-size: 1.2rem; }
-      .newsletter-form { flex-direction: column; }
-      .footer-content { grid-template-columns: 1fr; gap: 30px; }
-      .sticky-support { right: 15px; bottom: 15px; }
-      .sticky-support button { padding: 14px 20px; font-size: 0.95rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.95rem; }
-      h2 { font-size: 1.5rem; }
-      .contact-method h3 { font-size: 1.3rem; }
-      .contact-icon { font-size: 3rem; }
-      .contact-info, .form-container { padding: 20px; }
-      form input, form textarea, form select { padding: 12px; }
-      form button { padding: 14px 30px; }
-    }
-  
-    /* HAMBURGER MENU */
-    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
-    .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
-    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px!important}}
-</style>
+    @media(max-width:900px) { nav { display: none; } nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0a3d21; padding: 15px 20px; gap: 5px; box-shadow: 0 10px 20px rgba(0,0,0,.3); } nav.open a { padding: 12px 16px; } nav.open a.support-btn { margin-left: 0; margin-top: 5px; } .hamburger { display: block; } header { position: relative; padding: 14px 20px; } }
+    @media(max-width:768px) { .hero { padding: 80px 20px; } .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } h2 { font-size: 1.8rem; } section { padding: 60px 20px; } .contact-methods { grid-template-columns: 1fr; } .contact-grid { grid-template-columns: 1fr; gap: 30px; } .info-item { flex-direction: column; } .info-icon { margin-right: 0; margin-bottom: 10px; } .newsletter-form { flex-direction: column; } .footer-content { grid-template-columns: 1fr; gap: 26px; } }
+    @media(max-width:480px) { .hero h1 { font-size: 1.7rem; } h2 { font-size: 1.5rem; } }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo-wrapper">
-    <img src="Image/logo.png" alt="ADO Logo" style="height:46px;width:46px;object-fit:contain;border-radius:6px;background:#fff;padding:3px"><div class="logo-text">AFRICA DYNAMITE ORGANISATION<span style="display:block;font-size:0.72rem;font-weight:400;color:#ffc107;letter-spacing:.8px;text-transform:uppercase">Igniting Minds, Transforming Africa</span></div>
-  </div>
-  <nav>
+  <a href="index.html" class="logo-wrapper">
+    <img src="Image/logo.png" alt="ADO Logo">
+    <div class="logo-text">AFRICA DYNAMITE ORGANISATION
+      <span>Igniting Minds, Transforming Africa</span>
+    </div>
+  </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="what-we-do.html">What We Do</a>
@@ -193,7 +153,7 @@
     <a href="get-involved.html">Get Involved</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
-    <a href="support.html" class="support-btn">Support</a>
+    <a href="support.html" class="support-btn">❤️ Support</a>
   </nav>
 </header>
 
@@ -206,10 +166,7 @@
 
 <section>
   <h2>Get in Touch</h2>
-  <p>
-    Africa Dynamite Organisation (ADO) welcomes inquiries from donors, partners, volunteers, 
-    and community members. We're here to answer your questions and explore how we can work together.
-  </p>
+  <p>Africa Dynamite Organisation (ADO) welcomes inquiries from donors, partners, volunteers, and community members. We're here to answer your questions and explore how we can work together.</p>
 
   <div class="contact-methods">
     <div class="contact-method">
@@ -218,16 +175,12 @@
       <p>Send us a message anytime. We typically respond within 24-48 hours.</p>
       <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>
     </div>
-
     <div class="contact-method">
       <span class="contact-icon">💬</span>
-      <h3>Social Media</h3>
-      <p>Follow us for updates, stories, and ways to get involved in our mission.</p>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
+      <h3>WhatsApp</h3>
+      <p>Reach us directly on WhatsApp for quick responses.</p>
+      <a href="https://wa.me/237676092268" target="_blank">Chat on WhatsApp</a>
     </div>
-
     <div class="contact-method">
       <span class="contact-icon">🌍</span>
       <h3>Our Reach</h3>
@@ -242,16 +195,21 @@
 
     <div class="contact-info">
       <h3>Contact Information</h3>
-      <p>
-        We're a community-driven organization operating across Africa. 
-        Reach out to us through any of these channels.
-      </p>
+      <p>We're a community-driven organization operating across Africa. Reach out to us through any of these channels.</p>
 
       <div class="info-item">
         <span class="info-icon">📧</span>
         <div class="info-content">
           <strong>Email Address</strong>
           <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">💬</span>
+        <div class="info-content">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/237676092268" target="_blank">+237 676 092 268</a>
         </div>
       </div>
 
@@ -267,23 +225,22 @@
         <span class="info-icon">⏰</span>
         <div class="info-content">
           <strong>Response Time</strong>
-          <span>We respond to all inquiries within 24-48 hours</span>
+          <span>We respond to all inquiries within 24–48 hours</span>
         </div>
       </div>
 
       <div class="note">
-        <p>
-          <strong>Note:</strong> ADO is currently operating as a community-driven initiative and is
-          in the process of formal registration. Our work is guided by transparency, accountability, 
-          and ethical practice.
-        </p>
+        <p><strong>Note:</strong> ADO is currently operating as a community-driven initiative and is in the process of formal registration. Our work is guided by transparency, accountability, and ethical practice.</p>
       </div>
     </div>
 
     <div class="form-container">
       <h3>Send Us a Message</h3>
+      <!-- Formspree handles delivery to info@africadynamite.org -->
+      <form id="contactForm" action="https://formspree.io/f/africadynamite25" method="POST">
+        <input type="hidden" name="_subject" value="New message from africadynamite.org contact form">
+        <input type="hidden" name="_replyto" value="info@africadynamite.org">
 
-      <form action="mailto:info@africadynamite.org" method="post" enctype="text/plain">
         <label for="name">Full Name *</label>
         <input type="text" id="name" name="Name" required placeholder="Enter your full name">
 
@@ -306,10 +263,8 @@
         <textarea id="message" name="Message" required placeholder="Tell us how we can help you..."></textarea>
 
         <button type="submit">Send Message</button>
-
-        <div class="form-note">
-          This form opens your default email application. A secure web form will be added after formal registration.
-        </div>
+        <div class="form-success" id="formSuccess">✅ Thank you! Your message has been sent. We'll reply within 24–48 hours.</div>
+        <div class="form-note">Your message goes directly to info@africadynamite.org</div>
       </form>
     </div>
 
@@ -318,33 +273,27 @@
 
 <section class="faq-section">
   <h2>Frequently Asked Questions</h2>
-
   <div class="faq-grid">
     <div class="faq-item">
       <h3>How can I donate to support a specific child?</h3>
       <p>Visit our <a href="children.html">Children page</a> to see profiles of children in need. Each profile has a direct donation button for targeted support.</p>
     </div>
-
     <div class="faq-item">
       <h3>Can I volunteer remotely?</h3>
       <p>Yes! We have many remote volunteer opportunities in communications, research, fundraising, and administration. Visit our <a href="get-involved.html">Get Involved page</a> to learn more.</p>
     </div>
-
     <div class="faq-item">
       <h3>How do you ensure transparency in fund usage?</h3>
       <p>We maintain strict financial accountability, provide regular updates to donors, and document all program activities. We're working toward formal registration to further strengthen our governance.</p>
     </div>
-
     <div class="faq-item">
       <h3>Can my organization partner with ADO?</h3>
       <p>Absolutely! We welcome partnerships with schools, NGOs, businesses, and community groups. Contact us to discuss collaboration opportunities.</p>
     </div>
-
     <div class="faq-item">
       <h3>In which countries does ADO operate?</h3>
       <p>We currently support children across multiple African countries including Nigeria, Kenya, Somalia, Malawi, Niger, and Tanzania, with plans to expand to more regions.</p>
     </div>
-
     <div class="faq-item">
       <h3>How can I stay updated on ADO's work?</h3>
       <p>Follow us on social media and subscribe to our newsletter below for updates on programs, success stories, and opportunities to get involved.</p>
@@ -354,18 +303,19 @@
 
 <section class="newsletter">
   <h2>Stay Connected</h2>
-  <p>Subscribe to receive updates, success stories, and ways to support our mission.</p>
-  <form class="newsletter-form" action="mailto:info@africadynamite.org" method="post" enctype="text/plain">
+  <p>Subscribe to receive updates, success stories, and ways to support our mission. We send no more than 2 emails per month.</p>
+  <form class="newsletter-form" action="https://formspree.io/f/africadynamite25" method="POST">
     <input type="email" name="email" placeholder="Enter your email address" required>
     <button type="submit">Subscribe</button>
   </form>
+  <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
 </section>
 
 <footer>
   <div class="footer-content">
     <div class="footer-section">
       <h3>Africa Dynamite Organisation</h3>
-      <p>A community-driven non-profit initiative working to ensure every African child has access to quality education.</p>
+      <p>A community-driven non-profit initiative working to ensure every African child has access to quality education. Pursuing formal registration in 2025.</p>
       <div class="social-links">
         <a href="https://facebook.com/africadynamiteorganisation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com/africadynamite" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -380,46 +330,57 @@
       <a href="what-we-do.html">What We Do</a>
       <a href="children.html">Children</a>
       <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <div class="footer-section">
       <h3>Contact Us</h3>
-      <p><i class="fas fa-envelope"></i> info@africadynamite.org</p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@africadynamite.org">info@africadynamite.org</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237676092268" target="_blank">WhatsApp Us</a></p>
       <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
-      <p><i class="fas fa-clock"></i> Response time: 24-48 hours</p>
+      <p><i class="fas fa-clock"></i> Response time: 24–48 hours</p>
     </div>
     <div class="footer-section">
       <h3>Support Our Mission</h3>
       <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
-      <a href="support.html" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #ffc107; color: #000; border-radius: 8px; font-weight: 600;">Support Now</a>
+      <a href="support.html" style="display:inline-block;margin-top:12px;padding:11px 22px;background:#ffc107;color:#000;border-radius:8px;font-weight:700">❤️ Support Now</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | A community-driven non-profit initiative working toward formal registration.</p>
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | Community-driven initiative working toward formal registration.</p>
+    <p style="margin-top:8px"><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
   </div>
 </footer>
 
 <div class="sticky-support">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="africadynamite25@gmail.com">
     <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
-   <!-- NEW: Return URL after successful payment -->
-  <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
-  
-  <!-- NEW: Cancel URL if user cancels -->
-  <input type="hidden" name="cancel_return" value="https://africady.mbahedwin0.workers.dev/support.html">
-  
+    <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
     <button type="submit">❤️ Support ADO</button>
-</form>
+  </form>
+</div>
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
+<script>
+  document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+
+  // Show success message after Formspree submission
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      setTimeout(function() {
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 1000);
+    });
+  }
+</script>
 </body>
 </html>
-
-
-
-
-
-
