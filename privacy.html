@@ -20,26 +20,38 @@
     nav a{color:#fff;padding:9px 13px;text-decoration:none;font-weight:500;font-size:.88rem;border-radius:6px;transition:all .3s}
     nav a:hover{background:rgba(255,255,255,.15)}
     nav a.support-btn{background:#ffc107;color:#000;font-weight:700;margin-left:8px}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;padding:5px}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
     .page-hero{background:linear-gradient(135deg,#0f5132,#1a7a4f);color:#fff;padding:80px 30px;text-align:center}
     .page-hero h1{font-size:2.8rem;font-weight:700}
     .page-hero p{font-size:1.1rem;margin-top:12px;opacity:.9}
     .content{max-width:860px;margin:60px auto;padding:0 30px 80px}
     h2{color:#0f5132;font-size:1.6rem;margin:40px 0 15px;font-weight:600}
     p{color:#555;font-size:1rem;line-height:1.8;margin-bottom:14px}
+    a{color:#0f5132;text-decoration:none}
+    a:hover{color:#ffc107}
     footer{background:#111;color:#ccc;padding:30px 40px;text-align:center;font-size:.85rem}
     footer a{color:#ffc107;text-decoration:none}
+    .sticky-whatsapp{position:fixed;left:25px;bottom:25px;z-index:9999}
+    .sticky-whatsapp a{display:flex;align-items:center;justify-content:center;width:54px;height:54px;background:#25D366;color:#fff;border-radius:50%;font-size:1.7rem;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+    .sticky-whatsapp a:hover{background:#128C7E;transform:translateY(-3px)}
+    @media(max-width:900px){nav{display:none}nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a3d21;padding:15px 20px;gap:5px;box-shadow:0 10px 20px rgba(0,0,0,.3)}nav.open a{padding:12px 16px}nav.open a.support-btn{margin-left:0;margin-top:5px}.hamburger{display:block}header{position:relative;padding:14px 20px}}
+    @media(max-width:768px){.page-hero h1{font-size:2rem}.content{padding:0 20px 60px}}
   </style>
 </head>
 <body>
+
 <header>
   <a href="index.html" class="logo-wrapper">
     <img src="Image/logo.png" alt="ADO Logo">
     <div class="logo-text">AFRICA DYNAMITE ORGANISATION<span>Igniting Minds, Transforming Africa</span></div>
   </a>
-  <nav>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
     <a href="support.html" class="support-btn">❤️ Support</a>
   </nav>
 </header>
@@ -51,7 +63,7 @@
 
 <div class="content">
   <h2>1. Who We Are</h2>
-  <p>Africa Dynamite Organisation (ADO) is a community-driven initiative dedicated to supporting children's education across Africa. We can be reached at <a href="mailto:africadynamite25@gmail.com" style="color:#0f5132">africadynamite25@gmail.com</a>.</p>
+  <p>Africa Dynamite Organisation (ADO) is a community-driven initiative dedicated to supporting children's education across Africa. We can be reached at <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>.</p>
 
   <h2>2. What Information We Collect</h2>
   <p>We collect information you voluntarily provide, including: your name and email address when you subscribe to updates or contact us; your email address and name when making a donation via PayPal (processed by PayPal, not stored by us); and any information you submit through our contact form.</p>
@@ -72,18 +84,27 @@
   <p>We take reasonable measures to protect your personal information. Our website is served over HTTPS (via Cloudflare) to encrypt data in transit.</p>
 
   <h2>8. Your Rights</h2>
-  <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. Contact us at info@africadynamite.org with any such requests.</p>
+  <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. Contact us at <a href="mailto:info@africadynamite.org">info@africadynamite.org</a> with any such requests.</p>
 
   <h2>9. Children's Privacy</h2>
   <p>We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe we have collected such information, please contact us immediately.</p>
 
   <h2>10. Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please email us at <a href="mailto:info@africadynamite.org" style="color:#0f5132">info@africadynamite.org</a>.</p>
+  <p>If you have any questions about this Privacy Policy, please email us at <a href="mailto:info@africadynamite.org">info@africadynamite.org</a>.</p>
 </div>
 
 <footer>
-  <p>© 2025 Africa Dynamite Organisation. | <a href="index.html">Home</a> | <a href="contact.html">Contact</a></p>
+  <p>© 2025 Africa Dynamite Organisation. | <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
 </footer>
+
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<script>
+  document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+</script>
 </body>
 </html>
-
