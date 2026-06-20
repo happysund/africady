@@ -170,9 +170,11 @@
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="africadynamite1@gmail.com">
-          <input type="hidden" name="item_name" value="Support for AFRICA DYNAMITE ORGANISATION">
+          <input type="hidden" name="item_name" value="Donation to Africa Dynamite Organisation">
+          <input type="hidden" name="amount" value="10.00">
           <input type="hidden" name="currency_code" value="USD">
-          <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+          <input type="hidden" name="no_note" value="1">
+          <input type="hidden" name="return" value="https://africadynamite.org/thank-you.html">
           <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
           <button type="submit" class="pay-now-btn btn-yellow">Support via PayPal</button>
         </form>
@@ -282,10 +284,12 @@
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="africadynamite1@gmail.com">
-    <input type="hidden" name="item_name" value="Support for Africa Dynamite Organisation">
+    <input type="hidden" name="item_name" value="Donation to Africa Dynamite Organisation">
+    <input type="hidden" name="amount" value="10.00">
     <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="no_shipping" value="1">
-    <input type="hidden" name="return" value="https://africady.mbahedwin0.workers.dev/thank-you.html">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="return" value="https://africadynamite.org/thank-you.html">
     <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
     <button type="submit">❤️ Support ADO</button>
   </form>
@@ -305,12 +309,8 @@
     var duration = 2000; var step = target / (duration / 16); var cur = 0;
     var timer = setInterval(function() {
       cur += step;
-      if (cur >= target) {
-        el.textContent = prefix + target.toLocaleString() + suffix;
-        clearInterval(timer);
-      } else {
-        el.textContent = prefix + Math.floor(cur).toLocaleString();
-      }
+      if (cur >= target) { el.textContent = prefix + target.toLocaleString() + suffix; clearInterval(timer); }
+      else { el.textContent = prefix + Math.floor(cur).toLocaleString(); }
     }, 16);
   }
   var counterSection = document.querySelector('.impact-counter');
