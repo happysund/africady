@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Assistance | Africa Dynamite Organisation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Students and pupils can request assistance from Africa Dynamite Organisation directly through this form." />
+  <link rel="icon" type="image/png" href="Image/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', Arial, Helvetica, sans-serif; line-height: 1.7; color: #2c3e50; overflow-x: hidden; }
+    header { background: linear-gradient(135deg, #0f5132 0%, #1a7a4f 100%); color: #fff; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 15px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-wrapper img { height: 50px; width: 50px; object-fit: contain; border-radius: 6px; background: #fff; padding: 3px; }
+    .logo-text { font-weight: 700; font-size: 1.2rem; color: #fff; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 0.72rem; font-weight: 400; color: #ffc107; letter-spacing: .8px; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { color: #fff; padding: 9px 13px; text-decoration: none; font-weight: 500; font-size: .88rem; border-radius: 6px; transition: all .3s; }
+    nav a:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+    nav a.support-btn { background: #ffc107; color: #000; font-weight: 700; margin-left: 8px; box-shadow: 0 4px 12px rgba(255,193,7,.3); }
+    nav a.support-btn:hover { background: #ffb300; transform: translateY(-2px); }
+    nav a.assist-btn { background: rgba(255,255,255,.2); font-weight: 700; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; transition: all .3s; }
+    .hero { background: linear-gradient(rgba(15,81,50,0.88), rgba(0,0,0,0.7)), url("Image/ado-team-hero.jpg") center/cover no-repeat; color: #fff; text-align: center; padding: 120px 30px; }
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 700; text-shadow: 2px 4px 8px rgba(0,0,0,0.3); }
+    .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; font-weight: 300; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); }
+    section { max-width: 1200px; margin: auto; padding: 80px 40px; }
+    h2 { color: #0f5132; margin-bottom: 30px; font-size: 2.5rem; font-weight: 700; position: relative; display: inline-block; }
+    h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #ffc107; border-radius: 2px; }
+    section > p { font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 30px; }
+    .info-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; margin: 40px 0 50px; }
+    .info-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; position: relative; overflow: hidden; }
+    .info-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0f5132, #ffc107); }
+    .info-card .icon { font-size: 2.6rem; margin-bottom: 14px; display: block; }
+    .info-card h3 { color: #0f5132; margin-bottom: 10px; font-size: 1.2rem; font-weight: 600; }
+    .info-card p { color: #666; font-size: 0.95rem; margin: 0; }
+    .note { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 20px; border-radius: 8px; margin-bottom: 40px; }
+    .note p { color: #555; font-size: 0.95rem; margin: 0; }
+    .privacy-note { background: rgba(15,81,50,0.06); border-left: 4px solid #0f5132; padding: 20px; border-radius: 8px; margin-bottom: 40px; }
+    .privacy-note p { color: #555; font-size: 0.95rem; margin: 0; }
+    .form-container { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+    .form-container iframe { width: 100%; border: none; display: block; }
+    .alt-contact { text-align: center; margin-top: 40px; color: #666; }
+    .alt-contact a { color: #0f5132; font-weight: 600; text-decoration: none; }
+    .alt-contact a:hover { color: #ffc107; }
+    footer { background: #111; color: #ccc; padding: 60px 40px 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 38px; max-width: 1200px; margin: 0 auto 40px; }
+    .footer-section h3 { color: #ffc107; margin-bottom: 16px; font-size: 1.1rem; }
+    .footer-section p { font-size: .88rem; line-height: 1.8; margin-bottom: 10px; }
+    .footer-section a { color: #ccc; text-decoration: none; display: block; margin-bottom: 7px; font-size: .88rem; transition: color .3s; }
+    .footer-section a:hover { color: #ffc107; }
+    .social-links { display: flex; gap: 10px; margin-top: 16px; }
+    .social-links a { width: 36px; height: 36px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; transition: all .3s; font-size: .85rem; }
+    .social-links a:hover { background: #ffc107; color: #000; transform: translateY(-3px); }
+    .footer-bottom { text-align: center; padding-top: 26px; border-top: 1px solid #222; color: #777; font-size: .82rem; }
+    .footer-bottom a { color: #aaa; text-decoration: none; }
+    .footer-bottom a:hover { color: #ffc107; }
+    .sticky-support { position: fixed; right: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-support button { background: linear-gradient(135deg, #ffc107, #ffb300); color: #000; border: none; padding: 14px 22px; font-size: .95rem; font-weight: 700; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 20px rgba(255,193,7,.4); transition: all .3s; font-family: 'Poppins', sans-serif; }
+    .sticky-support button:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,193,7,.5); }
+    .sticky-whatsapp { position: fixed; left: 25px; bottom: 25px; z-index: 9999; }
+    .sticky-whatsapp a { display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background: #25D366; color: #fff; border-radius: 50%; font-size: 1.7rem; box-shadow: 0 8px 20px rgba(37,211,102,.4); transition: all .3s; text-decoration: none; }
+    .sticky-whatsapp a:hover { background: #128C7E; transform: translateY(-3px); }
+    @media(max-width:900px) { nav { display: none; } nav.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #0a3d21; padding: 15px 20px; gap: 5px; box-shadow: 0 10px 20px rgba(0,0,0,.3); } nav.open a { padding: 12px 16px; } nav.open a.support-btn { margin-left: 0; margin-top: 5px; } .hamburger { display: block; } header { position: relative; padding: 14px 20px; } }
+    @media(max-width:768px) { .hero { padding: 80px 20px; } .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } h2 { font-size: 1.8rem; } section { padding: 60px 20px; } .form-container { padding: 15px; } .form-container iframe { height: 1600px; } .footer-content { grid-template-columns: 1fr; gap: 26px; } }
+    @media(max-width:480px) { .hero h1 { font-size: 1.7rem; } h2 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo-wrapper">
+    <img src="Image/logo.png" alt="ADO Logo">
+    <div class="logo-text">AFRICA DYNAMITE ORGANISATION
+      <span>Igniting Minds, Transforming Africa</span>
+    </div>
+  </a>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="children.html">Children</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="request-assistance.html" class="assist-btn">📋 Request Assistance</a>
+    <a href="support.html" class="support-btn">❤️ Support</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Request Assistance</h1>
+    <p>If you are a student or pupil in need of support, fill out the form below and our team will follow up with you.</p>
+  </div>
+</section>
+
+<section>
+  <h2>How This Works</h2>
+  <p>We know that reaching out for help isn't always easy. This form allows students and their families to formally request assistance from Africa Dynamite Organisation — whether for school fees, enrollment support, learning materials, tutoring, or another need. Our team reviews every submission personally.</p>
+
+  <div class="info-strip">
+    <div class="info-card">
+      <span class="icon">📝</span>
+      <h3>Fill the Form</h3>
+      <p>Share your details and describe your situation below.</p>
+    </div>
+    <div class="info-card">
+      <span class="icon">👀</span>
+      <h3>We Review It</h3>
+      <p>Our team reviews every request and verifies the details.</p>
+    </div>
+    <div class="info-card">
+      <span class="icon">📞</span>
+      <h3>We Follow Up</h3>
+      <p>We reach out using the WhatsApp number or email you provide.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p><strong>Note for students:</strong> Please make sure a parent or guardian is aware that you are submitting this request — there's a checkbox in the form to confirm this.</p>
+  </div>
+
+  <div class="privacy-note">
+    <p><strong>Your privacy matters:</strong> Any photo or personal information you share is used only by our team to verify and process your request. It will never be shared publicly or with third parties without the guardian's written permission.</p>
+  </div>
+
+  <div class="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSci3v1cpW5BfMwpisvXHSGyPBwKPlWOq_SnQ7QXM09JFRKg2g/viewform?embedded=true" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <div class="alt-contact">
+    <p>Prefer to reach us directly instead? You can still <a href="https://wa.me/237676092268" target="_blank">message us on WhatsApp</a> or <a href="contact.html">use our contact page</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Africa Dynamite Organisation</h3>
+      <p>A community-driven non-profit initiative working to ensure every African child has access to quality education. Pursuing formal registration in 2025.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/africadynamiteorganisation" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/africadynamite" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/africadynamiteorganisation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/africa-dynamite-organisation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="children.html">Children</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:info@africadynamite.org">info@africadynamite.org</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237676092268" target="_blank">WhatsApp Us</a></p>
+      <p><i class="fas fa-globe"></i> Operating across Africa and the diaspora</p>
+      <p><i class="fas fa-clock"></i> Response time: 24–48 hours</p>
+    </div>
+    <div class="footer-section">
+      <h3>Support Our Mission</h3>
+      <p>Your contribution helps provide education, supplies, and hope to children across Africa.</p>
+      <a href="support.html" style="display:inline-block;margin-top:12px;padding:11px 22px;background:#ffc107;color:#000;border-radius:8px;font-weight:700">❤️ Support Now</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Africa Dynamite Organisation (ADO). All rights reserved. | Community-driven initiative working toward formal registration.</p>
+    <p style="margin-top:8px"><a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="faq.html">FAQ</a></p>
+  </div>
+</footer>
+
+<div class="sticky-support">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="africadynamite1@gmail.com">
+    <input type="hidden" name="item_name" value="Donation to Africa Dynamite Organisation">
+    <input type="hidden" name="amount" value="10.00">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="no_shipping" value="1">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="return" value="https://africadynamite.org/thank-you.html">
+    <input type="hidden" name="cancel_return" value="https://africadynamite.org/support.html">
+    <button type="submit">❤️ Support ADO</button>
+  </form>
+</div>
+<div class="sticky-whatsapp">
+  <a href="https://wa.me/237676092268" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<script>
+  document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    document.getElementById('mainNav').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
